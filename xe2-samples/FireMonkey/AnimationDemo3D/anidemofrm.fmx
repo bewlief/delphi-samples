@@ -1,0 +1,258 @@
+object frmAniDemo: TfrmAniDemo
+  BiDiMode = bdLeftToRight
+  Caption = 'FireMonkey 3D Animation'
+  ClientHeight = 627
+  ClientWidth = 824
+  Left = 497
+  Top = 171
+  Position = poDefault
+  Transparency = False
+  Visible = False
+  Color = claGray
+  Left = 497
+  Top = 171
+  object Sphere1: TSphere
+    Position.Point = '(2.54277014732361,-4.67672967910767,6.38635778427124)'
+    Width = 1.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+    Opacity = 1.000000000000000000
+    Material.Diffuse = xFFBC4F17
+    Quanternion = '(0,0,0,1)'
+    object Text1: TTextLayer3D
+      Position.Point = '(0.168607950210571,-1.37444686889648,0.738456249237061)'
+      Width = 3.936766386032104000
+      Height = 0.928038835525512700
+      Depth = 0.009999999776482582
+      Opacity = 1.000000000000000000
+      StyleLookup = 'backgroundstyle'
+      
+      Font.Size = 19.000000000000000000
+      Text = 'Trigger IsMouseOver'
+      Quanternion = '(0,0,0,1)'
+    end
+    object ColorAnimation1: TColorAnimation
+      Duration = 0.299999982118606600
+      Trigger = 'IsMouseOver=true'
+      StartValue = xFFE5F34C
+      StopValue = xFFCD540D
+      PropertyName = 'Material.Diffuse'
+    end
+    object ColorAnimation2: TColorAnimation
+      Duration = 0.299999982118606600
+      Trigger = 'IsMouseOver=false'
+      StartValue = xFFCD540D
+      StopValue = xFFE5F34C
+      PropertyName = 'Material.Diffuse'
+    end
+  end
+  object Light1: TLight
+    Position.Point = '(-4.27029514312744,-8.56721115112305,3.03586989502946E-6)'
+    Width = 1.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+    Opacity = 1.000000000000000000
+    LightType = ltDirectional
+    Quanternion = '(0,0,0,1)'
+  end
+  object Sphere2: TSphere
+    Position.Point = '(-2.05011105537415,-4.04830169677734,6.31927633285522)'
+    Width = 1.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+    Opacity = 1.000000000000000000
+    Material.Diffuse = xFFABB532
+    Quanternion = '(0,0,0,1)'
+    object Text2: TTextLayer3D
+      Position.Point = '(-0.0566458702087402,-1.70719194412231,0.659072399139404)'
+      Width = 1.334717512130737000
+      Height = 0.999561071395874000
+      Depth = 0.009999999776482582
+      Opacity = 1.000000000000000000
+      StyleLookup = 'backgroundstyle'
+      
+      Font.Size = 19.000000000000000000
+      Text = 'Loop'
+      Quanternion = '(0,0,0,1)'
+    end
+    object FloatAnimation1: TFloatAnimation
+      AutoReverse = True
+      Enabled = True
+      Duration = 0.500000000000000000
+      Loop = True
+      StartValue = 1.000000000000000000
+      StopValue = 0.500000000000000000
+      PropertyName = 'Opacity'
+    end
+  end
+  object StrokeCube1: TStrokeCube
+    Position.Point = '(-5.67153930664063,-3.80411267280579,2.65377068519592)'
+    Width = 1.979644775390625000
+    Height = 1.000000000000000000
+    Depth = 1.483392715454101000
+    Opacity = 1.000000000000000000
+    Material.Diffuse = xFF9C431C
+    Material.Lighting = False
+    Quanternion = '(0,0,0,1)'
+    object FloatAnimation2: TFloatAnimation
+      AnimationType = atInOut
+      AutoReverse = True
+      Enabled = True
+      Duration = 2.000000000000000000
+      Interpolation = itBack
+      Loop = True
+      StopValue = 360.000000000000000000
+      PropertyName = 'RotationAngle.Y'
+    end
+    object Cube1: TCube
+      Width = 1.779644727706909000
+      Height = 0.800000011920928900
+      Depth = 1.283392667770386000
+      Opacity = 1.000000000000000000
+      Material.Diffuse = xFFB065A0
+      Quanternion = '(0,0,0,1)'
+    end
+  end
+  object Text3: TTextLayer3D
+    Position.Point = '(-5.83160448074341,-5.94520330429077,4.01932764053345)'
+    Width = 2.857328414916992000
+    Height = 1.044777631759644000
+    Depth = 0.009999999776482582
+    Opacity = 1.000000000000000000
+    StyleLookup = 'backgroundstyle'
+    
+    Font.Size = 14.000000000000000000
+    Text = 'Back Interpolation and AutoReverse'
+    Quanternion = '(0,0,0,1)'
+  end
+  object Plane1: TPlane
+    Position.Point = '(5.96729850769043,0.883200645446777,-8.70692360877001E-7)'
+    Width = 8.250221252441407000
+    Height = 8.714034080505371000
+    Depth = 0.009999999776482582
+    Opacity = 1.000000000000000000
+    Material.Diffuse = xFF89B2F8
+    Quanternion = '(0,0,0,1)'
+    object Text4: TTextLayer3D
+      Position.Point = '(-0.333063840866089,-4.52879953384399,1.18870151042938)'
+      Width = 4.515333175659180000
+      Height = 0.917372465133666900
+      Depth = 0.009999999776482582
+      Opacity = 1.000000000000000000
+      StyleLookup = 'backgroundstyle'
+      
+      Font.Size = 23.000000000000000000
+      Text = 'Elastic Interpolation'
+      Quanternion = '(0,0,0,1)'
+    end
+  end
+  object RoundCube1: TRoundCube
+    Position.Point = '(4.15264129638672,-0.686200499534607,5)'
+    Width = 1.000000000000000000
+    Height = 1.000000000000000000
+    Depth = 1.000000000000000000
+    Opacity = 1.000000000000000000
+    Material.Diffuse = xFF146986
+    Quanternion = '(0,0,0,1)'
+    object FloatAnimation3: TFloatAnimation
+      AnimationType = atOut
+      AutoReverse = True
+      Enabled = True
+      Duration = 1.000000000000000000
+      Interpolation = itElastic
+      Loop = True
+      StartValue = 5.000000000000000000
+      StopValue = 0.500000000000000000
+      PropertyName = 'Position.Z'
+    end
+  end
+  object Text3D1: TText3D
+    Position.Point = '(0.0105376839637756,2.01489305496216,-5.67614507675171)'
+    Width = 7.446239948272705000
+    Height = 1.523382663726807000
+    Depth = 0.500009417533874500
+    Opacity = 1.000000000000000000
+    TwoSide = True
+    Material.Diffuse = xFFA04D6E
+    Flatness = 2.000000000000000000
+    Sides = [esFront, esBack, esShaft]
+    MaterialBack.Diffuse = xFFA04D6E
+    MaterialShaft.Diffuse = xFFA04D6E
+    Text = 'TextLayer3D'
+    Quanternion = '(0,0,0,1)'
+    object FloatAnimation4: TFloatAnimation
+      AnimationType = atInOut
+      AutoReverse = True
+      Enabled = True
+      Duration = 1.000000000000000000
+      Interpolation = itBack
+      Loop = True
+      StopValue = 360.000000000000000000
+      PropertyName = 'RotationAngle.X'
+    end
+  end
+  object ObjectLayer1: TLayer3D
+    Position.Point = '(-4,0,0)'
+    Width = 9.499696731567383000
+    Height = 5.897700786590577000
+    Depth = 0.009999999776482582
+    Opacity = 1.000000000000000000
+    StyleLookup = 'backgroundstyle'
+    Quanternion = '(0,0,0,1)'
+    object Background1: TLayout
+      Align = alClient
+      Width = 475.000000000000000000
+      Height = 295.000000000000000000
+    end
+    object Path1: TPath
+      Position.Point = '(-176,327)'
+      Width = 527.000000000000000000
+      Height = 97.000000000000000000
+      Fill.Kind = bkNone
+      StrokeThickness = 2.000000000000000000
+      Data.Path = {
+        19000000000000007B147640A2455E4002000000E5D09A4054E3C44102000000
+        CBA1D14166E60B420200000000802B42F0A7F64102000000FABE8B42CFF7C041
+        02000000F252A4420E2D1CC102000000B633954202AB15C202000000CFF77F42
+        986E98C2020000009CC4BD41C5A0BAC202000000426015C164FBA0C202000000
+        811551C21D5A7FC20200000002AB8DC2426001C10200000048E15CC28B6C1642
+        020000009A990FC23749BC42020000000C02C341DF8FEC42020000007D3F9342
+        C1CAC04202000000689104436D678C420200000089811D43A470FDC002000000
+        3DAA05439A198FC202000000CBA1D34289E111C302000000986ECA412F1D31C3
+        02000000105820C2140E12C3020000004260BFC2C14AEFC202000000DBF901C3
+        CD4C5CC202000000C520FEC2FCA93741}
+    end
+    object RoundRect1: TRoundRect
+      Position.Point = '(121.916999816895,198.544006347656)'
+      Width = 130.000000000000000000
+      Height = 25.000000000000000000
+      object PathAni: TPathAnimation
+        AnimationType = atInOut
+        AutoReverse = True
+        Enabled = True
+        Duration = 3.000000000000000000
+        Interpolation = itCubic
+        Loop = True
+        Path.Path = {
+          19000000000000007B147640A2455E4002000000E5D09A4054E3C44102000000
+          CBA1D14166E60B420200000000802B42F0A7F64102000000FABE8B42CFF7C041
+          02000000F252A4420E2D1CC102000000B633954202AB15C202000000CFF77F42
+          986E98C2020000009CC4BD41C5A0BAC202000000426015C164FBA0C202000000
+          811551C21D5A7FC20200000002AB8DC2426001C10200000048E15CC28B6C1642
+          020000009A990FC23749BC42020000000C02C341DF8FEC42020000007D3F9342
+          C1CAC04202000000689104436D678C420200000089811D43A470FDC002000000
+          3DAA05439A198FC202000000CBA1D34289E111C302000000986ECA412F1D31C3
+          02000000105820C2140E12C3020000004260BFC2C14AEFC202000000DBF901C3
+          CD4C5CC202000000C520FEC2FCA93741}
+      end
+      object Text5: TText
+        Align = alCenter
+        Position.Point = '(12,0)'
+        Width = 105.000000000000000000
+        Height = 26.000000000000000000
+        Font.Size = 11.000000953674320000
+        Text = 'Path Animation'
+      end
+    end
+  end
+end

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="2kibe3g7xim_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TEmployeeServerRDMClient">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="1217,131,179,114" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TEmployeeServerRDMClient.Create(DBXCommon.TDBXConnection)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TEmployeeServerRDMClient.Create(DBXCommon.TDBXConnection,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TEmployeeServerRDMClient.Destroy()" />
+      <reference referencedUin="delphi:l_gnt:src:DelphiDataSnapClient:DSClientProxy.TEmployeeServerRDMClient:DSProxy.TDSAdminClient">
+        <property name="sourceAnchor" value="1306,245" />
+        <property name="targetAnchor" value="1081,561" />
+        <property name="bendpoints" value="1306,352" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TLookupServerRDMClient">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="1416,131,164,114" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TLookupServerRDMClient.Create(DBXCommon.TDBXConnection)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TLookupServerRDMClient.Create(DBXCommon.TDBXConnection,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TLookupServerRDMClient.Destroy()" />
+      <reference referencedUin="delphi:l_gnt:src:DelphiDataSnapClient:DSClientProxy.TLookupServerRDMClient:DSProxy.TDSAdminClient">
+        <property name="sourceAnchor" value="1498,245" />
+        <property name="targetAnchor" value="1081,612" />
+        <property name="bendpoints" value="1498,320" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="582,40,281,296" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.FGetServerDateTimeCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.FExecuteJobCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.FMVPCustomerCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.FCustomerCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.FListofCustomerCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.FListofDifferentTypesCommand" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.Create(DBXCommon.TDBXConnection)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.Create(DBXCommon.TDBXConnection,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.GetServerDateTime()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.ExecuteJob(System.Integer)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.MVPCustomer()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.Customer()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.ListofCustomer()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient.ListofDifferentTypes()" />
+      <reference referencedUin="delphi:l_gnt:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient:DSProxy.TDSAdminClient">
+        <property name="sourceAnchor" value="751,336" />
+        <property name="targetAnchor" value="751,426" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TDSServerBatchClient">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="324,115,238,146" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDSServerBatchClient.FStartBackupCommand" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDSServerBatchClient.Create(DBXCommon.TDBXConnection)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDSServerBatchClient.Create(DBXCommon.TDBXConnection,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDSServerBatchClient.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDSServerBatchClient.StartBackup(DBXJSON.TDBXCallback,System.string)" />
+      <reference referencedUin="delphi:l_gnt:src:DelphiDataSnapClient:DSClientProxy.TDSServerBatchClient:DSProxy.TDSAdminClient">
+        <property name="sourceAnchor" value="443,261" />
+        <property name="targetAnchor" value="714,426" />
+        <property name="bendpoints" value="443,275" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TDMMainServerModuleClient">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,100,294,176" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDMMainServerModuleClient.FIpAddressCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDMMainServerModuleClient.FServerComputerNameCommand" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDMMainServerModuleClient.Create(DBXCommon.TDBXConnection)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDMMainServerModuleClient.Create(DBXCommon.TDBXConnection,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDMMainServerModuleClient.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDMMainServerModuleClient.IpAddress()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDMMainServerModuleClient.ServerComputerName()" />
+      <reference referencedUin="delphi:l_gnt:src:DelphiDataSnapClient:DSClientProxy.TDMMainServerModuleClient:DSProxy.TDSAdminClient">
+        <property name="sourceAnchor" value="157,276" />
+        <property name="targetAnchor" value="677,426" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="883,10,314,356" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.FDepartmentDefaultCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.FDepartmentOrderByIDCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.FDepartmentOrderByNameCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.FOrderByFieldCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.FGetDepartmentsOrderByCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.FGetDepartmentsCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.FInsertCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.FInsertAsDBXReaderCommand" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.Create(DBXCommon.TDBXConnection)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.Create(DBXCommon.TDBXConnection,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.DepartmentDefault()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.DepartmentOrderByID()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.DepartmentOrderByName()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.OrderByField()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.GetDepartmentsOrderBy()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.GetDepartments()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.Insert(DB.TParams)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient.InsertAsDBXReader(DBXCommon.TDBXReader)" />
+      <reference referencedUin="delphi:l_gnt:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient:DSProxy.TDSAdminClient">
+        <property name="sourceAnchor" value="982,366" />
+        <property name="targetAnchor" value="982,426" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TUserClient">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="1161,650,238,236" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TUserClient.FAddUserCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TUserClient.FIsValidUserCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TUserClient.FDisableUserCommand" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DSClientProxy.TUserClient.FEnableUserCommand" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TUserClient.Create(DBXCommon.TDBXConnection)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TUserClient.Create(DBXCommon.TDBXConnection,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TUserClient.Destroy()" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TUserClient.AddUser(System.string,System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TUserClient.IsValidUser(System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TUserClient.DisableUser(System.string)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DSClientProxy.TUserClient.EnableUser(System.string)" />
+      <reference referencedUin="delphi:l_gnt:src:DelphiDataSnapClient:DSClientProxy.TUserClient:DSProxy.TDSAdminClient">
+        <property name="sourceAnchor" value="1161,768" />
+        <property name="targetAnchor" value="1081,768" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:lib:DelphiWin32:DSProxy.TDSAdminClient">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="640,426,441,685" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.NotifyCallback(System.string,System.string,System.string,DBXJSON.TJSONValue,out@DBXJSON.TJSONValue)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.ListClasses()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.DescribeMethod(System.string)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.FindPackages()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FListMethodsCommand" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.GetPlatformName()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FGetServerMethodsCommand" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.FindClasses(System.string,System.string)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FNotifyCallbackCommand" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FBroadcastObjectToChannelCommand" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.BroadcastObjectToChannel(System.string,System.TObject)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FGetServerMethodParametersCommand" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FUnMarshal" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FMarshal" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.FindMethods(System.string,System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.GetServerMethods()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.BroadcastToChannel(System.string,DBXJSON.TJSONValue)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FListClassesCommand" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FFindPackagesCommand" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FFindMethodsCommand" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.ClearResources()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FFindClassesCommand" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.GetDatabaseConnectionProperties()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FDescribeMethodCommand" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.Create(DBXCommon.TDBXConnection)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FInstanceOwner" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.DescribeClass(System.string)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.ListMethods(System.string)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FBroadcastToChannelCommand" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FNotifyObjectCommand" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.NotifyObject(System.string,System.string,System.string,System.TObject,out@System.TObject)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FDescribeClassCommand" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FDBXConnection" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FClearResourcesCommand" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FGetDatabaseConnectionPropertiesCommand" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.Destroy()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.GetServerMethodParameters()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:DSProxy.TDSAdminClient.FGetPlatformNameCommand" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.Create(DBXCommon.TDBXConnection,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:DSProxy.TDSAdminClient.Create()" />
+    </reference>
+    <reference referencedUin="design:view:::j3aiy4sqk0svxoasl_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,152,42" />
+    </reference>
+  </view>
+</nodeSet>

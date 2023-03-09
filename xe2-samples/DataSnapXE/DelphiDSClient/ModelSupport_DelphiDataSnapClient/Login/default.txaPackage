@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <node uin="b4nj75aag0k_n">
+    <property name="$metaclass" value="Interaction Container" />
+    <property name="$name" value="Interaction container1" />
+    <node uin="zvurwb2ziij_n">
+      <property name="$metaclass" value="Object" />
+      <property name="$name" value="Object1" />
+      <property name="@stereotype" value="actor" />
+      <link uin="pjpljukxfls_l">
+        <property name="$metaclass" value="Collaboration Link" />
+        <property name="$name" value="Collaboration Link1" />
+        <participant referencedUin="design:node:::zvurwb2ziij_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="design:node:::9cctdxz6zfq_n:b4nj75aag0k_n" role="Supplier" />
+      </link>
+      <node uin="04xklgptcer_n">
+        <property name="$metaclass" value="Activation" />
+        <property name="$name" value="Activation1" />
+        <property name="@OrderNumber" value="1" />
+        <link uin="pmaelqr32rt_l">
+          <property name="$metaclass" value="Message Link" />
+          <property name="$name" value="Message Link1" />
+          <property name="@Arguments" value="TObject Sender" />
+          <property name="@ChainNumber" value="1" />
+          <property name="@Operation" value="'Button1Click(TObject)'" />
+          <participant referencedUin="design:node:::04xklgptcer_n:zvurwb2ziij_n:b4nj75aag0k_n" role="Client" />
+          <participant referencedUin="design:node:::jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Supplier" />
+          <link uin="k5mja30zyqo_l">
+            <property name="$metaclass" value="Dependency Link" />
+            <property name="$name" value="Dependency Link1" />
+            <participant referencedUin="design:link:::pmaelqr32rt_l:04xklgptcer_n:zvurwb2ziij_n:b4nj75aag0k_n" role="Client" />
+            <participant referencedUin="delphi:e_method:src:DelphiDataSnapClient:Login.TFrmLogin.Button1Click(System.TObject)" role="Supplier" />
+          </link>
+        </link>
+      </node>
+    </node>
+    <node uin="9cctdxz6zfq_n">
+      <property name="$metaclass" value="Object" />
+      <property name="$name" value="initial" />
+      <property name="@Constructed" value="False" />
+      <property name="@Destructed" value="False" />
+      <link uin="fcdthon8kor_l">
+        <property name="$metaclass" value="Dependency Link" />
+        <property name="$name" value="Dependency Link1" />
+        <participant referencedUin="design:node:::9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="delphi:e_class:src:DelphiDataSnapClient:Login.TFrmLogin" role="Supplier" />
+      </link>
+      <node uin="jb3t3nnsuwo_n">
+        <property name="$metaclass" value="Activation" />
+        <property name="$name" value="Activation1" />
+        <property name="@OrderNumber" value="1" />
+        <property name="@PredecessorUin" value="design:link:::pmaelqr32rt_l" />
+        <link uin="hqi8kkpu2to_l">
+          <property name="$metaclass" value="Message Link" />
+          <property name="$name" value="Message Link1" />
+          <property name="@Operation" value="'Text.get():Controls.TCaption'" />
+          <property name="@OrderNumber" value="1" />
+          <participant referencedUin="design:node:::jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+          <participant referencedUin="design:node:::wv3editqm7q_n:b0y55couzgn_n:b4nj75aag0k_n" role="Supplier" />
+          <link uin="6uwptbmkcnj_l">
+            <property name="$metaclass" value="Dependency Link" />
+            <property name="$name" value="Dependency Link1" />
+            <participant referencedUin="design:link:::hqi8kkpu2to_l:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+            <participant referencedUin="delphi:e_method:lib:DelphiWin32:ExtCtrls.TButtonedEdit.Text.get" role="Supplier" />
+          </link>
+        </link>
+        <link uin="x60cei1i0jf_l">
+          <property name="$metaclass" value="Message Link" />
+          <property name="$name" value="Message Link2" />
+          <property name="@Arguments" value="f1" />
+          <property name="@Operation" value="'Trim(System.string):System.string'" />
+          <property name="@OrderNumber" value="2" />
+          <participant referencedUin="design:node:::jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+          <participant referencedUin="design:node:::18fy14ljo7j_n:qtq7h4hem1s_n:b4nj75aag0k_n" role="Supplier" />
+          <link uin="b8vai5wfy2i_l">
+            <property name="$metaclass" value="Dependency Link" />
+            <property name="$name" value="Dependency Link1" />
+            <participant referencedUin="design:link:::x60cei1i0jf_l:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+            <participant referencedUin="delphi:e_method:lib:DelphiWin32:SysUtils.Trim(System.string)" role="Supplier" />
+          </link>
+        </link>
+        <node uin="71y9oke5fth_n">
+          <property name="$metaclass" value="Conditional Block" />
+          <property name="$name" value="Statement Block1" />
+          <property name="@OrderNumber" value="2" />
+          <property name="@StatementExpression" value="Trim(edUserName.Text) = ''" />
+          <property name="@StatementType" value="if" />
+          <property name="@StmtOrderNumber" value="1" />
+          <link uin="6mig1nkj2k_l">
+            <property name="$metaclass" value="Message Link" />
+            <property name="$name" value="Message Link1" />
+            <property name="@Arguments" value="" />
+            <property name="@Operation" value="'SetFocus():'" />
+            <property name="@OrderNumber" value="3" />
+            <participant referencedUin="design:node:::71y9oke5fth_n:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+            <participant referencedUin="design:node:::gguq5x16wjo_n:b0y55couzgn_n:b4nj75aag0k_n" role="Supplier" />
+            <link uin="dc3k200eber_l">
+              <property name="$metaclass" value="Dependency Link" />
+              <property name="$name" value="Dependency Link1" />
+              <participant referencedUin="design:link:::6mig1nkj2k_l:71y9oke5fth_n:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+              <participant referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetFocus()" role="Supplier" />
+            </link>
+          </link>
+          <link uin="qv11jskp16i_l">
+            <property name="$metaclass" value="Message Link" />
+            <property name="$name" value="Message Link2" />
+            <property name="@Arguments" value="f2" />
+            <property name="@Creation" value="True" />
+            <property name="@Operation" value="'Create(System.string)'" />
+            <property name="@OrderNumber" value="4" />
+            <property name="@Return" value="c1" />
+            <participant referencedUin="design:node:::71y9oke5fth_n:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+            <participant referencedUin="design:node:::r00s3024hsj_n:0kz4sskrasl_n:b4nj75aag0k_n" role="Supplier" />
+            <link uin="3693qu0di5p_l">
+              <property name="$metaclass" value="Dependency Link" />
+              <property name="$name" value="Dependency Link1" />
+              <participant referencedUin="design:link:::qv11jskp16i_l:71y9oke5fth_n:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+              <participant referencedUin="delphi:e_method:lib:DelphiWin32:SysUtils.Exception.Create(System.string)" role="Supplier" />
+            </link>
+          </link>
+        </node>
+        <link uin="npirid58hoo_l">
+          <property name="$metaclass" value="Message Link" />
+          <property name="$name" value="Message Link3" />
+          <property name="@Operation" value="'Text.get():Controls.TCaption'" />
+          <property name="@OrderNumber" value="5" />
+          <participant referencedUin="design:node:::jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+          <participant referencedUin="design:node:::tcrdwxc6c3h_n:irpu9w4e7uj_n:b4nj75aag0k_n" role="Supplier" />
+          <link uin="gtoxovtp4cf_l">
+            <property name="$metaclass" value="Dependency Link" />
+            <property name="$name" value="Dependency Link1" />
+            <participant referencedUin="design:link:::npirid58hoo_l:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+            <participant referencedUin="delphi:e_method:lib:DelphiWin32:ExtCtrls.TButtonedEdit.Text.get" role="Supplier" />
+          </link>
+        </link>
+        <link uin="68yxj75hmht_l">
+          <property name="$metaclass" value="Message Link" />
+          <property name="$name" value="Message Link4" />
+          <property name="@Arguments" value="f3" />
+          <property name="@Operation" value="'Trim(System.string):System.string'" />
+          <property name="@OrderNumber" value="6" />
+          <participant referencedUin="design:node:::jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+          <participant referencedUin="design:node:::c8t4nrfdeof_n:qtq7h4hem1s_n:b4nj75aag0k_n" role="Supplier" />
+          <link uin="r00kcoov6ek_l">
+            <property name="$metaclass" value="Dependency Link" />
+            <property name="$name" value="Dependency Link1" />
+            <participant referencedUin="design:link:::68yxj75hmht_l:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+            <participant referencedUin="delphi:e_method:lib:DelphiWin32:SysUtils.Trim(System.string)" role="Supplier" />
+          </link>
+        </link>
+        <node uin="jydrn19dxxs_n">
+          <property name="$metaclass" value="Conditional Block" />
+          <property name="$name" value="Statement Block2" />
+          <property name="@OrderNumber" value="6" />
+          <property name="@StatementExpression" value="Trim(edPassowrd.Text) = ''" />
+          <property name="@StatementType" value="if" />
+          <property name="@StmtOrderNumber" value="1" />
+          <link uin="03tp60migfn_l">
+            <property name="$metaclass" value="Message Link" />
+            <property name="$name" value="Message Link1" />
+            <property name="@Arguments" value="" />
+            <property name="@Operation" value="'SetFocus():'" />
+            <property name="@OrderNumber" value="7" />
+            <participant referencedUin="design:node:::jydrn19dxxs_n:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+            <participant referencedUin="design:node:::01sy003m8q_n:irpu9w4e7uj_n:b4nj75aag0k_n" role="Supplier" />
+            <link uin="d0qk7sazm0s_l">
+              <property name="$metaclass" value="Dependency Link" />
+              <property name="$name" value="Dependency Link1" />
+              <participant referencedUin="design:link:::03tp60migfn_l:jydrn19dxxs_n:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+              <participant referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetFocus()" role="Supplier" />
+            </link>
+          </link>
+          <link uin="uq60h0i1j9g_l">
+            <property name="$metaclass" value="Message Link" />
+            <property name="$name" value="Message Link2" />
+            <property name="@Arguments" value="f4" />
+            <property name="@Creation" value="True" />
+            <property name="@Operation" value="'Create(System.string)'" />
+            <property name="@OrderNumber" value="8" />
+            <property name="@Return" value="c2" />
+            <participant referencedUin="design:node:::jydrn19dxxs_n:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+            <participant referencedUin="design:node:::uflwgftftck_n:bruu5ogxkpp_n:b4nj75aag0k_n" role="Supplier" />
+            <link uin="4hx6b920mff_l">
+              <property name="$metaclass" value="Dependency Link" />
+              <property name="$name" value="Dependency Link1" />
+              <participant referencedUin="design:link:::uq60h0i1j9g_l:jydrn19dxxs_n:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+              <participant referencedUin="delphi:e_method:lib:DelphiWin32:SysUtils.Exception.Create(System.string)" role="Supplier" />
+            </link>
+          </link>
+        </node>
+        <link uin="jhxqe88r0yn_l">
+          <property name="$metaclass" value="Message Link" />
+          <property name="$name" value="Message Link5" />
+          <property name="@Operation" value="'Text.get():Controls.TCaption'" />
+          <property name="@OrderNumber" value="9" />
+          <participant referencedUin="design:node:::jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+          <participant referencedUin="design:node:::xcaekuwr3yi_n:d4wcjoou1lg_n:b4nj75aag0k_n" role="Supplier" />
+          <link uin="08xvl0at07g_l">
+            <property name="$metaclass" value="Dependency Link" />
+            <property name="$name" value="Dependency Link1" />
+            <participant referencedUin="design:link:::jhxqe88r0yn_l:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+            <participant referencedUin="delphi:e_method:lib:DelphiWin32:ExtCtrls.TButtonedEdit.Text.get" role="Supplier" />
+          </link>
+        </link>
+        <link uin="lnf34wnmx3m_l">
+          <property name="$metaclass" value="Message Link" />
+          <property name="$name" value="Message Link6" />
+          <property name="@Arguments" value="f5" />
+          <property name="@Operation" value="'Trim(System.string):System.string'" />
+          <property name="@OrderNumber" value="10" />
+          <participant referencedUin="design:node:::jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+          <participant referencedUin="design:node:::i4bwq9l00dg_n:qtq7h4hem1s_n:b4nj75aag0k_n" role="Supplier" />
+          <link uin="sol09s8i1of_l">
+            <property name="$metaclass" value="Dependency Link" />
+            <property name="$name" value="Dependency Link1" />
+            <participant referencedUin="design:link:::lnf34wnmx3m_l:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+            <participant referencedUin="delphi:e_method:lib:DelphiWin32:SysUtils.Trim(System.string)" role="Supplier" />
+          </link>
+        </link>
+        <node uin="h2b0wr1z3k_n">
+          <property name="$metaclass" value="Conditional Block" />
+          <property name="$name" value="Statement Block3" />
+          <property name="@OrderNumber" value="10" />
+          <property name="@StatementExpression" value="Trim(edDSServer.Text) = ''" />
+          <property name="@StatementType" value="if" />
+          <property name="@StmtOrderNumber" value="1" />
+          <link uin="mz9w40end3p_l">
+            <property name="$metaclass" value="Message Link" />
+            <property name="$name" value="Message Link1" />
+            <property name="@Arguments" value="" />
+            <property name="@Operation" value="'SetFocus():'" />
+            <property name="@OrderNumber" value="11" />
+            <participant referencedUin="design:node:::h2b0wr1z3k_n:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+            <participant referencedUin="design:node:::cgellwp9bmm_n:d4wcjoou1lg_n:b4nj75aag0k_n" role="Supplier" />
+            <link uin="0a9y2aludfj_l">
+              <property name="$metaclass" value="Dependency Link" />
+              <property name="$name" value="Dependency Link1" />
+              <participant referencedUin="design:link:::mz9w40end3p_l:h2b0wr1z3k_n:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+              <participant referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetFocus()" role="Supplier" />
+            </link>
+          </link>
+          <link uin="r58q55t5vli_l">
+            <property name="$metaclass" value="Message Link" />
+            <property name="$name" value="Message Link2" />
+            <property name="@Arguments" value="f6" />
+            <property name="@Creation" value="True" />
+            <property name="@Operation" value="'Create(System.string)'" />
+            <property name="@OrderNumber" value="12" />
+            <property name="@Return" value="c3" />
+            <participant referencedUin="design:node:::h2b0wr1z3k_n:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+            <participant referencedUin="design:node:::0za57xyvuqj_n:ez3bnsq4vsj_n:b4nj75aag0k_n" role="Supplier" />
+            <link uin="tdcwxl0rkti_l">
+              <property name="$metaclass" value="Dependency Link" />
+              <property name="$name" value="Dependency Link1" />
+              <participant referencedUin="design:link:::r58q55t5vli_l:h2b0wr1z3k_n:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+              <participant referencedUin="delphi:e_method:lib:DelphiWin32:SysUtils.Exception.Create(System.string)" role="Supplier" />
+            </link>
+          </link>
+        </node>
+        <node uin="6gdh1gaoe6r_n">
+          <property name="$metaclass" value="Activation" />
+          <property name="$name" value="Activation1" />
+          <property name="@OrderNumber" value="2" />
+          <property name="@PredecessorUin" value="design:link:::bj1ucibeogo_l" />
+        </node>
+        <link uin="bj1ucibeogo_l">
+          <property name="$metaclass" value="Message Link" />
+          <property name="$name" value="Message Link7" />
+          <property name="@Operation" value="'ModalResult.set()'" />
+          <property name="@OrderNumber" value="13" />
+          <participant referencedUin="design:node:::jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+          <participant referencedUin="design:node:::6gdh1gaoe6r_n:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Supplier" />
+          <link uin="fj0x0jpsqsg_l">
+            <property name="$metaclass" value="Dependency Link" />
+            <property name="$name" value="Dependency Link1" />
+            <participant referencedUin="design:link:::bj1ucibeogo_l:jb3t3nnsuwo_n:9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+            <participant referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.ModalResult.set" role="Supplier" />
+          </link>
+        </link>
+      </node>
+      <link uin="rlodkdug8tm_l">
+        <property name="$metaclass" value="Collaboration Link" />
+        <property name="$name" value="Collaboration Link1" />
+        <participant referencedUin="design:node:::9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="design:node:::b0y55couzgn_n:b4nj75aag0k_n" role="Supplier" />
+      </link>
+      <link uin="6e2rr9jajbg_l">
+        <property name="$metaclass" value="Collaboration Link" />
+        <property name="$name" value="Collaboration Link2" />
+        <participant referencedUin="design:node:::9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="design:node:::qtq7h4hem1s_n:b4nj75aag0k_n" role="Supplier" />
+      </link>
+      <link uin="m7hmdo0fk5j_l">
+        <property name="$metaclass" value="Collaboration Link" />
+        <property name="$name" value="Collaboration Link3" />
+        <participant referencedUin="design:node:::9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="design:node:::0kz4sskrasl_n:b4nj75aag0k_n" role="Supplier" />
+      </link>
+      <link uin="5yv56njo4ok_l">
+        <property name="$metaclass" value="Collaboration Link" />
+        <property name="$name" value="Collaboration Link4" />
+        <participant referencedUin="design:node:::9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="design:node:::irpu9w4e7uj_n:b4nj75aag0k_n" role="Supplier" />
+      </link>
+      <link uin="uojxv38cqxf_l">
+        <property name="$metaclass" value="Collaboration Link" />
+        <property name="$name" value="Collaboration Link5" />
+        <participant referencedUin="design:node:::9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="design:node:::bruu5ogxkpp_n:b4nj75aag0k_n" role="Supplier" />
+      </link>
+      <link uin="e6judxdgsnn_l">
+        <property name="$metaclass" value="Collaboration Link" />
+        <property name="$name" value="Collaboration Link6" />
+        <participant referencedUin="design:node:::9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="design:node:::d4wcjoou1lg_n:b4nj75aag0k_n" role="Supplier" />
+      </link>
+      <link uin="w46bgpc2yfh_l">
+        <property name="$metaclass" value="Collaboration Link" />
+        <property name="$name" value="Collaboration Link7" />
+        <participant referencedUin="design:node:::9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="design:node:::ez3bnsq4vsj_n:b4nj75aag0k_n" role="Supplier" />
+      </link>
+      <link uin="7w42xgsbpxo_l">
+        <property name="$metaclass" value="Collaboration Link" />
+        <property name="$name" value="Collaboration Link8" />
+        <participant referencedUin="design:node:::9cctdxz6zfq_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="design:node:::9cctdxz6zfq_n:b4nj75aag0k_n" role="Supplier" />
+      </link>
+    </node>
+    <node uin="b0y55couzgn_n">
+      <property name="$metaclass" value="Object" />
+      <property name="$name" value="b1" />
+      <property name="@Constructed" value="False" />
+      <property name="@Destructed" value="False" />
+      <link uin="av05ne84out_l">
+        <property name="$metaclass" value="Dependency Link" />
+        <property name="$name" value="Dependency Link1" />
+        <participant referencedUin="design:node:::b0y55couzgn_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="delphi:e_class:lib:DelphiWin32:ExtCtrls.TButtonedEdit" role="Supplier" />
+      </link>
+      <node uin="wv3editqm7q_n">
+        <property name="$metaclass" value="Activation" />
+        <property name="$name" value="Activation1" />
+        <property name="@OrderNumber" value="1" />
+        <property name="@PredecessorUin" value="design:link:::hqi8kkpu2to_l" />
+      </node>
+      <node uin="gguq5x16wjo_n">
+        <property name="$metaclass" value="Activation" />
+        <property name="$name" value="Activation2" />
+        <property name="@OrderNumber" value="2" />
+        <property name="@PredecessorUin" value="design:link:::6mig1nkj2k_l" />
+      </node>
+    </node>
+    <node uin="qtq7h4hem1s_n">
+      <property name="$metaclass" value="Object" />
+      <property name="$name" value="static" />
+      <property name="@Constructed" value="False" />
+      <property name="@Destructed" value="False" />
+      <link uin="s1tzo15t6op_l">
+        <property name="$metaclass" value="Dependency Link" />
+        <property name="$name" value="Dependency Link1" />
+        <participant referencedUin="design:node:::qtq7h4hem1s_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="delphi:e_class:lib:DelphiWin32:SysUtils.@unitclass" role="Supplier" />
+      </link>
+      <node uin="18fy14ljo7j_n">
+        <property name="$metaclass" value="Activation" />
+        <property name="$name" value="Activation1" />
+        <property name="@OrderNumber" value="1" />
+        <property name="@PredecessorUin" value="design:link:::x60cei1i0jf_l" />
+      </node>
+      <node uin="c8t4nrfdeof_n">
+        <property name="$metaclass" value="Activation" />
+        <property name="$name" value="Activation2" />
+        <property name="@OrderNumber" value="2" />
+        <property name="@PredecessorUin" value="design:link:::68yxj75hmht_l" />
+      </node>
+      <node uin="i4bwq9l00dg_n">
+        <property name="$metaclass" value="Activation" />
+        <property name="$name" value="Activation3" />
+        <property name="@OrderNumber" value="3" />
+        <property name="@PredecessorUin" value="design:link:::lnf34wnmx3m_l" />
+      </node>
+    </node>
+    <node uin="0kz4sskrasl_n">
+      <property name="$metaclass" value="Object" />
+      <property name="$name" value="c1" />
+      <property name="@Constructed" value="True" />
+      <link uin="1myg5zkifrg_l">
+        <property name="$metaclass" value="Dependency Link" />
+        <property name="$name" value="Dependency Link1" />
+        <participant referencedUin="design:node:::0kz4sskrasl_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="delphi:e_class:lib:DelphiWin32:SysUtils.Exception" role="Supplier" />
+      </link>
+      <node uin="r00s3024hsj_n">
+        <property name="$metaclass" value="Activation" />
+        <property name="$name" value="Activation1" />
+        <property name="@OrderNumber" value="1" />
+        <property name="@PredecessorUin" value="design:link:::qv11jskp16i_l" />
+      </node>
+    </node>
+    <node uin="irpu9w4e7uj_n">
+      <property name="$metaclass" value="Object" />
+      <property name="$name" value="b2" />
+      <property name="@Constructed" value="False" />
+      <property name="@Destructed" value="False" />
+      <link uin="ymco0thuoxk_l">
+        <property name="$metaclass" value="Dependency Link" />
+        <property name="$name" value="Dependency Link1" />
+        <participant referencedUin="design:node:::irpu9w4e7uj_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="delphi:e_class:lib:DelphiWin32:ExtCtrls.TButtonedEdit" role="Supplier" />
+      </link>
+      <node uin="tcrdwxc6c3h_n">
+        <property name="$metaclass" value="Activation" />
+        <property name="$name" value="Activation1" />
+        <property name="@OrderNumber" value="1" />
+        <property name="@PredecessorUin" value="design:link:::npirid58hoo_l" />
+      </node>
+      <node uin="01sy003m8q_n">
+        <property name="$metaclass" value="Activation" />
+        <property name="$name" value="Activation2" />
+        <property name="@OrderNumber" value="2" />
+        <property name="@PredecessorUin" value="design:link:::03tp60migfn_l" />
+      </node>
+    </node>
+    <node uin="bruu5ogxkpp_n">
+      <property name="$metaclass" value="Object" />
+      <property name="$name" value="c2" />
+      <property name="@Constructed" value="True" />
+      <link uin="ee699nlngts_l">
+        <property name="$metaclass" value="Dependency Link" />
+        <property name="$name" value="Dependency Link1" />
+        <participant referencedUin="design:node:::bruu5ogxkpp_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="delphi:e_class:lib:DelphiWin32:SysUtils.Exception" role="Supplier" />
+      </link>
+      <node uin="uflwgftftck_n">
+        <property name="$metaclass" value="Activation" />
+        <property name="$name" value="Activation1" />
+        <property name="@OrderNumber" value="1" />
+        <property name="@PredecessorUin" value="design:link:::uq60h0i1j9g_l" />
+      </node>
+    </node>
+    <node uin="d4wcjoou1lg_n">
+      <property name="$metaclass" value="Object" />
+      <property name="$name" value="b3" />
+      <property name="@Constructed" value="False" />
+      <property name="@Destructed" value="False" />
+      <link uin="3c003v4lhao_l">
+        <property name="$metaclass" value="Dependency Link" />
+        <property name="$name" value="Dependency Link1" />
+        <participant referencedUin="design:node:::d4wcjoou1lg_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="delphi:e_class:lib:DelphiWin32:ExtCtrls.TButtonedEdit" role="Supplier" />
+      </link>
+      <node uin="xcaekuwr3yi_n">
+        <property name="$metaclass" value="Activation" />
+        <property name="$name" value="Activation1" />
+        <property name="@OrderNumber" value="1" />
+        <property name="@PredecessorUin" value="design:link:::jhxqe88r0yn_l" />
+      </node>
+      <node uin="cgellwp9bmm_n">
+        <property name="$metaclass" value="Activation" />
+        <property name="$name" value="Activation2" />
+        <property name="@OrderNumber" value="2" />
+        <property name="@PredecessorUin" value="design:link:::mz9w40end3p_l" />
+      </node>
+    </node>
+    <node uin="ez3bnsq4vsj_n">
+      <property name="$metaclass" value="Object" />
+      <property name="$name" value="c3" />
+      <property name="@Constructed" value="True" />
+      <link uin="i9m31skp27j_l">
+        <property name="$metaclass" value="Dependency Link" />
+        <property name="$name" value="Dependency Link1" />
+        <participant referencedUin="design:node:::ez3bnsq4vsj_n:b4nj75aag0k_n" role="Client" />
+        <participant referencedUin="delphi:e_class:lib:DelphiWin32:SysUtils.Exception" role="Supplier" />
+      </link>
+      <node uin="0za57xyvuqj_n">
+        <property name="$metaclass" value="Activation" />
+        <property name="$name" value="Activation1" />
+        <property name="@OrderNumber" value="1" />
+        <property name="@PredecessorUin" value="design:link:::r58q55t5vli_l" />
+      </node>
+    </node>
+  </node>
+</nodeSet>

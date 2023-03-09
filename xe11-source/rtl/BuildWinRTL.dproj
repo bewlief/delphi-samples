@@ -1,0 +1,519 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{2F2E0144-BB24-44E6-9AA3-35BDC647BD4D}</ProjectGuid>
+        <MainSource>BuildWinRTL.dpk</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Release</Config>
+        <TargetedPlatforms>3</TargetedPlatforms>
+        <AppType>Package</AppType>
+        <FrameworkType>None</FrameworkType>
+        <ProjectVersion>19.2</ProjectVersion>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Android' and '$(Base)'=='true') or '$(Base_Android)'!=''">
+        <Base_Android>true</Base_Android>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Android64' and '$(Base)'=='true') or '$(Base_Android64)'!=''">
+        <Base_Android64>true</Base_Android64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='iOSDevice64' and '$(Base)'=='true') or '$(Base_iOSDevice64)'!=''">
+        <Base_iOSDevice64>true</Base_iOSDevice64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='OSX64' and '$(Base)'=='true') or '$(Base_OSX64)'!=''">
+        <Base_OSX64>true</Base_OSX64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='iOSDevice64' and '$(Cfg_2)'=='true') or '$(Cfg_2_iOSDevice64)'!=''">
+        <Cfg_2_iOSDevice64>true</Cfg_2_iOSDevice64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='OSX64' and '$(Cfg_2)'=='true') or '$(Cfg_2_OSX64)'!=''">
+        <Cfg_2_OSX64>true</Cfg_2_OSX64>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <SanitizedProjectName>BuildWinRTL</SanitizedProjectName>
+        <DCC_UNSUPPORTED_CONSTRUCT>false</DCC_UNSUPPORTED_CONSTRUCT>
+        <DCC_SYMBOL_DEPRECATED>false</DCC_SYMBOL_DEPRECATED>
+        <DCC_SYMBOL_PLATFORM>false</DCC_SYMBOL_PLATFORM>
+        <DCC_UNIT_PLATFORM>false</DCC_UNIT_PLATFORM>
+        <DCC_UnitSearchPath>$(BDSCOMMONDIR)\lib\$(Platform);$(DCC_UnitSearchPath)</DCC_UnitSearchPath>
+        <DCC_DcuOutput>$(BDSCOMMONDIR)\lib\$(Platform)</DCC_DcuOutput>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_OutputNeverBuildDcps>true</DCC_OutputNeverBuildDcps>
+        <DCC_Description>Windows RTL Builder</DCC_Description>
+        <RuntimeOnlyPackage>true</RuntimeOnlyPackage>
+        <GenPackage>true</GenPackage>
+        <DCC_N>false</DCC_N>
+        <DCC_S>false</DCC_S>
+        <GenDll>true</GenDll>
+        <DCC_K>false</DCC_K>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <DCC_E>false</DCC_E>
+        <DCC_F>false</DCC_F>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Android)'!=''">
+        <EnabledSysJars>android-support-v4.dex.jar;cloud-messaging.dex.jar;fmx.dex.jar;google-analytics-v2.dex.jar;google-play-billing.dex.jar;google-play-licensing.dex.jar;google-play-services.dex.jar</EnabledSysJars>
+        <VerInfo_Keys>package=com.embarcadero.$(MSBuildProjectName);label=$(MSBuildProjectName);versionCode=1;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=auto;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=</VerInfo_Keys>
+        <BT_BuildType>Debug</BT_BuildType>
+        <Android_LauncherIcon192>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_192x192.png</Android_LauncherIcon192>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Android64)'!=''">
+        <VerInfo_Keys>package=com.embarcadero.$(MSBuildProjectName);label=$(MSBuildProjectName);versionCode=1;versionName=1.0.0;persistent=False;restoreAnyVersion=False;installLocation=auto;largeHeap=False;theme=TitleBar;hardwareAccelerated=true;apiKey=</VerInfo_Keys>
+        <BT_BuildType>Debug</BT_BuildType>
+        <Base_Android>true</Base_Android>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+        <EnabledSysJars>android-support-v4.dex.jar;cloud-messaging.dex.jar;fmx.dex.jar;google-analytics-v2.dex.jar;google-play-billing.dex.jar;google-play-licensing.dex.jar;google-play-services.dex.jar</EnabledSysJars>
+        <Android_LauncherIcon192>$(BDS)\bin\Artwork\Android\FM_LauncherIcon_192x192.png</Android_LauncherIcon192>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_iOSDevice64)'!=''">
+        <iOS_AppStore1024>$(BDS)\bin\Artwork\iOS\iPhone\FM_ApplicationIcon_1024x1024.png</iOS_AppStore1024>
+        <VerInfo_Keys>CFBundleName=$(MSBuildProjectName);CFBundleDevelopmentRegion=en;CFBundleDisplayName=$(MSBuildProjectName);CFBundleIdentifier=$(MSBuildProjectName);CFBundleInfoDictionaryVersion=7.1;CFBundleVersion=1.0.0;CFBundleShortVersionString=1.0.0;CFBundlePackageType=APPL;CFBundleSignature=????;LSRequiresIPhoneOS=true;CFBundleAllowMixedLocalizations=YES;CFBundleExecutable=$(MSBuildProjectName);UIDeviceFamily=iPhone &amp; iPad;NSLocationAlwaysUsageDescription=The reason for accessing the location information of the user;NSLocationWhenInUseUsageDescription=The reason for accessing the location information of the user;NSLocationAlwaysAndWhenInUseUsageDescription=The reason for accessing the location information of the user;UIBackgroundModes=;NSContactsUsageDescription=The reason for accessing the contacts;NSPhotoLibraryUsageDescription=The reason for accessing the photo library;NSPhotoLibraryAddUsageDescription=The reason for adding to the photo library;NSCameraUsageDescription=The reason for accessing the camera;NSFaceIDUsageDescription=The reason for accessing the face id;NSMicrophoneUsageDescription=The reason for accessing the microphone;NSSiriUsageDescription=The reason for accessing Siri;ITSAppUsesNonExemptEncryption=false;NSBluetoothAlwaysUsageDescription=The reason for accessing bluetooth;NSBluetoothPeripheralUsageDescription=The reason for accessing bluetooth peripherals;NSCalendarsUsageDescription=The reason for accessing the calendar data;NSRemindersUsageDescription=The reason for accessing the reminders;NSMotionUsageDescription=The reason for accessing the accelerometer;NSSpeechRecognitionUsageDescription=The reason for requesting to send user data to Apple&apos;s speech recognition servers</VerInfo_Keys>
+        <VerInfo_UIDeviceFamily>iPhoneAndiPad</VerInfo_UIDeviceFamily>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <BT_BuildType>Debug</BT_BuildType>
+        <VerInfo_BundleId>$(MSBuildProjectName)</VerInfo_BundleId>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_OSX64)'!=''">
+        <VerInfo_Keys>CFBundleName=$(MSBuildProjectName);CFBundleDisplayName=$(MSBuildProjectName);CFBundleIdentifier=$(MSBuildProjectName);CFBundleVersion=1.0.0;CFBundleShortVersionString=1.0.0;CFBundlePackageType=APPL;CFBundleSignature=????;CFBundleAllowMixedLocalizations=YES;CFBundleExecutable=$(MSBuildProjectName);NSHighResolutionCapable=true;LSApplicationCategoryType=public.app-category.utilities;NSLocationUsageDescription=The reason for accessing the location information of the user;NSContactsUsageDescription=The reason for accessing the contacts;NSCalendarsUsageDescription=The reason for accessing the calendar data;NSRemindersUsageDescription=The reason for accessing the reminders;NSCameraUsageDescription=The reason for accessing the camera;NSMicrophoneUsageDescription=The reason for accessing the microphone;NSMotionUsageDescription=The reason for accessing the accelerometer;NSDesktopFolderUsageDescription=The reason for accessing the Desktop folder;NSDocumentsFolderUsageDescription=The reason for accessing the Documents folder;NSDownloadsFolderUsageDescription=The reason for accessing the Downloads folder;NSNetworkVolumesUsageDescription=The reason for accessing files on a network volume;NSRemovableVolumesUsageDescription=The reason for accessing files on a removable volume;NSSpeechRecognitionUsageDescription=The reason for requesting to send user data to Apple&apos;s speech recognition servers</VerInfo_Keys>
+        <BT_BuildType>Debug</BT_BuildType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;$(DCC_Namespace)</DCC_Namespace>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_iOSDevice64)'!=''">
+        <DCC_RemoteDebug>true</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_OSX64)'!=''">
+        <DCC_RemoteDebug>true</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="common\System.Actions.pas"/>
+        <DCCReference Include="common\System.Character.pas"/>
+        <DCCReference Include="common\System.Classes.pas"/>
+        <DCCReference Include="common\System.ConvUtils.pas"/>
+        <DCCReference Include="common\System.DateUtils.pas"/>
+        <DCCReference Include="common\System.Diagnostics.pas"/>
+        <DCCReference Include="common\System.Generics.Collections.pas"/>
+        <DCCReference Include="common\System.Generics.Defaults.pas"/>
+        <DCCReference Include="common\System.Hash.pas"/>
+        <DCCReference Include="common\System.HelpIntfs.pas"/>
+        <DCCReference Include="common\System.IniFiles.pas"/>
+        <DCCReference Include="common\System.IOUtils.pas"/>
+        <DCCReference Include="common\System.Masks.pas"/>
+        <DCCReference Include="common\System.MaskUtils.pas"/>
+        <DCCReference Include="common\System.Math.pas"/>
+        <DCCReference Include="common\System.Math.Vectors.pas"/>
+        <DCCReference Include="common\System.Messaging.pas"/>
+        <DCCReference Include="common\System.NetEncoding.pas"/>
+        <DCCReference Include="common\System.ObjAuto.pas"/>
+        <DCCReference Include="common\System.Permissions.pas"/>
+        <DCCReference Include="common\System.RegularExpressions.pas"/>
+        <DCCReference Include="common\System.RegularExpressionsAPI.pas"/>
+        <DCCReference Include="common\System.RegularExpressionsConsts.pas"/>
+        <DCCReference Include="common\System.RegularExpressionsCore.pas"/>
+        <DCCReference Include="common\System.RTLConsts.pas"/>
+        <DCCReference Include="common\System.Rtti.pas"/>
+        <DCCReference Include="common\System.Sqlite.pas"/>
+        <DCCReference Include="common\System.StartUpCopy.pas"/>
+        <DCCReference Include="common\System.StdConvs.pas"/>
+        <DCCReference Include="common\System.StrUtils.pas"/>
+        <DCCReference Include="common\System.SyncObjs.pas"/>
+        <DCCReference Include="sys\System.SysConst.pas"/>
+        <DCCReference Include="sys\System.SysUtils.pas"/>
+        <DCCReference Include="common\System.Threading.pas"/>
+        <DCCReference Include="common\System.TimeSpan.pas"/>
+        <DCCReference Include="sys\System.Types.pas"/>
+        <DCCReference Include="common\System.TypInfo.pas"/>
+        <DCCReference Include="common\System.UIConsts.pas"/>
+        <DCCReference Include="common\System.UITypes.pas"/>
+        <DCCReference Include="common\System.VarCmplx.pas"/>
+        <DCCReference Include="common\System.VarConv.pas"/>
+        <DCCReference Include="sys\System.Variants.pas"/>
+        <DCCReference Include="sys\System.VarUtils.pas"/>
+        <DCCReference Include="common\System.Zip.pas"/>
+        <DCCReference Include="common\System.ZLib.pas"/>
+        <DCCReference Include="common\System.ZLibConst.pas"/>
+        <DCCReference Include="common\System.JSON.pas"/>
+        <DCCReference Include="common\System.JSON.BSON.pas"/>
+        <DCCReference Include="common\System.JSON.Builders.pas"/>
+        <DCCReference Include="common\System.JSON.Converters.pas"/>
+        <DCCReference Include="common\System.JSON.Readers.pas"/>
+        <DCCReference Include="common\System.JSON.Serializers.pas"/>
+        <DCCReference Include="common\System.JSON.Types.pas"/>
+        <DCCReference Include="common\System.JSON.Utils.pas"/>
+        <DCCReference Include="common\System.JSON.Writers.pas"/>
+        <DCCReference Include="common\System.JSONConsts.pas"/>
+        <DCCReference Include="net\System.Net.FileClient.pas"/>
+        <DCCReference Include="net\System.Net.HTTPClientComponent.pas"/>
+        <DCCReference Include="net\System.Net.Mime.pas"/>
+        <DCCReference Include="net\System.Net.Socket.pas"/>
+        <DCCReference Include="net\System.Net.URLClient.pas"/>
+        <DCCReference Include="net\System.NetConsts.pas"/>
+        <DCCReference Include="common\System.ImageList.pas"/>
+        <DCCReference Include="common\System.PushNotification.pas"/>
+        <DCCReference Include="common\System.AnsiStrings.pas"/>
+        <DCCReference Include="common\System.Contnrs.pas"/>
+        <DCCReference Include="common\System.WideStrings.pas"/>
+        <DCCReference Include="common\System.WideStrUtils.pas"/>
+        <DCCReference Include="common\System.Odbc.pas"/>
+        <DCCReference Include="common\System.Internal.DebugUtils.pas"/>
+        <DCCReference Include="sys\System.Internal.ExcUtils.pas"/>
+        <DCCReference Include="sys\System.Internal.GenericsHlpr.pas"/>
+        <DCCReference Include="sys\System.Internal.JSONHlpr.pas"/>
+        <DCCReference Include="sys\System.Internal.StrHlpr.pas"/>
+        <DCCReference Include="sys\System.Internal.VarHlpr.pas"/>
+        <DCCReference Include="common\System.Analytics.pas"/>
+        <DCCReference Include="common\System.Analytics.AppAnalytics.pas"/>
+        <DCCReference Include="net\System.Beacon.pas"/>
+        <DCCReference Include="net\System.Beacon.Common.pas"/>
+        <DCCReference Include="net\System.Beacon.Components.pas"/>
+        <DCCReference Include="net\System.Win.Beacon.pas"/>
+        <DCCReference Include="net\System.Bluetooth.pas"/>
+        <DCCReference Include="net\System.Bluetooth.Components.pas"/>
+        <DCCReference Include="net\System.Win.Bluetooth.pas"/>
+        <DCCReference Include="net\System.Win.BluetoothWinRT.pas"/>
+        <DCCReference Include="common\System.Sensors.pas"/>
+        <DCCReference Include="common\System.Sensors.Components.pas"/>
+        <DCCReference Include="common\System.Win.Sensors.pas"/>
+        <DCCReference Include="net\System.Net.HTTPClient.pas"/>
+        <DCCReference Include="net\System.Net.HTTPClient.Win.pas"/>
+        <DCCReference Include="common\System.Notification.pas"/>
+        <DCCReference Include="common\System.Win.Notification.pas"/>
+        <DCCReference Include="common\System.Devices.pas"/>
+        <DCCReference Include="common\System.Win.Devices.pas"/>
+        <DCCReference Include="common\System.Win.ComConst.pas"/>
+        <DCCReference Include="common\System.Win.ComObj.pas"/>
+        <DCCReference Include="common\System.Win.ComObjWrapper.pas"/>
+        <DCCReference Include="common\System.Win.Crtl.pas"/>
+        <DCCReference Include="common\System.Win.HighDpi.pas"/>
+        <DCCReference Include="common\System.Win.IEInterfaces.pas"/>
+        <DCCReference Include="common\System.Win.InternetExplorer.pas"/>
+        <DCCReference Include="common\System.Win.ObjComAuto.pas"/>
+        <DCCReference Include="common\System.Win.OleControls.pas"/>
+        <DCCReference Include="common\System.Win.OleServers.pas"/>
+        <DCCReference Include="common\System.Win.Registry.pas"/>
+        <DCCReference Include="common\System.Win.ScktComp.pas"/>
+        <DCCReference Include="common\System.Win.ShareContract.pas"/>
+        <DCCReference Include="common\System.Win.StdVCL.pas"/>
+        <DCCReference Include="common\System.Win.Taskbar.pas"/>
+        <DCCReference Include="common\System.Win.TaskbarCore.pas"/>
+        <DCCReference Include="common\System.Win.VCLCom.pas"/>
+        <DCCReference Include="common\System.Win.WinRT.pas"/>
+        <DCCReference Include="win\Winapi.AccCtrl.pas"/>
+        <DCCReference Include="win\Winapi.AclAPI.pas"/>
+        <DCCReference Include="win\Winapi.ActiveX.pas"/>
+        <DCCReference Include="win\Winapi.ADOInt.pas"/>
+        <DCCReference Include="win\Winapi.AspTlb.pas"/>
+        <DCCReference Include="win\Winapi.Bluetooth.pas"/>
+        <DCCReference Include="win\Winapi.BluetoothLE.pas"/>
+        <DCCReference Include="win\Winapi.COMAdmin.pas"/>
+        <DCCReference Include="win\Winapi.CommCtrl.pas"/>
+        <DCCReference Include="win\Winapi.CommDlg.pas"/>
+        <DCCReference Include="win\Winapi.ComSvcs.pas"/>
+        <DCCReference Include="win\Winapi.Cor.pas"/>
+        <DCCReference Include="win\Winapi.CorError.pas"/>
+        <DCCReference Include="win\Winapi.CorHdr.pas"/>
+        <DCCReference Include="win\Winapi.Cpl.pas"/>
+        <DCCReference Include="win\Winapi.D2D1.pas"/>
+        <DCCReference Include="win\Winapi.D3D10.pas"/>
+        <DCCReference Include="win\Winapi.D3D10_1.pas"/>
+        <DCCReference Include="win\Winapi.D3D11.pas"/>
+        <DCCReference Include="win\Winapi.D3D11_1.pas"/>
+        <DCCReference Include="win\Winapi.D3D11_2.pas"/>
+        <DCCReference Include="win\Winapi.D3D11_3.pas"/>
+        <DCCReference Include="win\Winapi.D3D11on12.pas"/>
+        <DCCReference Include="win\Winapi.D3D11sdklayers.pas"/>
+        <DCCReference Include="win\Winapi.D3D11Shader.pas"/>
+        <DCCReference Include="win\Winapi.D3D11ShaderTracing.pas"/>
+        <DCCReference Include="win\Winapi.D3D12.pas"/>
+        <DCCReference Include="win\Winapi.D3D12sdklayers.pas"/>
+        <DCCReference Include="win\Winapi.D3D12Shader.pas"/>
+        <DCCReference Include="win\Winapi.D3DCommon.pas"/>
+        <DCCReference Include="win\Winapi.D3DCompiler.pas"/>
+        <DCCReference Include="win\Winapi.D3DX10.pas"/>
+        <DCCReference Include="win\Winapi.D3DX8.pas"/>
+        <DCCReference Include="win\Winapi.D3DX9.pas"/>
+        <DCCReference Include="win\Winapi.DDEml.pas"/>
+        <DCCReference Include="win\Winapi.Direct3D.pas"/>
+        <DCCReference Include="win\Winapi.Direct3D8.pas"/>
+        <DCCReference Include="win\Winapi.Direct3D9.pas"/>
+        <DCCReference Include="win\Winapi.DirectDraw.pas"/>
+        <DCCReference Include="win\Winapi.DirectInput.pas"/>
+        <DCCReference Include="win\Winapi.DirectMusic.pas"/>
+        <DCCReference Include="win\Winapi.DirectPlay8.pas"/>
+        <DCCReference Include="win\Winapi.DirectShow9.pas"/>
+        <DCCReference Include="win\Winapi.DirectSound.pas"/>
+        <DCCReference Include="win\Winapi.Dlgs.pas"/>
+        <DCCReference Include="win\Winapi.DwmApi.pas"/>
+        <DCCReference Include="win\Winapi.DX7toDX8.pas"/>
+        <DCCReference Include="win\Winapi.DxDiag.pas"/>
+        <DCCReference Include="win\Winapi.DXFile.pas"/>
+        <DCCReference Include="win\Winapi.Dxgi.pas"/>
+        <DCCReference Include="win\Winapi.Dxgi1_2.pas"/>
+        <DCCReference Include="win\Winapi.Dxgi1_3.pas"/>
+        <DCCReference Include="win\Winapi.Dxgi1_4.pas"/>
+        <DCCReference Include="win\Winapi.DxgiFormat.pas"/>
+        <DCCReference Include="win\Winapi.DxgiType.pas"/>
+        <DCCReference Include="win\Winapi.DXTypes.pas"/>
+        <DCCReference Include="win\Winapi.FlatSB.pas"/>
+        <DCCReference Include="win\Winapi.Functiondiscovery.pas"/>
+        <DCCReference Include="win\Winapi.GDIPAPI.pas"/>
+        <DCCReference Include="win\Winapi.GDIPOBJ.pas"/>
+        <DCCReference Include="win\Winapi.GDIPUTIL.pas"/>
+        <DCCReference Include="win\Winapi.ImageHlp.pas"/>
+        <DCCReference Include="win\Winapi.Imm.pas"/>
+        <DCCReference Include="win\Winapi.IpExport.pas"/>
+        <DCCReference Include="win\Winapi.IpHlpApi.pas"/>
+        <DCCReference Include="win\Winapi.IpRtrMib.pas"/>
+        <DCCReference Include="win\Winapi.IpTypes.pas"/>
+        <DCCReference Include="win\Winapi.Isapi.pas"/>
+        <DCCReference Include="win\Winapi.Isapi2.pas"/>
+        <DCCReference Include="win\Winapi.KnownFolders.pas"/>
+        <DCCReference Include="win\Winapi.Locationapi.pas"/>
+        <DCCReference Include="win\Winapi.LZExpand.pas"/>
+        <DCCReference Include="win\Winapi.Manipulations.pas"/>
+        <DCCReference Include="win\Winapi.Mapi.pas"/>
+        <DCCReference Include="win\Winapi.Messages.pas"/>
+        <DCCReference Include="win\Winapi.MLang.pas"/>
+        <DCCReference Include="win\Winapi.MMSystem.pas"/>
+        <DCCReference Include="win\Winapi.MsCTF.pas"/>
+        <DCCReference Include="win\WinApi.Mshtmhst.pas"/>
+        <DCCReference Include="win\Winapi.MsInkAut.pas"/>
+        <DCCReference Include="win\Winapi.MsInkAut15.pas"/>
+        <DCCReference Include="win\Winapi.msxml.pas"/>
+        <DCCReference Include="win\Winapi.MSXMLIntf.pas"/>
+        <DCCReference Include="win\Winapi.Mtx.pas"/>
+        <DCCReference Include="win\Winapi.MultiMon.pas"/>
+        <DCCReference Include="win\Winapi.Nb30.pas"/>
+        <DCCReference Include="win\Winapi.ObjectArray.pas"/>
+        <DCCReference Include="win\Winapi.oleacc.pas"/>
+        <DCCReference Include="win\Winapi.OleDB.pas"/>
+        <DCCReference Include="win\Winapi.OleDlg.pas"/>
+        <DCCReference Include="win\Winapi.OpenGL.pas"/>
+        <DCCReference Include="win\Winapi.OpenGLext.pas"/>
+        <DCCReference Include="win\Winapi.PenInputPanel.pas"/>
+        <DCCReference Include="win\Winapi.Penwin.pas"/>
+        <DCCReference Include="win\Winapi.Portabledevicetypes.pas"/>
+        <DCCReference Include="win\Winapi.PropKey.pas"/>
+        <DCCReference Include="win\Winapi.PropSys.pas"/>
+        <DCCReference Include="win\Winapi.PsAPI.pas"/>
+        <DCCReference Include="win\Winapi.Qos.pas"/>
+        <DCCReference Include="win\Winapi.RegStr.pas"/>
+        <DCCReference Include="win\Winapi.RichEdit.pas"/>
+        <DCCReference Include="win\Winapi.RtsCom.pas"/>
+        <DCCReference Include="win\Winapi.Sensors.pas"/>
+        <DCCReference Include="win\Winapi.Sensorsapi.pas"/>
+        <DCCReference Include="win\Winapi.ShellAPI.pas"/>
+        <DCCReference Include="win\Winapi.ShellScaling.pas"/>
+        <DCCReference Include="win\Winapi.SHFolder.pas"/>
+        <DCCReference Include="win\Winapi.ShlObj.pas"/>
+        <DCCReference Include="win\Winapi.ShLwApi.pas"/>
+        <DCCReference Include="win\Winapi.StructuredQuery.pas"/>
+        <DCCReference Include="win\Winapi.StructuredQueryCondition.pas"/>
+        <DCCReference Include="win\Winapi.TlHelp32.pas"/>
+        <DCCReference Include="win\Winapi.TpcShrd.pas"/>
+        <DCCReference Include="win\Winapi.UrlMon.pas"/>
+        <DCCReference Include="win\Winapi.UserEnv.pas"/>
+        <DCCReference Include="win\Winapi.UxTheme.pas"/>
+        <DCCReference Include="win\Winapi.Wbem.pas"/>
+        <DCCReference Include="win\Winapi.Wincodec.pas"/>
+        <DCCReference Include="win\Winapi.WinCred.pas"/>
+        <DCCReference Include="win\Winapi.Windows.pas"/>
+        <DCCReference Include="win\Winapi.WinHTTP.pas"/>
+        <DCCReference Include="win\Winapi.WinInet.pas"/>
+        <DCCReference Include="win\Winapi.WinRT.pas"/>
+        <DCCReference Include="win\Winapi.WinRTMetadata.pas"/>
+        <DCCReference Include="win\Winapi.Winsafer.pas"/>
+        <DCCReference Include="win\Winapi.WinSock.pas"/>
+        <DCCReference Include="win\Winapi.WinSock2.pas"/>
+        <DCCReference Include="win\Winapi.WinSpool.pas"/>
+        <DCCReference Include="win\Winapi.WinSvc.pas"/>
+        <DCCReference Include="win\Winapi.WMF9.pas"/>
+        <DCCReference Include="win\winrt\Winapi.CommonNames.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Networking.PushNotifications.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Perception.pas"/>
+        <DCCReference Include="win\winrt\Winapi.ServicesRT.pas"/>
+        <DCCReference Include="win\winrt\Winapi.ServicesRT.Store.pas"/>
+        <DCCReference Include="win\winrt\Winapi.AI.pas"/>
+        <DCCReference Include="win\winrt\Winapi.ApplicationModel.pas"/>
+        <DCCReference Include="win\winrt\Winapi.ApplicationModel.Background.pas"/>
+        <DCCReference Include="win\winrt\Winapi.ApplicationModel.Contacts.pas"/>
+        <DCCReference Include="win\winrt\Winapi.ApplicationModel.Core.pas"/>
+        <DCCReference Include="win\winrt\Winapi.ApplicationModel.DataTransfer.pas"/>
+        <DCCReference Include="win\winrt\Winapi.CommonTypes.pas"/>
+        <DCCReference Include="win\winrt\Winapi.DataRT.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Devices.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Devices.AllJoyn.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Devices.Bluetooth.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Devices.Bluetooth.Advertisement.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Devices.Enumeration.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Devices.Geolocation.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Devices.Midi.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Devices.PointOfService.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Devices.Scanners.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Devices.Sensors.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Devices.Sms.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Foundation.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Foundation.Collections.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Gaming.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Globalization.pas"/>
+        <DCCReference Include="win\winrt\Winapi.GraphicsRT.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Management.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Media.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Media.Devices.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Media.MediaProperties.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Networking.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Networking.Connectivity.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Networking.NetworkOperators.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Networking.Proximity.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Networking.Sockets.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Networking.Vpn.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Security.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Security.Credentials.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Security.Cryptography.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Storage.pas"/>
+        <DCCReference Include="win\winrt\Winapi.Storage.Streams.pas"/>
+        <DCCReference Include="win\winrt\Winapi.SystemRT.pas"/>
+        <DCCReference Include="win\winrt\Winapi.UI.Notifications.pas"/>
+        <DCCReference Include="win\winrt\Winapi.UI.Text.pas"/>
+        <DCCReference Include="win\winrt\Winapi.UI.ViewManagement.pas"/>
+        <DCCReference Include="win\winrt\Winapi.WebRT.pas"/>
+        <DCCReference Include="win\winrt\Winapi.HSTRINGIterables.pas"/>
+        <DCCReference Include="win\winrt\Winapi.WindowsStore.pas"/>
+        <DCCReference Include="win\winrt\Winapi.WinRT.Utils.pas"/>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType>Package</Borland.ProjectType>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">BuildWinRTL.dpk</Source>
+                </Source>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">1</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1033</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                </VersionInfoKeys>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Android">False</Platform>
+                <Platform value="Android64">False</Platform>
+                <Platform value="iOSDevice64">False</Platform>
+                <Platform value="iOSSimulator">False</Platform>
+                <Platform value="Linux64">False</Platform>
+                <Platform value="OSX64">False</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">True</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="RTL.Build.targets"/>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>

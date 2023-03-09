@@ -1,0 +1,7 @@
+win7style			RCDATA "styles\platform\win\Win7.fsf"
+win8style			RCDATA "styles\platform\win\Win8.fsf"
+win10style			RCDATA "styles\platform\win\Win10.fsf"
+32755				CURSOR "cursors\fmx.sqlwait.cur"
+32756				CURSOR "cursors\fmx.multidrag.cur"
+32759				CURSOR "cursors\fmx.drag.cur"
+32760				CURSOR "cursors\fmx.nodrop.cur"

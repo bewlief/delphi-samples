@@ -1,0 +1,30 @@
+<Project DefaultTargets="default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <Platforms Condition="'$(Platforms)'==''">Win32;Win64;Osx32</Platforms>
+    </PropertyGroup>
+
+    <ItemGroup>
+
+        <PlatformIDEProjects
+            Include="
+                AnimationDemo3D\AnimationDemo3D.dproj;
+                AnimationDemoHD\AnimationDemoHD.dproj;
+                ControlsDemo\ControlsDemo.dproj;
+                CustomListBox\CustomListBox.dproj;
+                ShaderFilters\ShaderFilters.dproj;
+                GUI3D\GUI3D.dproj;
+                customcontrol\customcontrol.dproj;
+                helloworld3d\helloworld3d.dproj;
+                import3ds\import3ds.dproj;
+               MultiLanguage\MultiLanguage.dproj;
+            ">
+            <!-- Remove the empty output directories left behind after the clean -->
+            <RemoveOutputDir>true</RemoveOutputDir>
+        </PlatformIDEProjects>
+
+    </ItemGroup>
+
+    <Import Project="$(TP)\Platform.targets"/>
+
+</Project>

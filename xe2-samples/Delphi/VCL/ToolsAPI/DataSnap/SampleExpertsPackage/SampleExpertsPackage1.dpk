@@ -1,0 +1,57 @@
+
+//---------------------------------------------------------------------------
+
+// This software is Copyright (c) 2011 Embarcadero Technologies, Inc. 
+// You may only use this software if you are an authorized licensee
+// of Delphi, C++Builder or RAD Studio (Embarcadero Products).
+// This software is considered a Redistributable as defined under
+// the software license agreement that comes with the Embarcadero Products
+// and is subject to that software license agreement.
+
+//---------------------------------------------------------------------------
+package SampleExpertsPackage1;
+
+{$R *.res}
+{$R *.dres}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  ExpertsCreators,
+  ExpertsUI;
+
+contains
+  SampleExpertsCreatorsUnit in 'SampleExpertsCreatorsUnit.pas' {SampleExpertsModule: TDataModule},
+  SampleExpertsReg in 'SampleExpertsReg.pas',
+  SampleExpertsUIUnit in 'SampleExpertsUIUnit.pas' {SampleExpertsUIModule: TDataModule},
+  SampleFormOptionsFrame in 'SampleFormOptionsFrame.pas' {FormOptionsFrame: TFrame},
+  SampleAppTypeFrameUnit in 'SampleAppTypeFrameUnit.pas' {ApplicationTypeFrame: TFrame},
+  SampleExpertsFeatures in 'SampleExpertsFeatures.pas',
+  SampleExpertTypes in 'SampleExpertTypes.pas';
+
+end.

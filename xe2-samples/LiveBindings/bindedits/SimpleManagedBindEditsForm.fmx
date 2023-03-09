@@ -1,0 +1,90 @@
+object EditsForm1: TEditsForm1
+  Left = 0
+  Top = 0
+  BiDiMode = bdLeftToRight
+  Caption = 'TEdit Managed Binding Example'
+  ClientHeight = 259
+  ClientWidth = 539
+  Transparency = False
+  Visible = False
+  OnCreate = FormCreate
+  StyleLookup = 'backgroundstyle'
+  object Edit1: TEdit
+    Position.Point = '(72,69)'
+    Width = 100.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 0
+    ReadOnly = False
+    OnChange = EditChange
+    Password = False
+    Text = 'Edit1Text'
+  end
+  object Edit2: TEdit
+    Position.Point = '(73,102)'
+    Width = 100.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 1
+    ReadOnly = False
+    OnChange = EditChange
+    Password = False
+    Text = 'Edit2Text'
+  end
+  object Label1: TLabel
+    Position.Point = '(24,72)'
+    Width = 57.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 2
+    Text = 'Edit1:'
+  end
+  object Label2: TLabel
+    Position.Point = '(24,105)'
+    Width = 49.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 3
+    Text = 'Edit2:'
+  end
+  object LabelHint: TLabel
+    Position.Point = '(16,16)'
+    Width = 369.000000000000000000
+    Height = 41.000000000000000000
+    TabOrder = 4
+    Text = 'LabelHint'
+  end
+  object LabelControl: TLabel
+    Position.Point = '(24,176)'
+    Width = 185.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 5
+    Text = 'LabelControl'
+  end
+  object LabelSource: TLabel
+    Position.Point = '(24,152)'
+    Width = 185.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 6
+    Text = 'LabelSource'
+  end
+  object LabelDirection: TLabel
+    Position.Point = '(24,200)'
+    Width = 273.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 7
+    Text = 'LabelDirection'
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    UseAppManager = True
+    Left = 444
+    Top = 5
+    object BindExpressionEdit11: TBindExpression
+      Category = 'Binding Expressions'
+      ControlComponent = Edit2
+      SourceComponent = Edit1
+      SourceExpression = 'Text'
+      ControlExpression = 'Text'
+      NotifyOutputs = False
+      Direction = dirBidirectional
+    end
+  end
+end

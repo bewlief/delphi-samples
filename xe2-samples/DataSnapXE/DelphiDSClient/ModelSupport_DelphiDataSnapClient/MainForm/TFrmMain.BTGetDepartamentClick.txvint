@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="shuirb2t75odauv9o_v">
+    <property name="$metaclass" value="Interaction Diagram" />
+    <property name="$name" value="TFrmMain.BTGetDepartamentClick" />
+    <property name="@ViewType" value="Sequence" />
+    <reference referencedUin="design:node:::vckub0t3f5ohjm0bp_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="20,20,59,1154" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::g5fp2u7of5ozq1jzm_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="99,20,107,1154" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::hai369xz5o6vs0ur_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="226,20,131,1154" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::47qpy1y8h6omosczk_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="377,107,140,1067" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::kcxlhboqj6owfnb0s_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="537,20,77,1154" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::s6unmtc0w6oiybrnr_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="634,20,131,1154" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::9weo6pmnw6o3i5zah_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="785,20,127,1154" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::e6vhwwko67odua2re_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="932,20,127,1154" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::wb0g1h2pa7oezvvff_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="1079,20,91,1154" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::p5novbg0b7ody9dmj_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="1190,20,75,1154" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::kg6x1pg2h7oxuh6et_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="1285,20,108,1154" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::p7d98jvmh7ofl754p_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="1413,20,108,1154" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::ihk9a5cnm7oo1shdp_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="1541,20,108,1154" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::035gov0mn7opnc8cq_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="1669,20,95,1154" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::jb3bl9osh5omn9gfl_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="24,58,10,1052" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::osk3h18ki5o80mr7r_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="48,58,10,1052" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::suqjw18ki5osevd2t_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="@ChainNumber" value="1" />
+      <property name="seq_sourceAnchor" value="54,78" />
+      <property name="seq_targetAnchor" value="147,78" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::y7ut7a6ju6or2vs3s_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="5,200,10,775" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::clnq4njdo7oridnmj_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="5,989,10,49" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::yqmkhh2pa7odz345s_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="5,320,10,378" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::voariv0mn7olduz8r_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="5,712,10,49" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::oi3bybg0b7o3goa7g_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="5,49,10,315" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::t49kelqfh7odujc5o_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="5,107,10,194" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::hhpuwyro06oh4aadq_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="60,78,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::8nj2kyro06oh0kr0g_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="157,98" />
+      <property name="seq_targetAnchor" value="286,98" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::ru1ecnvki6oxd151f_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="65,40,10,59" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::9xtpanvki6op09qms_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="157,127" />
+      <property name="seq_targetAnchor" value="377,127" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::ybojydjjj6oxauc1j_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="65,113,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::h3joedjjj6ojobtzf_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="157,220" />
+      <property name="seq_targetAnchor" value="442,220" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::hvfob5k4v6o89a4po_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="65,191,10,286" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::m9g4o5k4v6o4xaflq_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="162,298" />
+      <property name="seq_targetAnchor" value="442,298" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::te4hpnjdo7oztg7hl_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="65,980,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::ar31wnjdo7o02k9vm_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="162,1087" />
+      <property name="seq_targetAnchor" value="442,1087" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::4p5eqj5zi6o4jow0o_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="5,30,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::5904j5zi6o0sy9tf_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="452,167" />
+      <property name="seq_targetAnchor" value="457,177" />
+      <property name="seq_bendpoints" value="482,167,482,177" />
+      <property name="seq_bounds_setted_by_user" value="True" />
+    </reference>
+    <reference referencedUin="design:node:::xr004v83w6o1qwuug_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="5,20,10,136" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:node:::3scox0txj6ovzclle_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="33,229,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::h4zjf0txj6o2dlevk_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="157,249" />
+      <property name="seq_targetAnchor" value="570,249" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::49lkwrhgw6o1408et_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="60,318,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::xf4qxrhgw6orr41sf_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="457,338" />
+      <property name="seq_targetAnchor" value="694,338" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::6veodnruw6olz89nj_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="58,347,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::gsv08nruw6o07iqsf_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="457,367" />
+      <property name="seq_targetAnchor" value="843,367" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::wwjmh27467o4n0u8r_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="58,376,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::kd2o527467o1tf8lo_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="457,396" />
+      <property name="seq_targetAnchor" value="843,396" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::iv5v90ba67ocibgns_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="58,405,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::udmma0ba67o6lr7ie_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="457,425" />
+      <property name="seq_targetAnchor" value="843,425" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::bdc7jyfh67oxzd0wg_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="58,448,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::8hyrnyfh67ow80vop_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="452,468" />
+      <property name="seq_targetAnchor" value="843,468" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::zaijcupv67ortex4i_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="58,477,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::um2pmupv67ondoszj_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="452,497" />
+      <property name="seq_targetAnchor" value="990,497" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::rcchdupv67o6ehcyo_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="58,506,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::nu0crupv67ouuixin_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="452,526" />
+      <property name="seq_targetAnchor" value="990,526" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::0ose5jxha7owqg39q_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="58,535,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::ghgw9jxha7o3gp2dk_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="452,555" />
+      <property name="seq_targetAnchor" value="990,555" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::f4cvxf7wa7olqdiuo_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="40,598,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::r6iuuf7wa7oqnt5ie_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="167,618" />
+      <property name="seq_targetAnchor" value="1119,618" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::vt8ym0lgb7ordo6yg_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="32,647,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::ei4j60lgb7o1cfi6q_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="172,667" />
+      <property name="seq_targetAnchor" value="1222,667" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::gur37rbvg7og1aeln_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="32,676,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::k86c2rbvg7ory01ek_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="172,696" />
+      <property name="seq_targetAnchor" value="1222,696" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::ltuluzq8n7o37pl6f_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="32,870,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::gvkphzq8n7oqxzdjk_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="177,890" />
+      <property name="seq_targetAnchor" value="1222,890" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::qu2nszq8n7oc1wvll_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="32,899,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::rsnl2xven7o2uvnkl_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="177,919" />
+      <property name="seq_targetAnchor" value="1222,919" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::rkh44pg2h7oxnwbml_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="49,705,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::uftkanl9h7onslt4l_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="172,725" />
+      <property name="seq_targetAnchor" value="1334,725" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::r163bh0uh7o65eo2j_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="49,754,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::6bm4bh0uh7ouybmbg_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="177,774" />
+      <property name="seq_targetAnchor" value="1462,774" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::yx2e5eool7oq0jtuf_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="49,783,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::o9ya8eool7oykqc7r_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="177,803" />
+      <property name="seq_targetAnchor" value="1462,803" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::hmnta5cnm7oxadv9q_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="49,812,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::l975q3hum7ouo1mcf_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="177,832" />
+      <property name="seq_targetAnchor" value="1590,832" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::oqnxw1m1n7ozexu0i_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="49,841,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::pppiq1m1n7onkxyge_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="177,861" />
+      <property name="seq_targetAnchor" value="1590,861" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+    <reference referencedUin="design:node:::5s01ipe7o7ofa0l3o_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_bounds" value="42,990,10,15" />
+      <property name="seq_bounds_setted_by_user" value="False" />
+    </reference>
+    <reference referencedUin="design:link:::uk042pe7o7ou3y62g_l">
+      <property name="$shortcutReference" value="true" />
+      <property name="seq_sourceAnchor" value="167,1010" />
+      <property name="seq_targetAnchor" value="1711,1010" />
+      <property name="seq_bendpoints" value="" />
+    </reference>
+  </view>
+  <link uin="ipo9l4jpe5o9nrh0s_l">
+    <property name="$metaclass" value="Interaction Container Link" />
+    <property name="$name" value="1" />
+    <participant referencedUin="design:view:::shuirb2t75odauv9o_v" role="Client" />
+    <participant referencedUin="design:node:::go50k055e5oamjqwp_n" role="Supplier" />
+  </link>
+</nodeSet>

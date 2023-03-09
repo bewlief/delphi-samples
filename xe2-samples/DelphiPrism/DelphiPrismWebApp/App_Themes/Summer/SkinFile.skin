@@ -1,0 +1,31 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+
+--%>
+
+<asp:Label runat="server" font-names="Verdana" font-bold="True" ForeColor="Black" font-size="14px"/>
+
+<asp:Label runat="server" SkinId="ErrorMessageSkin"  font-names="Verdana" font-bold="True" ForeColor="Red" font-size="14px"/>
+
+<asp:Label runat="server" SkinId="StatisticSkin"  font-names="Verdana" font-bold="True" ForeColor="Black" font-size="12px"/>
+
+<asp:Label runat="server" SkinId="TitleSkin" font-names="Verdana" font-bold="True" ForeColor="Red" font-size="24px"/>
+
+<asp:HyperLink SkinId="LinkStatisticsSkin" runat="server" font-names="Verdana" font-bold="True" ForeColor="Black" font-size="20px"/>
+
+<asp:SiteMapPath runat="server" font-names="Verdana" font-size="18px" font-bold="True" ForeColor="Black" />
+
+<asp:RequiredFieldValidator runat="server" font-names="Verdana" font-size="Medium" font-italic="False" font-bold="True"/>
+

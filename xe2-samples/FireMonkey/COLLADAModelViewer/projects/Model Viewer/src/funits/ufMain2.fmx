@@ -1,0 +1,268 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BiDiMode = bdLeftToRight
+  Caption = 'FireMonkey COLLADA Model Viewer'
+  ClientHeight = 610
+  ClientWidth = 834
+  Transparency = False
+  Visible = False
+  OnCreate = Form3DCreate
+  OnDestroy = Form3DDestroy
+  object LayerGUI: TLayer3D
+    Position.Point = '(125,305,0)'
+    Width = 250.000000000000000000
+    Height = 610.000000000000000000
+    Depth = 0.009999999776482582
+    Opacity = 1.000000000000000000
+    Projection = pjScreen
+    Align = alMostLeft
+    StyleLookup = 'backgroundstyle'
+    Quanternion = '(0,0,0,1)'
+    object TabControl1: TTabControl
+      Align = alClient
+      Width = 250.000000000000000000
+      Height = 610.000000000000000000
+      TabOrder = 0
+      TabIndex = 0
+      TabHeight = 20.000000000000000000
+      object TabItem1: TTabItem
+        Width = 80.000000000000000000
+        Height = 20.000000000000000000
+        TabOrder = 0
+        Index = 0
+        Text = 'Options'
+        WordWrap = False
+        object ButtonLoadFromFile: TButton
+          Align = alMostTop
+          Width = 250.000000000000000000
+          Height = 22.000000000000000000
+          OnClick = ButtonLoadFromFileClick
+          TabOrder = 0
+          StaysPressed = False
+          IsPressed = False
+          Text = 'Load from file...'
+        end
+        object GroupBox1: TGroupBox
+          Align = alTop
+          Position.Point = '(0,22)'
+          Width = 250.000000000000000000
+          Height = 190.000000000000000000
+          TabOrder = 1
+          Text = 'Lightning'
+          object cpAmbientColor: TColorPanel
+            Position.Point = '(8,38)'
+            Width = 100.000000000000000000
+            Height = 100.000000000000000000
+            TabOrder = 0
+            OnChange = cpAmbientColorChange
+            Color = claBlack
+          end
+          object cpLightColor: TColorPanel
+            Position.Point = '(128,32)'
+            Width = 100.000000000000000000
+            Height = 100.000000000000000000
+            TabOrder = 1
+            Color = claWhite
+          end
+          object Label1: TLabel
+            Position.Point = '(16,24)'
+            Width = 120.000000000000000000
+            Height = 15.000000000000000000
+            TabOrder = 2
+            Text = 'Ambient Color'
+          end
+          object Label2: TLabel
+            Position.Point = '(136,24)'
+            Width = 120.000000000000000000
+            Height = 15.000000000000000000
+            TabOrder = 3
+            Text = 'Light Color'
+          end
+          object cbLightPosAsCameraPos: TCheckBox
+            Position.Point = '(16,144)'
+            Width = 209.000000000000000000
+            Height = 19.000000000000000000
+            TabOrder = 4
+            IsChecked = True
+            Text = 'Light position as camera position'
+            OnChange = cbLightPosAsCameraPosChange
+          end
+          object cbAnimatedLight: TCheckBox
+            Enabled = False
+            Position.Point = '(16,160)'
+            Width = 120.000000000000000000
+            Height = 19.000000000000000000
+            TabOrder = 5
+            IsChecked = True
+            Text = 'Animated Light'
+          end
+        end
+        object GroupBox2: TGroupBox
+          Align = alTop
+          Position.Point = '(0,212)'
+          Width = 250.000000000000000000
+          Height = 80.000000000000000000
+          TabOrder = 2
+          Text = 'Mesh Mode'
+          object rbMeshModeFrame: TRadioButton
+            Position.Point = '(16,24)'
+            Width = 120.000000000000000000
+            Height = 19.000000000000000000
+            TabOrder = 0
+            IsChecked = False
+            Text = 'Frame'
+            GroupName = 'MeshModeGroup'
+            OnChange = rbMeshModeFrameChange
+          end
+          object rbMeshModeSolid: TRadioButton
+            Position.Point = '(16,48)'
+            Width = 120.000000000000000000
+            Height = 19.000000000000000000
+            TabOrder = 1
+            IsChecked = True
+            Text = 'Solid'
+            GroupName = 'MeshModeGroup'
+            OnChange = rbMeshModeSolidChange
+          end
+        end
+        object GroupBox3: TGroupBox
+          Align = alTop
+          Position.Point = '(0,292)'
+          Width = 250.000000000000000000
+          Height = 100.000000000000000000
+          TabOrder = 3
+          Text = 'Pixel Mode'
+          object rbAmbientMap: TRadioButton
+            Position.Point = '(16,24)'
+            Width = 120.000000000000000000
+            Height = 19.000000000000000000
+            TabOrder = 0
+            IsChecked = False
+            Text = 'Ambient Map'
+            GroupName = 'PixelModeGroup'
+            OnChange = rbAmbientMapChange
+          end
+          object rbDiffuseMap: TRadioButton
+            Position.Point = '(16,48)'
+            Width = 120.000000000000000000
+            Height = 19.000000000000000000
+            TabOrder = 1
+            IsChecked = False
+            Text = 'Diffuse Map'
+            GroupName = 'PixelModeGroup'
+            OnChange = rbDiffuseMapChange
+          end
+          object rbSpecularMap: TRadioButton
+            Position.Point = '(136,24)'
+            Width = 120.000000000000000000
+            Height = 19.000000000000000000
+            TabOrder = 2
+            IsChecked = False
+            Text = 'Specular Map'
+            GroupName = 'PixelModeGroup'
+            OnChange = rbSpecularMapChange
+          end
+          object rbEffects: TRadioButton
+            Position.Point = '(136,48)'
+            Width = 120.000000000000000000
+            Height = 19.000000000000000000
+            TabOrder = 3
+            IsChecked = False
+            Text = 'Effects'
+            GroupName = 'PixelModeGroup'
+            OnChange = rbEffectsChange
+          end
+          object rbComposition: TRadioButton
+            Position.Point = '(136,72)'
+            Width = 120.000000000000000000
+            Height = 19.000000000000000000
+            TabOrder = 4
+            IsChecked = True
+            Text = 'Composition'
+            GroupName = 'PixelModeGroup'
+            OnChange = rbCompositionChange
+          end
+          object rbNormalMap: TRadioButton
+            Position.Point = '(16,72)'
+            Width = 120.000000000000000000
+            Height = 19.000000000000000000
+            TabOrder = 5
+            IsChecked = False
+            Text = 'Normal Map'
+            GroupName = 'PixelModeGroup'
+            OnChange = rbNormalMapChange
+          end
+        end
+      end
+      object TabItem2: TTabItem
+        Position.Point = '(80,0)'
+        Width = 80.000000000000000000
+        Height = 20.000000000000000000
+        TabOrder = 1
+        Index = 1
+        Text = 'Info'
+        WordWrap = False
+        object Label3: TLabel
+          Position.Point = '(16,16)'
+          Width = 120.000000000000000000
+          Height = 15.000000000000000000
+          TabOrder = 0
+          Text = 'Meshes'
+        end
+        object lbMeshes: TListBox
+          Position.Point = '(16,41)'
+          Width = 217.000000000000000000
+          Height = 143.000000000000000000
+          TabOrder = 1
+          OnChange = lbMeshesChange
+        end
+        object lblTriangleCount: TLabel
+          Position.Point = '(16,216)'
+          Width = 225.000000000000000000
+          Height = 15.000000000000000000
+          TabOrder = 2
+          Text = 'Triangle Count -'
+        end
+        object lblVerticesCount: TLabel
+          Position.Point = '(16,240)'
+          Width = 217.000000000000000000
+          Height = 15.000000000000000000
+          TabOrder = 3
+          Text = 'Vertices Count - '
+        end
+      end
+    end
+  end
+  object LayerRender: TLayer3D
+    Position.Point = '(542,305,0)'
+    Width = 584.000000000000000000
+    Height = 610.000000000000000000
+    Depth = 0.009999999776482582
+    Opacity = 1.000000000000000000
+    Projection = pjScreen
+    Align = alClient
+    StyleLookup = 'backgroundstyle'
+    Quanternion = '(0,0,0,1)'
+    object Viewport: TViewport3D
+      Align = alClient
+      Width = 584.000000000000000000
+      Height = 610.000000000000000000
+      OnMouseMove = ViewportMouseMove
+      OnMouseWheel = ViewportMouseWheel
+      Color = claBlack
+      object Dummy1: TDummy
+        Width = 1.000000000000000000
+        Height = 1.000000000000000000
+        Depth = 1.000000000000000000
+        Opacity = 1.000000000000000000
+        OnRender = Dummy1Render
+        Quanternion = '(0,0,0,1)'
+      end
+    end
+  end
+  object dOpen: TOpenDialog
+    Left = 400
+    Top = 288
+  end
+end

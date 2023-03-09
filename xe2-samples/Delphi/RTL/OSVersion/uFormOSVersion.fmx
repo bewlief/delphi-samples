@@ -1,0 +1,35 @@
+object FormOSVersion: TFormOSVersion
+  BiDiMode = bdLeftToRight
+  Caption = 'Delphi XE2 FireMonkey HD App'
+  ClientHeight = 400
+  ClientWidth = 600
+  Left = 0
+  Top = 0
+  Transparency = False
+  Visible = False
+  StyleLookup = 'backgroundstyle'
+  object PanelTop: TPanel
+    Align = alTop
+    Width = 600.000000000000000000
+    Height = 41.000000000000000000
+    TabOrder = 1
+    object ButtonGetOSInfo: TButton
+      Position.Point = '(16,8)'
+      Width = 193.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = ButtonGetOSInfoClick
+      TabOrder = 1
+      StaysPressed = False
+      IsPressed = False
+      Text = 'Get OS Version Information...'
+    end
+  end
+  object MemoLog: TMemo
+    Align = alClient
+    Position.Point = '(0,41)'
+    Width = 600.000000000000000000
+    Height = 359.000000000000000000
+    TabOrder = 2
+    WordWrap = False
+  end
+end

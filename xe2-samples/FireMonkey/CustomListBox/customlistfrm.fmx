@@ -1,0 +1,279 @@
+object frmCustomList: TfrmCustomList
+  BiDiMode = bdLeftToRight
+  Caption = 'FireMonkey Custom List'
+  ClientHeight = 505
+  ClientWidth = 640
+  Left = 470
+  Top = 237
+  Position = poScreenCenter
+  Transparency = False
+  Visible = False
+  StyleLookup = 'backgroundstyle'
+  Left = 470
+  Top = 237
+  object ListBox1: TListBox
+    Position.Point = '(10,32)'
+    Width = 306.000000000000000000
+    Height = 439.000000000000000000
+    HelpType = htKeyword
+    StyleLookup = 'ListBox1Style1'
+    TabOrder = 0
+    DisableFocusEffect = True
+    ItemHeight = 64.000000000000000000
+  end
+  object Button1: TButton
+    Position.Point = '(483,32)'
+    Width = 121.000000000000000000
+    Height = 22.000000000000000000
+    OnClick = Button1Click
+    HelpType = htKeyword
+    TabOrder = 1
+    StaysPressed = False
+    IsPressed = False
+    Text = 'Add From File...'
+  end
+  object Button2: TButton
+    Position.Point = '(336,32)'
+    Width = 121.000000000000000000
+    Height = 22.000000000000000000
+    OnClick = Button2Click
+    HelpType = htKeyword
+    TabOrder = 2
+    StaysPressed = False
+    IsPressed = False
+    Text = 'Add By Code'
+  end
+  object InfoLabel: TLabel
+    Position.Point = '(114,4)'
+    Width = 423.000000000000000000
+    Height = 15.000000000000000000
+    HelpType = htKeyword
+    TabOrder = 3
+    TextAlign = taCenter
+  end
+  object Label1: TLabel
+    Position.Point = '(336,144)'
+    Width = 268.000000000000000000
+    Height = 152.000000000000000000
+    HelpType = htKeyword
+    TabOrder = 4
+    TextAlign = taCenter
+    Text = 
+      'This demo show how to use Custom listbox item (Using Style Edito' +
+      'r). And how to use FireMonkey'#39's Binding to set or get values fro' +
+      'm item and set events handler.'
+  end
+  object Button3: TButton
+    Position.Point = '(336,68)'
+    Width = 121.000000000000000000
+    Height = 22.000000000000000000
+    OnClick = Button3Click
+    HelpType = htKeyword
+    TabOrder = 5
+    StaysPressed = False
+    IsPressed = False
+    Text = 'Add 1000 By Code'
+  end
+  object CheckBox1: TCheckBox
+    Position.Point = '(336,107)'
+    Width = 120.000000000000000000
+    Height = 19.000000000000000000
+    TabOrder = 6
+    IsChecked = False
+    Text = 'Allow Drag'
+    OnChange = CheckBox1Change
+  end
+  object Resources1: TStyleBook
+    Resource.Strings = (
+      'object _1: TLayout'
+      '  Align = alClient'
+      '  Position.Point = '#39'(0,33)'#39
+      '  Width = 842.000000000000000000'
+      '  Height = 1002.000000000000000000'
+      '  object TLayout'
+      '    StyleName = '#39'CustomItem'#39
+      '    Position.Point = '#39'(273,469)'#39
+      '    Width = 296.000000000000000000'
+      '    Height = 64.000000000000000000'
+      '    Margins.Rect = '#39'(3,3,3,3)'#39
+      '    object TImage'
+      '      BindingName = '#39'image'#39
+      '      Align = alMostLeft'
+      '      Position.Point = '#39'(31,3)'#39
+      '      Width = 76.000000000000000000'
+      '      Height = 58.000000000000000000'
+      '      Padding.Rect = '#39'(0,0,3,0)'#39
+      '      HitTest = False'
+      '      Bitmap.PNG = {'
+      
+        '        89504E470D0A1A0A0000000D49484452000000010000000108060000' +
+        '001F15C4'
+      
+        '        89000000017352474200AECE1CE90000000467414D410000B18F0BFC' +
+        '61050000'
+      
+        '        00097048597300000EC300000EC301C76FA8640000000B4944415418' +
+        '57636000'
+      '        020000050001AAD5C8510000000049454E44AE426082}'
+      '    end'
+      '    object TText'
+      '      BindingName = '#39'text'#39
+      '      Align = alTop'
+      '      Position.Point = '#39'(110,3)'#39
+      '      Width = 133.000000000000000000'
+      '      Height = 17.000000000000000000'
+      '      HitTest = False'
+      '      Fill.Color = xFF909090'
+      '      HorzTextAlign = taLeading'
+      '      Text = '#39'Text'#39
+      '      WordWrap = False'
+      '    end'
+      '    object TText'
+      '      BindingName = '#39'resolution'#39
+      '      Align = alTop'
+      '      Position.Point = '#39'(110,20)'#39
+      '      Width = 133.000000000000000000'
+      '      Height = 17.000000000000000000'
+      '      HitTest = False'
+      '      Fill.Color = xFF656565'
+      '      HorzTextAlign = taLeading'
+      '      Text = '#39'Text'#39
+      '      WordWrap = False'
+      '    end'
+      '    object TLayout'
+      '      Align = alMostRight'
+      '      Position.Point = '#39'(243,3)'#39
+      '      Width = 50.000000000000000000'
+      '      Height = 58.000000000000000000'
+      '      object TSpeedButton'
+      '        BindingName = '#39'info'#39
+      '        Align = alTop'
+      '        Width = 50.000000000000000000'
+      '        Height = 19.000000000000000000'
+      '        HelpType = htKeyword'
+      '        StyleLookup = '#39'buttonstyle'#39
+      '        TabOrder = 0'
+      '        StaysPressed = False'
+      '        IsPressed = False'
+      '        DisableFocusEffect = True'
+      '        Text = '#39'info'#39
+      '      end'
+      '    end'
+      '    object TText'
+      '      BindingName = '#39'depth'#39
+      '      Align = alTop'
+      '      Position.Point = '#39'(110,37)'#39
+      '      Width = 133.000000000000000000'
+      '      Height = 17.000000000000000000'
+      '      HitTest = False'
+      '      Fill.Color = xFF656565'
+      '      HorzTextAlign = taLeading'
+      '      Text = '#39'Text'#39
+      '      WordWrap = False'
+      '    end'
+      '    object TLayout'
+      '      Align = alMostLeft'
+      '      Position.Point = '#39'(3,3)'#39
+      '      Width = 28.000000000000000000'
+      '      Height = 58.000000000000000000'
+      '      object TCheckBox'
+      '        BindingName = '#39'visible'#39
+      '        Align = alCenter'
+      '        Position.Point = '#39'(2,19)'#39
+      '        Width = 24.000000000000000000'
+      '        Height = 19.000000000000000000'
+      '        HelpType = htKeyword'
+      '        StyleLookup = '#39'customcheck'#39
+      '        TabOrder = 0'
+      '        IsChecked = False'
+      '      end'
+      '    end'
+      '  end'
+      '  object TLayout'
+      '    StyleName = '#39'customcheck'#39
+      '    Position.Point = '#39'(360,492)'#39
+      '    Width = 121.000000000000000000'
+      '    Height = 17.000000000000000000'
+      '    object TLayout'
+      '      Align = alLeft'
+      '      Width = 24.000000000000000000'
+      '      Height = 17.000000000000000000'
+      '      object TPath'
+      '        Align = alClient'
+      '        Position.Point = '#39'(2,2)'#39
+      '        Width = 20.000000000000000000'
+      '        Height = 13.000000000000000000'
+      '        Padding.Rect = '#39'(2,2,2,2)'#39
+      '        HitTest = False'
+      '        Fill.Color = x40303030'
+      '        Stroke.Kind = bkNone'
+      '        Data.Path = {'
+      
+        '          2700000000000000FEC8BA4402E79244020000002592AD4402E792' +
+        '4402000000'
+      
+        '          6D5BA544FEB09E44020000006D5BA544FEB09E440200000093A4A4' +
+        '446A0C9F44'
+      
+        '          020000004A80AC44047AAA4402000000046EBA44047AAA44020000' +
+        '004A00C844'
+      
+        '          047AAA44020000000080CF44FEB09E44020000000080CF44FEB09E' +
+        '4402000000'
+      
+        '          0080CF44FEB09E44020000004C5BC84402E7924402000000FEC8BA' +
+        '4402E79244'
+      
+        '          00000000FE88BA44FE30974402000000B876BF44FE309744020000' +
+        '000277C344'
+      
+        '          EEA09A44020000000277C34404DE9E44020000000277C344121BA3' +
+        '4402000000'
+      
+        '          B876BF44008CA64402000000FE88BA44008CA644020000004C9BB5' +
+        '44008CA644'
+      
+        '          02000000009CB144121BA34402000000009CB14404DE9E44020000' +
+        '00009CB144'
+      
+        '          EEA09A44020000004C9BB544FE30974402000000FE88BA44FE3097' +
+        '4400000000'
+      
+        '          0080BA44045E9B4402000000146EB844045E9B440200000000C0B6' +
+        '4454F79C44'
+      
+        '          0200000000C0B64400F09E440200000000C0B644ACE8A044020000' +
+        '00146EB844'
+      
+        '          0482A244020000000080BA440482A24402000000EC91BC440482A2' +
+        '4402000000'
+      
+        '          0040BE44ACE8A044020000000040BE4400F09E44020000000040BE' +
+        '4454F79C44'
+      '          02000000EC91BC44045E9B44020000000080BA44045E9B44}'
+      '        object TColorAnimation'
+      '          Duration = 0.100000001490116100'
+      '          Trigger = '#39'IsChecked=true'#39
+      '          StartValue = x40303030'
+      '          StopValue = xFF303030'
+      '          PropertyName = '#39'Fill.Color'#39
+      '        end'
+      '        object TColorAnimation'
+      '          Duration = 0.100000001490116100'
+      '          Trigger = '#39'IsChecked=false'#39
+      '          StartValue = xFF303030'
+      '          StopValue = x40303030'
+      '          PropertyName = '#39'Fill.Color'#39
+      '        end'
+      '      end'
+      '    end'
+      '  end'
+      'end')
+    Left = 398
+    Top = 288
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 480
+    Top = 288
+  end
+end

@@ -1,0 +1,152 @@
+object Form1: TForm1
+  BiDiMode = bdLeftToRight
+  Caption = 'Form17'
+  ClientHeight = 370
+  ClientWidth = 407
+  Left = 0
+  Top = 0
+  Transparency = False
+  Visible = False
+  OnCreate = FormCreate
+  StyleLookup = 'backgroundstyle'
+  object LabelSourceExpressions: TLabel
+    Position.Point = '(6,108)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 0
+    Text = 'Source Expression:'
+  end
+  object LabelControlExpression: TLabel
+    Position.Point = '(5,43)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 1
+    Text = 'Control Expression:'
+  end
+  object EditControlExpression: TEdit
+    Enabled = False
+    Position.Point = '(128,40)'
+    Width = 241.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 2
+    ReadOnly = False
+    Password = False
+  end
+  object LabelControlComponent: TLabel
+    Position.Point = '(5,11)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 3
+    Text = 'Control Component:'
+  end
+  object EditControlComponent: TEdit
+    Enabled = False
+    Position.Point = '(128,8)'
+    Width = 129.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 4
+    ReadOnly = False
+    Password = False
+  end
+  object LabelSourceComponent: TLabel
+    Position.Point = '(6,75)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 5
+    Text = 'Source Component:'
+  end
+  object EditOutput: TEdit
+    Position.Point = '(10,214)'
+    Width = 383.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 6
+    ReadOnly = False
+    Password = False
+  end
+  object EditSource: TEdit
+    Position.Point = '(10,294)'
+    Width = 383.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 7
+    ReadOnly = False
+    OnChange = EditSourceChange
+    Password = False
+    Text = 'Sample text'
+  end
+  object EditSourceExpression: TEdit
+    Position.Point = '(128,105)'
+    Width = 265.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 8
+    ReadOnly = False
+    OnChange = EditSourceExpressionChange
+    Password = False
+  end
+  object CheckBoxActive: TCheckBox
+    Position.Point = '(7,138)'
+    Width = 89.000000000000000000
+    Height = 19.000000000000000000
+    TabOrder = 9
+    IsChecked = False
+    Text = 'Active'
+    OnChange = CheckBoxActiveChange
+  end
+  object LabelEditOutput: TLabel
+    Position.Point = '(10,198)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 10
+    Text = 'EditOutput: TEdit'
+  end
+  object LabelEditSource: TLabel
+    Position.Point = '(11,278)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 11
+    Text = 'EditSource: TEdit'
+  end
+  object ButtonEvaluate: TButton
+    Position.Point = '(128,138)'
+    Width = 113.000000000000000000
+    Height = 22.000000000000000000
+    OnClick = ButtonEvaluateClick
+    TabOrder = 12
+    StaysPressed = False
+    IsPressed = False
+    Text = 'Evaluate'
+  end
+  object EditSourceComponentName: TEdit
+    Enabled = False
+    Position.Point = '(128,72)'
+    Width = 129.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 13
+    ReadOnly = False
+    Password = False
+  end
+  object LabelPressEnter: TLabel
+    Position.Point = '(8,320)'
+    Width = 337.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 14
+    Text = '(Modify then press Enter to cause expression re-evaluation)'
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    UseAppManager = True
+    Left = 315
+    Top = 246
+    object BindEdits: TBindExpression
+      Category = 'Property Bindings'
+      ControlComponent = EditOutput
+      SourceComponent = EditSource
+      SourceExpression = '"Upper text: " + UpperCase(Text)'
+      ControlExpression = 'Text'
+      NotifyOutputs = False
+      Direction = dirSourceToControl
+      OnEvalError = BindEditsEvalError
+      OnActivating = BindEditsActivating
+    end
+  end
+end

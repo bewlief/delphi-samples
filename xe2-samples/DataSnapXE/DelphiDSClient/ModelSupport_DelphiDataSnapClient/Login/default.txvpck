@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="fh0qmbprfom_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Login.TFrmLogin">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="40,100,191,266" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Login.TFrmLogin.Button1" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Login.TFrmLogin.Label1" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Login.TFrmLogin.Label2" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Login.TFrmLogin.Panel1" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Login.TFrmLogin.Button2" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Login.TFrmLogin.Label3" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Login.TFrmLogin.edUserName" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Login.TFrmLogin.edPassowrd" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Login.TFrmLogin.edDSServer" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Login.TFrmLogin.Label4" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Login.TFrmLogin.edDSPort" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:Login.TFrmLogin.Button1Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:Login.TFrmLogin.edUserNameRightButtonClick(System.TObject)" />
+      <reference referencedUin="delphi:l_gnt:src:DelphiDataSnapClient:Login.TFrmLogin:Forms.TForm">
+        <property name="sourceAnchor" value="231,233" />
+        <property name="targetAnchor" value="392,233" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Login.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Login.@unitclass.FrmLogin" />
+      <reference referencedUin="delphi:l_ast:src:DelphiDataSnapClient:Login.@unitclass.FrmLogin" />
+    </reference>
+    <reference referencedUin="design:view:::8o6wwtb1kds_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="220,1,153,42" />
+    </reference>
+    <reference referencedUin="delphi:e_class:lib:DelphiWin32:Forms.TForm">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="392,1,235,1720" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnClose" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseWheelDown" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnCanResize" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ScreenSnap" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.HelpFile" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.GlassFrame" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseEnter" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ObjectMenuItem" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.PrintScale" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseUp" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.VertScrollBar" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnCloseQuery" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnKeyUp" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Align" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Font" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseActivate" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TForm.Cascade()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.DragMode" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ClientWidth" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseWheelUp" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.BorderStyle" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnUnDock" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Height" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.AutoScroll" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.BorderIcons" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OldCreateOrder" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnStartDock" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.KeyPreview" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnHide" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.PixelsPerInch" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.DefaultMonitor" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Caption" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnDockDrop" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnAlignInsertBefore" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.WindowState" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Ctl3D" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.TransparentColorValue" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Color" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnEndDock" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TForm.Create()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.DockSite" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.BorderWidth" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TForm.Previous()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TForm.Tile()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Position" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Scaled" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Touch" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Icon" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.WindowMenu" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnGetSiteInfo" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseLeave" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnCreate" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnShow" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Visible" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnContextPopup" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Enabled" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnActivate" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.AlphaBlendValue" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnAlignPosition" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ParentFont" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ClientHandle" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.FormStyle" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.BiDiMode" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.DragKind" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.TransparentColor" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnDragDrop" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.AlphaBlend" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnConstrainedResize" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnHelp" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Action" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnClick" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.PopupMenu" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Anchors" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.TileMode" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.DoubleBuffered" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseDown" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ActiveControl" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnPaint" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TForm.Next()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.MDIChildren" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnDblClick" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.SnapBuffer" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnDragOver" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnGesture" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Menu" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnKeyDown" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ShowHint" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ClientHeight" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Width" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ActiveMDIChild" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnKeyPress" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.HorzScrollBar" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.MDIChildCount" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.AutoSize" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseMove" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.UseDockManager" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseWheel" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TForm.ArrangeIcons()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.DockManager" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.PopupParent" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnResize" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ParentBiDiMode" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Padding" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnDockOver" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnDestroy" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Constraints" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnDeactivate" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnShortCut" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.PopupMode" />
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TForm.MDIChildren">
+        <property name="sourceAnchor" value="627,1696" />
+        <property name="targetAnchor" value="619,1721" />
+        <property name="bendpoints" value="677,1696,677,1771,619,1771" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TForm.ActiveMDIChild">
+        <property name="sourceAnchor" value="627,1671" />
+        <property name="targetAnchor" value="611,1721" />
+        <property name="bendpoints" value="702,1671,702,1796,611,1796" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+    </reference>
+  </view>
+</nodeSet>

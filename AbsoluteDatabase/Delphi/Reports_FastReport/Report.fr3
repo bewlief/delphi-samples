@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TfrxReport Name="" DotMatrixReport="False" EngineOptions.MaxMemSize="10000000" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="2047" PreviewOptions.Zoom="1" PrintOptions.Printer="Default" ReportOptions.CreateDate="38203,6657240972" ReportOptions.Description.Text="" ReportOptions.LastChange="38396,8355175694" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C656674026008446174617365747301010C3400000020446174615365743D22667278444244617461736574312220446174615365744E616D653D2266727844424461746173657431220000095661726961626C65730100055374796C650100">
+  <TfrxReportPage Name="Page1" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" PaperWidth="215,9" PaperHeight="279,4" PaperSize="1" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="41,57483" Left="0" Top="18,89765" Width="740,409927">
+      <TfrxMemoView Name="Memo1" Left="262,04741333" Top="3,77953" Width="186,45681333" Height="25,19686667" Font.Charset="1" Font.Color="0" Font.Height="-19" Font.Name="Arial" Font.Style="1" Memo.Text="Employee Report" ParentFont="False"/>
+    </TfrxReportTitle>
+    <TfrxMasterData Name="MasterData1" Height="22,67718" Left="0" Top="166,29932" Width="740,409927" ColumnWidth="0" ColumnGap="0" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" RowCount="0">
+      <TfrxMemoView Name="Memo2" Left="0" Top="0" Width="79,37013" Height="18,89765" DataField="EmpNo" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Memo.Text="[frxDBDataset1.&#34;EmpNo&#34;]" ParentFont="False"/>
+      <TfrxMemoView Name="Memo3" Left="120,94496" Top="0" Width="120,94496" Height="18,89765" DataField="FirstName" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Memo.Text="[frxDBDataset1.&#34;FirstName&#34;]" ParentFont="False"/>
+      <TfrxMemoView Name="Memo4" Left="336,37817" Top="3,77952999999999" Width="158,74026" Height="18,89765" DataField="LastName" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="0" Memo.Text="[frxDBDataset1.&#34;LastName&#34;]" ParentFont="False"/>
+      <TfrxMemoView Name="Memo9" Left="521,57514" Top="3,77952999999999" Width="75,5906" Height="18,89765" DataField="PhoneExt" DataSet="frxDBDataset1" DataSetName="frxDBDataset1" Memo.Text="[frxDBDataset1.&#34;PhoneExt&#34;]"/>
+    </TfrxMasterData>
+    <TfrxHeader Name="Header1" Height="22,67718" Left="0" Top="120,94496" Width="740,409927">
+      <TfrxMemoView Name="Memo5" Left="1,25984333" Top="3,77952999999999" Width="51,65357667" Height="17,63780667" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Memo.Text="EmpNo" ParentFont="False"/>
+      <TfrxMemoView Name="Memo6" Left="120,94496" Top="5,03937333" Width="192,75603" Height="18,89765" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Memo.Text="First Name" ParentFont="False"/>
+      <TfrxMemoView Name="Memo7" Left="337,63801333" Top="5,03937333" Width="167,55916333" Height="13,85827667" Font.Charset="1" Font.Color="0" Font.Height="-13" Font.Name="Arial" Font.Style="1" Memo.Text="Last Name" ParentFont="False"/>
+      <TfrxMemoView Name="Memo8" Left="519,05545333" Top="2,51968667" Width="77,33333333" Height="17,63780667" Memo.Text="PhoneExt"/>
+    </TfrxHeader>
+  </TfrxReportPage>
+</TfrxReport>

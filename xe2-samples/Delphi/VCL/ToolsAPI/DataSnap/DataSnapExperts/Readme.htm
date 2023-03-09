@@ -1,0 +1,49 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+  <head>
+	<title></title>
+  </head>
+
+  <body>
+	<table cellspacing="1" cellpadding="1" width="500" bgcolor="#e0ffff" border="1">
+		<tr>
+		  <td style="WIDTH: 149px" bgcolor="#fffaf0">Demo Name
+</td>
+		  <td bgcolor="#e6e6fa"><strong>CustomDataSnapServerWizardsPackage</strong>
+</td>
+		</tr>
+		<tr>
+		  <td style="WIDTH: 149px" bgcolor="#fffaf0">Classes demonstrated
+</td>
+		  <td bgcolor="#e6e6fa">
+			<p><strong>Open Tools API</strong>
+</p>
+			<p><strong>DataSnap interface</strong>
+</p>
+</td>
+		</tr>
+		<tr>
+		  <td style="WIDTH: 149px" bgcolor="#fffaf0">Description
+</td>
+		  <td bgcolor="#e6e6fa">
+            <strong>This sample package demonstrates how to derive new DataSnap Server or DataSnap REST Application wizards from the existing wizards.</p>
+
+You will need to install the packages dclExpertsUI160.bpl and dclExpertsCreators160.bpl in order to open the designers in this project.</p>
+     
+
+To use the wizards, build the CustomDataSnapServerWizardsPackage and install it into RAD Studio.  Use File | New | Other... to invoke the wizards.</p>
+
+Before using these wizards, the files in the local ObjRepos subdirectory must be copied to the RAD Studio ObjRepos directory.</p>
+
+
+<i><u>Issues with loading designers</u></i></p>
+
+CustomDataSnapServerWizardsPackage has modules which descend from datamodule classes in the dclDataSnapServer and dclInet packages. In order to open the designers for these descendent datamodules, RAD Studio must be able to find the source files for the ancestor classes.  If RAD Studio can't find the ancestors then errors occur when loading designers.  To resolve this issue, you will need to close the module, open the source files of the ancestor classes, and then reopen the module;  the source files are in the RAD studio source directory.  Once the ancestor file is open, RAD studio will be able to find the ancestor class.  In addition, if the ancestor module is in another project in the project group, then RAD studio will be able to find the module.  You can take advantage of this by creating a dummy project that contains all of the ancestor units and then add the project to the project group.  This is the purpose of the sample project UnitsContainerProject; make sure to correct the unit path names as appropriate. </p></strong>
+</td>
+        </tr>
+    </table>
+
+  </body>
+</html>

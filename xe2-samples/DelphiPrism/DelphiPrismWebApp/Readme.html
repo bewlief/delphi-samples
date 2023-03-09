@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+  <head>
+	<title>RAD Studio 2007 ASP.NET application with AJAX and InterBase/Blackfish- Example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"/>
+    <link href="bds://css/bdshome.css" type="text/css" rel="stylesheet"/>
+    <link href="bds://css/demo.css" type="text/css" rel="stylesheet"/>
+      <style type="text/css">
+          .style1
+          {
+              color: #FF0000;
+              font-weight: bold;
+          }
+      </style>
+  </head>
+  <body>
+    <h1>
+        <img alt="Delphi Prism 2011" src="images/DelphiPrism.png" 
+            style="height: 84px; width: 84px" />Delphi Prism 2011 - World Pictures Example</h1>
+    <h3>ASP.NET application with AJAX and InterBase - Example</h3>
+    <p>
+        <a href="http://www.embarcadero.com/products/delphi-prism">Delphi Prism</a> 
+        provide full support for ASP.NET which has lot of cool features for .NET Web 
+        Development, this demo use DBX Framework for database access</p>
+      <p>
+          This new version of 
+          Word Pictures explores some of these news features in Delphi Prism 2011 and .NET 
+          Framework, like:</p>
+      <div>
+          <ul>
+              <li>Ajax Web-based Application</li>
+              <li>DBX Framework</li>
+              <li>Master Page</li>
+              <li>Site Maps</li>
+              <li>Themes</li>
+          </ul>
+      </div>
+      <p>
+          Also explains the 8 events in the global.asax file. These events are used to create application access, page access and logged users counters.</p>
+      <ul>
+          <li>Application_Start</li>
+          <li>Session_Start</li>
+          <li>Application_BeginRequest</li>
+          <li>Application_EndRequest</li>
+          <li>Application_AuthenticateRequest</li>
+          <li>Application_Error</li>
+          <li>Session_End</li>
+          <li>Application_End</li>
+      </ul>
+      <p>
+          This application was tested with
+          <a href="http://www.embarcadero.com/products/interbase">InterBase 2007 and 
+          2009</a>, and use DBX Framework.</p>
+    <h2>Database Setup Information: the first time you run </h2>
+    <div id="setup"><!-- Setup information -->
+	This application uses an InterBase database (pictures.ib), the database scripts is located in the "database"
+    subdirectory.&nbsp; The first time you open the application the database may
+    not be set up correctly. So it
+    is necessary to correctly set up the connection parameters.<br />
+        <br />
+        <span class="style1">** Also this project include the some assemblies references 
+        which is define as C:\Program Files (x86)\*, if you use 32-bits operation system 
+        updates all reference to C:\Program Files\*</span><br />
+      <br/>
+	The database connection is based on dbExpress, the
+	parameteres in Web.Config define what database to use.<br/>
+	The parameter DatabaseAlias define the database connection,
+	  you can connect in InterBase or other SQL database:
+	  <p><strong>&nbsp;For InterBase use the alias WorldPicturesInterBase</strong>
+	  </p>
+    </div>
+	<h2>Web.config and dbxconnections.ini parameters information:</h2>
+	<div id="troubleshooting">
+	Before you&nbsp;run this application, please check the following
+	web.config and dbxconnections.ini parameters for InterBase or/and other SQL database:
+	  <ul>
+		<li>TraceTimeRequest (on / off ) (Web.config) - &gt; if "on", displays load
+        time at the bottom of the page. </li>
+	  </ul>
+	  <ul>
+		<li>Database Alias (Web.config)
+		  <ul>
+			<li>&nbsp;For InterBase use the alias WorldPicturesInterBase.</li>
+		  </ul>
+		</li>
+	  </ul>
+
+	  <ul>
+		<li>Use dbxconnections.ini to define the Database parameteres, you can define 
+            multiple alias on this file
+		  <ul>
+			<li>Database --&gt; Database parameter define the database path.</li>
+            <li>User_name and Password --User_name and password parameters define the
+			user and password to access the database.  </li>
+		  </ul>
+		</li>
+	  </ul>
+	  <ul>
+		<li>Database example for InterBase
+		  <ul>
+			<li>This application uses pictures.ib database in the database sub directory</li>
+		  </ul>
+		</li>
+	  </ul>
+	</div>
+	<h2>Running the Demos </h2>
+    <div>
+      <ol>
+        <li>Start the IDE. </li>
+        <li>Open the project. Complete the steps from the <b>Setup
+          Information </b>section above. </li>
+        <li>Compile the Applicaton (Build Menu, Build solution).</li> 
+        <li>Run the application with debugging (F5) or without
+        debugging (Ctrl+F5) </li>
+      </ol>
+    </div>
+  </body>
+</html>

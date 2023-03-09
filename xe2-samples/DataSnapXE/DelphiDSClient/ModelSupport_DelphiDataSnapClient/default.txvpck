@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="qf2tr0qfvse_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="design:view:::1nrneexp3vg_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,141,166" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:RecError.TReconcileErrorForm" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:RecError.TFieldData" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:RecError.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:RecError.PFieldData" />
+    </reference>
+    <reference referencedUin="design:view:::en5not1t0ff_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="170,1,177,134" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DelphiDataSnapClient.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::ytcq6212aof_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="170,154,119,151" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:BaseObject.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:BaseObject.TBaseObject" />
+    </reference>
+    <reference referencedUin="design:view:::fh0qmbprfom_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="21,195,145,168" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Login.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Login.TFrmLogin" />
+      <reference referencedUin="design:view:::8o6wwtb1kds_v" />
+    </reference>
+    <reference referencedUin="design:view:::a5bdin4y59j_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="385,1,135,151" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DMClient.TDMClientContainer" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DMClient.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::dg7p2zhichn_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="366,171,212,215" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:MainForm.TDSCallbackMethod" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:MainForm.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:MainForm.TFrmMain" />
+      <reference referencedUin="design:view:::shuirb2t75odauv9o_v" />
+      <reference referencedUin="design:view:::3ml1kp7edhg_v" />
+      <reference referencedUin="design:view:::x4qx6e5aezk_v" />
+      <reference referencedUin="design:view:::000sa30yhff_v" />
+    </reference>
+    <reference referencedUin="design:view:::9kwcpjv1wlo_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="385,390,109,183" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Customer.TCustomer" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Customer.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Customer.TMaritalStatus" />
+    </reference>
+    <reference referencedUin="design:view:::2kibe3g7xim_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="197,382,185,258" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TDSServerMethodsClient" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TEmployeeServerRDMClient" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TLookupServerRDMClient" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TDMMainServerModuleClient" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TDSServerBatchClient" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TDepartmentClient" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TUserClient" />
+      <reference referencedUin="design:view:::j3aiy4sqk0svxoasl_v" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TDSMasterDetailClient" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TDMDataSet3Client" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TDMDataSet5Client" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TDMDataSet6Client" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TDMDataSet2Client" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DSClientProxy.TDMDataSet1Client" />
+    </reference>
+    <reference referencedUin="design:view:::0l0fu62wa6l_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:PerfCounter.TPerfCounter" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:PerfCounter.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::199ik4kkgqo_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDataSet5b.TFormDM5b" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDataSet5b.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::gy8y41mvobh_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDBBackup.TDSCallbackMethod" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDBBackup.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDBBackup.TFormBackup" />
+    </reference>
+    <reference referencedUin="design:view:::p52tfpb9mlq_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDataSet5.TFormDM5" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDataSet5.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::rku7obyevye_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormJSONCollection.TFormCollectionJSON" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormJSONCollection.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::4xnfu2af43i_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDataSet6.TFormDM6" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDataSet6.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::1elso4rlkyo_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormMaintUser.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormMaintUser.TFormUser" />
+    </reference>
+    <reference referencedUin="design:view:::aiw6dn3uoht_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:MasterForm.TFormMaster" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:MasterForm.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::g3uhangqn7o_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:LocationMigration.TLocationMigration" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:LocationMigration.@unitclass" />
+      <reference referencedUin="design:view:::dqli3wdo8hn28ix2q_v" />
+    </reference>
+    <reference referencedUin="design:view:::csyebxytsho_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDataSet4.TFormDM4" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDataSet4.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::hf5krcmkwhe_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDataSet2.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDataSet2.TFormDM2" />
+    </reference>
+    <reference referencedUin="design:view:::cooi60q8ukn_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:MainFormRB.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:MainFormRB.TFrmMainRB" />
+    </reference>
+    <reference referencedUin="design:view:::093onpzhvat_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDataSet1.TFormDM1" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDataSet1.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::0quvuwps2hm_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormJSONSimple.TFormSimpleJSON" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormJSONSimple.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::j69ms4at2ik_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Location.TCountry" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Location.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Location.TRegion" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Location.TState" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Location.TCity" />
+    </reference>
+    <reference referencedUin="design:view:::ubs03tba9lp_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormBatch.TProgressBarCallback" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormBatch.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormBatch.TUpdateBar" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormBatch.TFormServerBatch" />
+    </reference>
+    <reference referencedUin="design:view:::p3vy8eggevq_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DBXDBReaders.TDBXClientDataSetTable" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DBXDBReaders.TDBXDataSetRow" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DBXDBReaders.TDBXDataSetTable" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DBXDBReaders.TDBXDBTable" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DBXDBReaders.TDBXParamsTable" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DBXDBReaders.TDBXParamsReader" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DBXDBReaders.TDBXMemoryTable" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DBXDBReaders.TDBXParamsRow" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DBXDBReaders.@unitclass" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DBXDBReaders.TDBXDataSetReader" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DBXDBReaders.TDBXWritableValueArrayComparer" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DBXDBReaders.TDBXOriginalRow" />
+    </reference>
+    <reference referencedUin="design:view:::wjo67cyuvkn_v">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDataSet3.TFormDM3" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:FormDataSet3.@unitclass" />
+    </reference>
+    <reference referencedUin="design:view:::g6v7y06cfyh_v">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+  </view>
+</nodeSet>

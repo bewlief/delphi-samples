@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <node uin="vwoeqds505t_n">
+    <property name="$metaclass" value="Actor" />
+    <property name="$name" value="Actor1" />
+    <link uin="99e3zc37gm_l">
+      <property name="$metaclass" value="Association Link" />
+      <property name="$name" value="Association Link1" />
+      <property name="@stereotype" value="communicate" />
+      <participant referencedUin="design:node:::vwoeqds505t_n" role="Client" />
+      <participant referencedUin="design:node:::r9xx259xj3h_n:2b2nde8l5rp_n" role="Supplier" />
+    </link>
+  </node>
+  <node uin="2b2nde8l5rp_n">
+    <property name="$metaclass" value="System Boundary" />
+    <property name="$name" value="System Boundary1" />
+    <node uin="r9xx259xj3h_n">
+      <property name="$metaclass" value="Use Case" />
+      <property name="$name" value="Use Case1" />
+      <property name="@url" value="element://model:project::DelphiDataSnapClient/delphi:e_class:src:DelphiDataSnapClient:Customer.TCustomer" />
+    </node>
+  </node>
+</nodeSet>

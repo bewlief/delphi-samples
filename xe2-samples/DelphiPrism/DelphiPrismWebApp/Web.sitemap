@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="~/Default.aspx" title="Home Page"  description="Return to Login Page">
+    <siteMapNode url="~/Pictures.aspx" title="Pictures"  description="List of all pictures">
+      <siteMapNode url="~/detail.aspx" title="Picture Details" description="" />
+    </siteMapNode>
+    <siteMapNode url="~/statistics.aspx" title="Statistics per Page" description="List of access per page" />
+    <siteMapNode url="~/Logoff.aspx" title="Logoff"  description="Logoff">
+    </siteMapNode>
+  </siteMapNode>
+</siteMap>
+

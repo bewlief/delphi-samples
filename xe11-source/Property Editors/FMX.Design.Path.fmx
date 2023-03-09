@@ -1,0 +1,196 @@
+object PathDataDesigner: TPathDataDesigner
+  Left = 435
+  Top = 227
+  Caption = 'Path Designer'
+  ClientHeight = 459
+  ClientWidth = 674
+  Position = ScreenCenter
+  FormFactor.Width = 2199
+  FormFactor.Height = 1276
+  FormFactor.Devices = [Desktop]
+  Left = 435
+  Top = 227
+  DesignerMasterStyle = 0
+  object previewLayout: TLayout
+    Align = Right
+    Margins.Right = 8.000000000000000000
+    Position.X = 483.000000000000000000
+    Size.Width = 183.000000000000000000
+    Size.Height = 415.000000000000000000
+    Size.PlatformDefault = False
+    object ComboBoxPathWrapMode: TComboBox
+      Align = Bottom
+      ItemIndex = 2
+      Position.Y = 393.000000000000000000
+      Size.Width = 183.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      OnChange = ComboBoxPathWrapModeChange
+      object ListBoxItem1: TListBoxItem
+        TabOrder = 0
+        Text = 'Fit'
+      end
+      object ListBoxItem2: TListBoxItem
+        Size.Width = 19.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = 'Origin'
+      end
+      object ListBoxItem3: TListBoxItem
+        IsSelected = True
+        Size.Width = 19.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = 'Stretch'
+      end
+      object ListBoxItem4: TListBoxItem
+        TabOrder = 3
+        Text = 'Tile'
+      end
+    end
+    object Rectangle1: TRectangle
+      Align = Client
+      Fill.Kind = None
+      Margins.Bottom = 9.000000000000000000
+      Size.Width = 183.000000000000000000
+      Size.Height = 362.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Color = claGray
+      Stroke.Dash = Dash
+      object PreviewPath: TPath
+        Align = Client
+        Margins.Left = 1.000000000000000000
+        Margins.Top = 1.000000000000000000
+        Margins.Right = 1.000000000000000000
+        Margins.Bottom = 1.000000000000000000
+        Size.Width = 181.000000000000000000
+        Size.Height = 360.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object LabelInvalidFormat: TLabel
+        Align = Center
+        AutoSize = True
+        StyledSettings = [Family, Size, Style]
+        Size.Width = 122.000000000000000000
+        Size.Height = 16.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.FontColor = claRed
+        TextSettings.HorzAlign = Center
+        Text = 'Invalid path format'
+        Visible = False
+        TabOrder = 1
+      end
+    end
+    object Layout3: TLayout
+      Align = Top
+      Size.Width = 183.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      object Label1: TLabel
+        Align = Client
+        Size.Width = 183.000000000000000000
+        Size.Height = 22.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Preview:'
+        TabOrder = 0
+      end
+      object PreviewUpdatingIndicator: TAniIndicator
+        Align = Right
+        Margins.Top = 1.000000000000000000
+        Margins.Bottom = 1.000000000000000000
+        Position.X = 163.000000000000000000
+        Position.Y = 1.000000000000000000
+        Size.Width = 20.000000000000000000
+        Size.Height = 20.000000000000000000
+        Size.PlatformDefault = False
+        Visible = False
+      end
+    end
+  end
+  object Layout2: TLayout
+    Align = Bottom
+    Position.Y = 415.000000000000000000
+    Size.Width = 674.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    object Button1: TButton
+      Position.X = 190.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 77.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Paste'
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      ModalResult = 1
+      Position.X = 10.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = 'OK'
+    end
+    object Button3: TButton
+      ModalResult = 2
+      Position.X = 98.000000000000000000
+      Position.Y = 8.000000000000000000
+      Size.Width = 78.000000000000000000
+      Size.Height = 26.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 2
+      Text = 'Cancel'
+    end
+  end
+  object Layout1: TLayout
+    Align = Client
+    Size.Width = 474.000000000000000000
+    Size.Height = 415.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    object LabelMemo: TLabel
+      Align = Top
+      Size.Width = 474.000000000000000000
+      Size.Height = 23.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Type pathData (like SVG or XAML):'
+      TabOrder = 0
+    end
+    object PathData: TMemo
+      Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+      DataDetectorTypes = []
+      StyledSettings = [Size, Style, FontColor]
+      TextSettings.Font.Family = 'Courier New'
+      OnChange = PathDataChange
+      OnChangeTracking = PathDataChangeTracking
+      Align = Client
+      Size.Width = 474.000000000000000000
+      Size.Height = 392.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Viewport.Width = 470.000000000000000000
+      Viewport.Height = 388.000000000000000000
+    end
+  end
+  object Splitter1: TSplitter
+    Align = Right
+    Cursor = crHSplit
+    MinSize = 20.000000000000000000
+    Position.X = 474.000000000000000000
+    Size.Width = 9.000000000000000000
+    Size.Height = 415.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object TimerUpdatePreview: TTimer
+    Enabled = False
+    OnTimer = TimerUpdatePreviewTimer
+    Left = 440
+    Top = 416
+  end
+end

@@ -1,0 +1,169 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  BiDiMode = bdLeftToRight
+  Caption = 'Simple List Collection Form'
+  ClientHeight = 519
+  ClientWidth = 579
+  Transparency = False
+  Visible = False
+  OnCreate = FormCreate
+  StyleLookup = 'backgroundstyle'
+  object ListBox1: TListBox
+    Position.Point = '(7,324)'
+    Width = 561.000000000000000000
+    Height = 181.000000000000000000
+    TabOrder = 0
+    object TListBoxItem
+      Width = 559.000000000000000000
+      Height = 19.000000000000000000
+      HitTest = False
+      TabOrder = 0
+    end
+  end
+  object GroupBox1: TGroupBox
+    Position.Point = '(8,16)'
+    Width = 561.000000000000000000
+    Height = 193.000000000000000000
+    TabOrder = 6
+    Text = 'Use BindScope1 and BindingsList1'
+    object ButtonClear: TButton
+      Position.Point = '(216,161)'
+      Width = 80.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = ButtonClearClick
+      TabOrder = 1
+      StaysPressed = False
+      IsPressed = False
+      Text = 'Clear'
+    end
+    object ButtonFill: TButton
+      Position.Point = '(128,161)'
+      Width = 80.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = ButtonFillClick
+      TabOrder = 2
+      StaysPressed = False
+      IsPressed = False
+      Text = 'Fill'
+    end
+    object EditControlComponent: TEdit
+      Enabled = False
+      Position.Point = '(128,34)'
+      Width = 241.000000000000000000
+      Height = 22.000000000000000000
+      TabOrder = 3
+      ReadOnly = False
+      Password = False
+    end
+    object EditControlExpression: TEdit
+      Enabled = False
+      Position.Point = '(128,66)'
+      Width = 241.000000000000000000
+      Height = 22.000000000000000000
+      TabOrder = 4
+      ReadOnly = False
+      Password = False
+    end
+    object EditSourceComponentName: TEdit
+      Enabled = False
+      Position.Point = '(128,98)'
+      Width = 265.000000000000000000
+      Height = 22.000000000000000000
+      TabOrder = 5
+      ReadOnly = False
+      Password = False
+    end
+    object EditSourceExpression: TEdit
+      Enabled = False
+      Position.Point = '(128,133)'
+      Width = 421.000000000000000000
+      Height = 22.000000000000000000
+      TabOrder = 6
+      ReadOnly = False
+      Password = False
+    end
+    object LabelControlComponent: TLabel
+      Position.Point = '(5,37)'
+      Width = 120.000000000000000000
+      Height = 15.000000000000000000
+      TabOrder = 7
+      Text = 'Control Component:'
+    end
+    object LabelControlExpression: TLabel
+      Position.Point = '(5,69)'
+      Width = 120.000000000000000000
+      Height = 15.000000000000000000
+      TabOrder = 8
+      Text = 'Control Expression:'
+    end
+    object LabelSourceComponent: TLabel
+      Position.Point = '(6,101)'
+      Width = 120.000000000000000000
+      Height = 15.000000000000000000
+      TabOrder = 9
+      Text = 'Source Component:'
+    end
+    object LabelSourceExpressions: TLabel
+      Position.Point = '(6,136)'
+      Width = 120.000000000000000000
+      Height = 15.000000000000000000
+      TabOrder = 10
+      Text = 'Source Expression:'
+    end
+  end
+  object GroupBox2: TGroupBox
+    Position.Point = '(8,216)'
+    Width = 561.000000000000000000
+    Height = 81.000000000000000000
+    TabOrder = 7
+    Text = 'Create binding components in code'
+    object ButtonClearFromScratch: TButton
+      Position.Point = '(216,32)'
+      Width = 80.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = ButtonClearFromScratchClick
+      TabOrder = 1
+      StaysPressed = False
+      IsPressed = False
+      Text = 'Clear'
+    end
+    object ButtonFillFromScratch: TButton
+      Position.Point = '(128,32)'
+      Width = 80.000000000000000000
+      Height = 22.000000000000000000
+      OnClick = ButtonFillFromScratchClick
+      TabOrder = 2
+      StaysPressed = False
+      IsPressed = False
+      Text = 'Fill'
+    end
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    UseAppManager = True
+    Left = 483
+    Top = 106
+    object BindList1: TBindList
+      Category = 'Lists'
+      ControlComponent = ListBox1
+      SourceComponent = BindScope1
+      FormatExpressions = <
+        item
+          ControlExpression = 'Text'
+          SourceExpression = 
+            #39'IntegerField:  '#39' + ToStr(Current.IntegerField) + '#39' StringField:' +
+            ' '#39' + Current.StringField'
+        end>
+      FormatControlExpressions = <>
+      ClearControlExpressions = <>
+      AutoFill = False
+      OnEvalError = BindList1EvalError
+    end
+  end
+  object BindScope1: TBindScope
+    Left = 480
+    Top = 16
+  end
+end

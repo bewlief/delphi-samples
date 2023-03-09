@@ -1,0 +1,84 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{3828D582-B0B3-49A4-8142-8D693139B53A}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="richedit.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="FRA\richedit_FRA.bdsproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="DEU\richedit_DEU.bdsproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="JPN\richedit_JPN.bdsproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="ENU\richedit_ENU.bdsproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="richedit">
+			<MSBuild Projects="richedit.dproj"/>
+		</Target>
+		<Target Name="richedit:Clean">
+			<MSBuild Projects="richedit.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="richedit:Make">
+			<MSBuild Projects="richedit.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="richedit_FRA">
+			<MSBuild Projects="FRA\richedit_FRA.bdsproj"/>
+		</Target>
+		<Target Name="richedit_FRA:Clean">
+			<MSBuild Projects="FRA\richedit_FRA.bdsproj" Targets="Clean"/>
+		</Target>
+		<Target Name="richedit_FRA:Make">
+			<MSBuild Projects="FRA\richedit_FRA.bdsproj" Targets="Make"/>
+		</Target>
+		<Target Name="richedit_DEU">
+			<MSBuild Projects="DEU\richedit_DEU.bdsproj"/>
+		</Target>
+		<Target Name="richedit_DEU:Clean">
+			<MSBuild Projects="DEU\richedit_DEU.bdsproj" Targets="Clean"/>
+		</Target>
+		<Target Name="richedit_DEU:Make">
+			<MSBuild Projects="DEU\richedit_DEU.bdsproj" Targets="Make"/>
+		</Target>
+		<Target Name="richedit_JPN">
+			<MSBuild Projects="JPN\richedit_JPN.bdsproj"/>
+		</Target>
+		<Target Name="richedit_JPN:Clean">
+			<MSBuild Projects="JPN\richedit_JPN.bdsproj" Targets="Clean"/>
+		</Target>
+		<Target Name="richedit_JPN:Make">
+			<MSBuild Projects="JPN\richedit_JPN.bdsproj" Targets="Make"/>
+		</Target>
+		<Target Name="richedit_ENU">
+			<MSBuild Projects="ENU\richedit_ENU.bdsproj"/>
+		</Target>
+		<Target Name="richedit_ENU:Clean">
+			<MSBuild Projects="ENU\richedit_ENU.bdsproj" Targets="Clean"/>
+		</Target>
+		<Target Name="richedit_ENU:Make">
+			<MSBuild Projects="ENU\richedit_ENU.bdsproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="richedit;richedit_FRA;richedit_DEU;richedit_JPN;richedit_ENU"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="richedit:Clean;richedit_FRA:Clean;richedit_DEU:Clean;richedit_JPN:Clean;richedit_ENU:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="richedit:Make;richedit_FRA:Make;richedit_DEU:Make;richedit_JPN:Make;richedit_ENU:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

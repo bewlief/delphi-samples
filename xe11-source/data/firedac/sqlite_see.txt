@@ -1,0 +1,29 @@
+=== Static linkage
+This is recomended way to use SQLite SEE with your application. Starting from RAD Studio 11 Update 1 new unit FireDAC.Phys.SQLiteWrapper.SEEStat.pas is provided. It enables static linkage of sqlite3 SEE to an application. This unit is provided to the customers only as PAS file due to SQLite SEE license restrictions.
+Usage:
+* Set FDPhysSQLiteDriverLink.Linkage=slSEEStatic. This will automatically add FireDAC.Phys.SQLiteWrapper.SEEStat to "uses" clause.
+* ... or include FireDAC.Phys.SQLiteWrapper.SEEStat instead of FireDAC.Phys.SQLiteWrapper.Stat into application uses clause.
+* Make FireDAC.Phys.SQLiteWrapper.SEEStat.pas accessible to compiler.
+* Compile sqlite3 SEE and produce sqlite3_see_x86.obj / sqlite3_see_x64.obj. See "Recompiling SQLite SEE" section below.
+* Put sqlite3_see_x86.obj / sqlite3_see_x64.obj into the folder with FireDAC.Phys.SQLiteWrapper.SEEStat.pas.
+
+=== Dynamic linkage
+Usage:
+* Set FDPhysSQLiteDriverLink.Linkage=slDynamic.
+* Set FDPhysSQLiteDriverLink.SEEKey='xxx', where 'xxx' is SEE activation key. You can read more details in "www\readme.wiki" SEE distribution file, chapter "5.0 C Interface".
+* Provide sqlite3.dll SEE version and make it accessible to FireDAC application.
+
+=== What works, what does not
+FireDAC SQLite encryption (FSE) supports features, which SQLite SEE does not support:
+* when wrong password is specified, then FSE will return "wrong password", SEE always - "file is not a database".
+* FSE can return the current encryption algorithm, SEE - cannot.
+* list of possible values for "Encrypt" FireDAC connection definition parameter has FSE supported values, not SEE ones.
+
+When you will build your application, then will be good first to get FireDAC environment reports, to be sure that "correct SQLite" is used.
+
+=== Recompiling SQLite SEE
+Use provided sqlite_compile.bat to produce sqlite3_see_x86.obj / sqlite3_see_x64.obj. Before running sqlite_compile.bat update it and set these variables to your actual values:
+* BDS - RAD Studio installation base folder. Eg, C:\Program Files (x86)\Embarcadero\Studio\22.0
+* SQLITE_SRC - path to sqlite3 SEE source file. Eg, C:\SQLiteSEE\sqlite3-see.c
+
+Note: Only classic BCC compiler is supported.

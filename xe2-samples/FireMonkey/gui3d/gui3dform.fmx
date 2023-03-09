@@ -1,0 +1,71 @@
+object Form29: TForm29
+  BiDiMode = bdLeftToRight
+  Caption = 'FireMonkey 3D Gui'
+  ClientHeight = 739
+  ClientWidth = 588
+  Left = 0
+  Top = 0
+  Transparency = False
+  Visible = False
+  Color = claBlack
+  object Layer3D1: TLayer3D
+    Position.Point = '(294,369.5,0.000133107416331768)'
+    Width = 588.000000000000000000
+    Height = 739.000000000000000000
+    Depth = 0.009999999776482582
+    Opacity = 1.000000000000000000
+    Projection = pjScreen
+    Align = alClient
+    StyleLookup = 'backgroundstyle'
+    StyleBook = Resources1
+    Quanternion = '(0,0,0,1)'
+    object Button1: TButton
+      Align = alCenter
+      Position.Point = '(254,208)'
+      Width = 80.000000000000000000
+      Height = 22.000000000000000000
+      Padding.Rect = '(0,-300,0,0)'
+      OnClick = Button1Click
+      TabOrder = 0
+      StaysPressed = False
+      IsPressed = False
+      Text = 'Flip'
+    end
+    object AniIndicator1: TAniIndicator
+      Align = alCenter
+      Enabled = True
+      Position.Point = '(241,463)'
+      Width = 105.000000000000000000
+      Height = 113.000000000000000000
+      Padding.Rect = '(0,0,0,-300)'
+      TabOrder = 1
+      Style = aiLinear
+    end
+    object Panel1: TPanel
+      Align = alCenter
+      Position.Point = '(97,269)'
+      Width = 393.000000000000000000
+      Height = 200.000000000000000000
+      StyleLookup = 'Panel1Style1'
+      TabOrder = 2
+      object Label1: TLabel
+        Align = alCenter
+        Position.Point = '(76,23)'
+        Width = 241.000000000000000000
+        Height = 154.000000000000000000
+        StyleLookup = 'Panel11'
+        TabOrder = 0
+        TextAlign = taCenter
+        Text = 
+          'All 2D objects inside TLayer3D. TLayer3D projected to screen pla' +
+          'ne (Projection = Screen). When layer projected to screen plane, ' +
+          'Align property works.  But this layer is a still real 3D object.'
+      end
+    end
+  end
+  object Resources1: TStyleBook
+  end
+  object RectAnimation1: TRectAnimation
+    Duration = 0.200000002980232200
+  end
+end

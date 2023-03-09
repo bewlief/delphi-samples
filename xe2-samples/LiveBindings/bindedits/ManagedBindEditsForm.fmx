@@ -1,0 +1,185 @@
+object EditsForm1: TEditsForm1
+  Left = 0
+  Top = 0
+  BiDiMode = bdLeftToRight
+  Caption = 'TEdit Managed Binding Example'
+  ClientHeight = 525
+  ClientWidth = 554
+  Transparency = False
+  Visible = False
+  OnCreate = FormCreate
+  StyleLookup = 'backgroundstyle'
+  object Edit1: TEdit
+    Position.Point = '(72,69)'
+    Width = 100.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 0
+    ReadOnly = False
+    OnChange = EditChange
+    Password = False
+    Text = 'Edit1Text'
+  end
+  object Edit2: TEdit
+    Position.Point = '(73,102)'
+    Width = 100.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 1
+    ReadOnly = False
+    OnChange = EditChange
+    Password = False
+    Text = 'Edit2Text'
+  end
+  object ListBoxBindingExpressions: TListBox
+    Position.Point = '(231,48)'
+    Width = 297.000000000000000000
+    Height = 105.000000000000000000
+    TabOrder = 2
+  end
+  object Label1: TLabel
+    Position.Point = '(24,72)'
+    Width = 57.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 3
+    Text = 'Edit1:'
+  end
+  object Label2: TLabel
+    Position.Point = '(24,105)'
+    Width = 49.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 4
+    Text = 'Edit2:'
+  end
+  object Label3: TLabel
+    Position.Point = '(231,16)'
+    Width = 289.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 5
+    Text = 'Managed Binding Expressions'
+  end
+  object CheckBoxActive: TCheckBox
+    Position.Point = '(24,360)'
+    Width = 120.000000000000000000
+    Height = 19.000000000000000000
+    TabOrder = 6
+    IsChecked = False
+    Text = 'Active'
+    OnChange = CheckBoxActiveChange
+  end
+  object GroupBox1: TGroupBox
+    Position.Point = '(24,232)'
+    Width = 161.000000000000000000
+    Height = 113.000000000000000000
+    TabOrder = 7
+    Text = 'Direction'
+    object RadioButtonSourceToControl: TRadioButton
+      Position.Point = '(24,24)'
+      Width = 120.000000000000000000
+      Height = 19.000000000000000000
+      TabOrder = 0
+      IsChecked = False
+      Text = 'SourceToControl'
+      OnChange = RadioButtonSourceToControlChange
+    end
+    object RadioButtonControlToSource: TRadioButton
+      Position.Point = '(24,48)'
+      Width = 120.000000000000000000
+      Height = 19.000000000000000000
+      TabOrder = 1
+      IsChecked = False
+      Text = 'ControlToSource'
+      OnChange = RadioButtonSourceToControlChange
+    end
+    object RadioButtonBidirectional: TRadioButton
+      Position.Point = '(24,72)'
+      Width = 120.000000000000000000
+      Height = 19.000000000000000000
+      TabOrder = 2
+      IsChecked = False
+      Text = 'Bidirectional'
+      OnChange = RadioButtonSourceToControlChange
+    end
+  end
+  object ListBoxAssigningValues: TListBox
+    Position.Point = '(232,200)'
+    Width = 296.000000000000000000
+    Height = 289.000000000000000000
+    TabOrder = 8
+  end
+  object Label4: TLabel
+    Position.Point = '(231,176)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 9
+    Text = 'Assigning Values'
+  end
+  object ButtonClear: TButton
+    Position.Point = '(447,174)'
+    Width = 80.000000000000000000
+    Height = 22.000000000000000000
+    OnClick = ButtonClearClick
+    TabOrder = 10
+    StaysPressed = False
+    IsPressed = False
+    Text = 'Clear'
+  end
+  object LabelSource: TLabel
+    Position.Point = '(24,176)'
+    Width = 185.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 11
+    Text = 'LabelSource'
+  end
+  object LabelControl: TLabel
+    Position.Point = '(24,208)'
+    Width = 185.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 12
+    Text = 'LabelControl'
+  end
+  object ButtonResetValues: TButton
+    Position.Point = '(24,136)'
+    Width = 81.000000000000000000
+    Height = 22.000000000000000000
+    OnClick = ButtonResetValuesClick
+    TabOrder = 13
+    StaysPressed = False
+    IsPressed = False
+    Text = 'Reset Text'
+  end
+  object LabelHint: TLabel
+    Position.Point = '(16,16)'
+    Width = 201.000000000000000000
+    Height = 41.000000000000000000
+    TabOrder = 14
+    Text = 'LabelHint'
+  end
+  object ButtonNotifyAll: TButton
+    Position.Point = '(24,400)'
+    Width = 80.000000000000000000
+    Height = 22.000000000000000000
+    OnClick = ButtonNotifyAllClick
+    TabOrder = 15
+    StaysPressed = False
+    IsPressed = False
+    Text = 'Notify All'
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    UseAppManager = True
+    Left = 444
+    Top = 5
+    object BindExpressionEdit11: TBindExpression
+      Category = 'Binding Expressions'
+      ControlComponent = Edit2
+      SourceComponent = Edit1
+      SourceExpression = 'Text'
+      ControlExpression = 'Text'
+      AutoActivate = False
+      NotifyOutputs = False
+      Direction = dirSourceToControl
+      OnAssignedValue = BindExpressionEdit11AssignedValue
+      OnActivated = BindExpressionEdit11Activated
+    end
+  end
+end

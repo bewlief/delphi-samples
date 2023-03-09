@@ -1,0 +1,287 @@
+{*******************************************************}
+{                                                       }
+{           CodeGear Delphi Runtime Library             }
+{ Copyright(c) 2012-2022 Embarcadero Technologies, Inc. }
+{              All rights reserved                      }
+{                                                       }
+{*******************************************************}
+
+package BuildAndroidRTL;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$ENDIF IMPLICITBUILDING}
+{$DESCRIPTION 'Android 32/64 RTL Builder'}
+{$LIBSUFFIX AUTO}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+contains
+  System.Actions in 'common\System.Actions.pas',
+  System.Character in 'common\System.Character.pas',
+  System.Classes in 'common\System.Classes.pas',
+  System.ConvUtils in 'common\System.ConvUtils.pas',
+  System.DateUtils in 'common\System.DateUtils.pas',
+  System.Diagnostics in 'common\System.Diagnostics.pas',
+  System.Generics.Collections in 'common\System.Generics.Collections.pas',
+  System.Generics.Defaults in 'common\System.Generics.Defaults.pas',
+  System.Hash in 'common\System.Hash.pas',
+  System.HelpIntfs in 'common\System.HelpIntfs.pas',
+  System.IniFiles in 'common\System.IniFiles.pas',
+  System.IOUtils in 'common\System.IOUtils.pas',
+  System.Masks in 'common\System.Masks.pas',
+  System.MaskUtils in 'common\System.MaskUtils.pas',
+  System.Math in 'common\System.Math.pas',
+  System.Math.Vectors in 'common\System.Math.Vectors.pas',
+  System.Messaging in 'common\System.Messaging.pas',
+  System.NetEncoding in 'common\System.NetEncoding.pas',
+  System.ObjAuto in 'common\System.ObjAuto.pas',
+  System.Permissions in 'common\System.Permissions.pas',
+  System.RegularExpressions in 'common\System.RegularExpressions.pas',
+  System.RegularExpressionsAPI in 'common\System.RegularExpressionsAPI.pas',
+  System.RegularExpressionsConsts in 'common\System.RegularExpressionsConsts.pas',
+  System.RegularExpressionsCore in 'common\System.RegularExpressionsCore.pas',
+  System.RTLConsts in 'common\System.RTLConsts.pas',
+  System.Rtti in 'common\System.Rtti.pas',
+  System.Sqlite in 'common\System.Sqlite.pas',
+  System.StartUpCopy in 'common\System.StartUpCopy.pas',
+  System.StdConvs in 'common\System.StdConvs.pas',
+  System.StrUtils in 'common\System.StrUtils.pas',
+  System.SyncObjs in 'common\System.SyncObjs.pas',
+  System.SysConst in 'sys\System.SysConst.pas',
+  System.SysUtils in 'sys\System.SysUtils.pas',
+  System.Threading in 'common\System.Threading.pas',
+  System.TimeSpan in 'common\System.TimeSpan.pas',
+  System.Types in 'sys\System.Types.pas',
+  System.TypInfo in 'common\System.TypInfo.pas',
+  System.UIConsts in 'common\System.UIConsts.pas',
+  System.UITypes in 'common\System.UITypes.pas',
+  System.VarCmplx in 'common\System.VarCmplx.pas',
+  System.VarConv in 'common\System.VarConv.pas',
+  System.Variants in 'sys\System.Variants.pas',
+  System.VarUtils in 'sys\System.VarUtils.pas',
+  System.Zip in 'common\System.Zip.pas',
+  System.ZLib in 'common\System.ZLib.pas',
+  System.ZLibConst in 'common\System.ZLibConst.pas',
+
+  System.JSON in 'common\System.JSON.pas',
+  System.JSON.BSON in 'common\System.JSON.BSON.pas',
+  System.JSON.Builders in 'common\System.JSON.Builders.pas',
+  System.JSON.Converters in 'common\System.JSON.Converters.pas',
+  System.JSON.Readers in 'common\System.JSON.Readers.pas',
+  System.JSON.Serializers in 'common\System.JSON.Serializers.pas',
+  System.JSON.Types in 'common\System.JSON.Types.pas',
+  System.JSON.Utils in 'common\System.JSON.Utils.pas',
+  System.JSON.Writers in 'common\System.JSON.Writers.pas',
+  System.JSONConsts in 'common\System.JSONConsts.pas',
+
+  System.Net.FileClient in 'net\System.Net.FileClient.pas',
+  System.Net.HTTPClientComponent in 'net\System.Net.HTTPClientComponent.pas',
+  System.Net.Mime in 'net\System.Net.Mime.pas',
+  System.Net.Socket in 'net\System.Net.Socket.pas',
+  System.Net.URLClient in 'net\System.Net.URLClient.pas',
+  System.NetConsts in 'net\System.NetConsts.pas',
+  System.ImageList in 'common\System.ImageList.pas',
+  System.PushNotification in 'common\System.PushNotification.pas',
+  System.AnsiStrings in 'common\System.AnsiStrings.pas',
+  System.Contnrs in 'common\System.Contnrs.pas',
+  System.WideStrings in 'common\System.WideStrings.pas',
+  System.WideStrUtils in 'common\System.WideStrUtils.pas',
+
+  System.Internal.DebugUtils in 'common\System.Internal.DebugUtils.pas',
+  System.Internal.ExcUtils in 'sys\System.Internal.ExcUtils.pas',
+  System.Internal.GenericsHlpr in 'sys\System.Internal.GenericsHlpr.pas',
+  System.Internal.JSONHlpr in 'sys\System.Internal.JSONHlpr.pas',
+  System.Internal.StrHlpr in 'sys\System.Internal.StrHlpr.pas',
+  System.Internal.VarHlpr in 'sys\System.Internal.VarHlpr.pas',
+  System.Internal.ICU in 'common\System.Internal.ICU.pas',
+  System.Internal.InitCPP in 'sys\System.Internal.InitCPP.pas',
+
+
+  System.Analytics in 'common\System.Analytics.pas',
+  System.Analytics.AppAnalytics in 'common\System.Analytics.AppAnalytics.pas',
+
+  System.Beacon in 'net\System.Beacon.pas',
+  System.Beacon.Common in 'net\System.Beacon.Common.pas',
+  System.Beacon.Components in 'net\System.Beacon.Components.pas',
+  System.Android.Beacon in 'net\System.Android.Beacon.pas',
+
+  System.Bluetooth in 'net\System.Bluetooth.pas',
+  System.Bluetooth.Components in 'net\System.Bluetooth.Components.pas',
+  System.Android.Bluetooth in 'net\System.Android.Bluetooth.pas',
+
+  System.Android.Permissions in 'common\System.Android.Permissions.pas',
+
+  System.Sensors in 'common\System.Sensors.pas',
+  System.Sensors.Components in 'common\System.Sensors.Components.pas',
+  System.Android.Sensors in 'common\System.Android.Sensors.pas',
+
+  System.Net.HTTPClient in 'net\System.Net.HTTPClient.pas',
+  System.Net.HTTPClient.Android in 'net\System.Net.HTTPClient.Android.pas',
+
+  System.Notification in 'common\System.Notification.pas',
+  System.Android.Notification in 'common\System.Android.Notification.pas',
+
+  System.Devices in 'common\System.Devices.pas',
+  System.Android.Devices in 'common\System.Android.Devices.pas',
+
+
+
+  Posix.ArpaInet in 'posix\Posix.ArpaInet.pas',
+  Posix.Base in 'posix\Posix.Base.pas',
+  Posix.Dirent in 'posix\Posix.Dirent.pas',
+  Posix.Dlfcn in 'posix\Posix.Dlfcn.pas',
+  Posix.Errno in 'posix\Posix.Errno.pas',
+  Posix.Fcntl in 'posix\Posix.Fcntl.pas',
+  Posix.Fnmatch in 'posix\Posix.Fnmatch.pas',
+  Posix.Grp in 'posix\Posix.Grp.pas',
+  Posix.Iconv in 'posix\Posix.Iconv.pas',
+  Posix.Langinfo in 'posix\Posix.Langinfo.pas',
+  Posix.Limits in 'posix\Posix.Limits.pas',
+  Posix.Locale in 'posix\Posix.Locale.pas',
+  Posix.NetDB in 'posix\Posix.NetDB.pas',
+  Posix.NetIf in 'posix\Posix.NetIf.pas',
+  Posix.NetinetIcmp6 in 'posix\Posix.NetinetIcmp6.pas',
+  Posix.NetinetIn in 'posix\Posix.NetinetIn.pas',
+  Posix.NetinetIp6 in 'posix\Posix.NetinetIp6.pas',
+  Posix.NetinetTCP in 'posix\Posix.NetinetTCP.pas',
+  Posix.NetinetUDP in 'posix\Posix.NetinetUDP.pas',
+  Posix.Pthread in 'posix\Posix.Pthread.pas',
+  Posix.Pwd in 'posix\Posix.Pwd.pas',
+  Posix.Sched in 'posix\Posix.Sched.pas',
+  Posix.Semaphore in 'posix\Posix.Semaphore.pas',
+  Posix.Signal in 'posix\Posix.Signal.pas',
+  Posix.StdDef in 'posix\Posix.StdDef.pas',
+  Posix.Stdio in 'posix\Posix.Stdio.pas',
+  Posix.Stdlib in 'posix\Posix.Stdlib.pas',
+  Posix.String_ in 'posix\Posix.String_.pas',
+  Posix.StrOpts in 'posix\Posix.StrOpts.pas',
+  Posix.SysMman in 'posix\Posix.SysMman.pas',
+  Posix.SysSelect in 'posix\Posix.SysSelect.pas',
+  Posix.SysSocket in 'posix\Posix.SysSocket.pas',
+  Posix.SysStat in 'posix\Posix.SysStat.pas',
+  Posix.SysStatvfs in 'posix\Posix.SysStatvfs.pas',
+  Posix.SysSysctl in 'posix\Posix.SysSysctl.pas',
+  Posix.SysTime in 'posix\Posix.SysTime.pas',
+  Posix.SysTimes in 'posix\Posix.SysTimes.pas',
+  Posix.SysTypes in 'posix\Posix.SysTypes.pas',
+  Posix.SysUio in 'posix\Posix.SysUio.pas',
+  Posix.SysUn in 'posix\Posix.SysUn.pas',
+  Posix.SysUtsname in 'posix\Posix.SysUtsname.pas',
+  Posix.SysWait in 'posix\Posix.SysWait.pas',
+  Posix.Termios in 'posix\Posix.Termios.pas',
+  Posix.Time in 'posix\Posix.Time.pas',
+  Posix.Unistd in 'posix\Posix.Unistd.pas',
+  Posix.Utime in 'posix\Posix.Utime.pas',
+  Posix.Wchar in 'posix\Posix.Wchar.pas',
+  Posix.Wctype in 'posix\Posix.Wctype.pas',
+  Posix.Wordexp in 'posix\Posix.Wordexp.pas',
+
+(*$HPPEMIT '#include <Androidapi.JNI.OpenGL.hpp>' *)
+(*$NOINCLUDE Androidapi.JNI.OpenGL *)
+(*$HPPEMIT '#include <Androidapi.Egl.hpp>' *)
+(*$NOINCLUDE Androidapi.Egl *)
+(*$HPPEMIT '#include <Androidapi.Eglext.hpp>' *)
+(*$NOINCLUDE Androidapi.Eglext *)
+(*$HPPEMIT '#include <Androidapi.EglPlatform.hpp>' *)
+(*$NOINCLUDE Androidapi.EglPlatform *)
+(*$HPPEMIT '#include <Androidapi.Gles.hpp>' *)
+(*$NOINCLUDE Androidapi.Gles *)
+(*$HPPEMIT '#include <Androidapi.Gles2.hpp>' *)
+(*$NOINCLUDE Androidapi.Gles2 *)
+(*$HPPEMIT '#include <Androidapi.Gles2ext.hpp>' *)
+(*$NOINCLUDE Androidapi.Gles2ext *)
+(*$HPPEMIT '#include <Androidapi.Glesext.hpp>' *)
+(*$NOINCLUDE Androidapi.Glesext *)
+  Androidapi.AppGlue in 'android\Androidapi.AppGlue.pas',
+  Androidapi.AssetManager in 'android\Androidapi.AssetManager.pas',
+  Androidapi.AssetManagerJni in 'android\Androidapi.AssetManagerJni.pas',
+  Androidapi.Bitmap in 'android\Androidapi.Bitmap.pas',
+  Androidapi.Configuration in 'android\Androidapi.Configuration.pas',
+  Androidapi.Consts in 'android\Androidapi.Consts.pas',
+  Androidapi.Egl in 'android\Androidapi.Egl.pas',
+  Androidapi.Eglext in 'android\Androidapi.Eglext.pas',
+  Androidapi.EglPlatform in 'android\Androidapi.EglPlatform.pas',
+  Androidapi.Gles in 'android\Androidapi.Gles.pas',
+  Androidapi.Gles2 in 'android\Androidapi.Gles2.pas',
+  Androidapi.Gles2ext in 'android\Androidapi.Gles2ext.pas',
+  Androidapi.Glesext in 'android\Androidapi.Glesext.pas',
+  Androidapi.Helpers in 'android\Androidapi.Helpers.pas',
+  Androidapi.Input in 'android\Androidapi.Input.pas',
+  Androidapi.IOUtils in 'android\Androidapi.IOUtils.pas',
+  Androidapi.Jni in 'android\Androidapi.Jni.pas',
+  Androidapi.JNI.Accounts in 'android\Androidapi.JNI.Accounts.pas',
+  Androidapi.JNI.AdMob in 'android\Androidapi.JNI.AdMob.pas',
+  Androidapi.JNI.Analytics in 'android\Androidapi.JNI.Analytics.pas',
+  Androidapi.JNI.Android.Security in 'android\Androidapi.JNI.Android.Security.pas',
+  Androidapi.JNI.ApkExpansion in 'android\Androidapi.JNI.ApkExpansion.pas',
+  Androidapi.JNI.App in 'android\Androidapi.JNI.App.pas',
+  Androidapi.JNI.Bluetooth in 'android\Androidapi.JNI.Bluetooth.pas',
+  Androidapi.JNI.Dalvik in 'android\Androidapi.JNI.Dalvik.pas',
+  Androidapi.JNI.Firebase in 'android\Androidapi.JNI.Firebase.pas',
+  Androidapi.JNI.Embarcadero in 'android\Androidapi.JNI.Embarcadero.pas',
+  Androidapi.JNI.Embarcadero.Firebase in 'android\Androidapi.JNI.Embarcadero.Firebase.pas',
+  Androidapi.JNI.GraphicsContentViewText in 'android\Androidapi.JNI.GraphicsContentViewText.pas',
+  Androidapi.JNI.Hardware in 'android\Androidapi.JNI.Hardware.pas',
+  Androidapi.JNI.InAppBilling in 'android\Androidapi.JNI.InAppBilling.pas',
+  Androidapi.JNI.InputMethodService in 'android\Androidapi.JNI.InputMethodService.pas',
+  Androidapi.JNI.Java.Net in 'android\Androidapi.JNI.Java.Net.pas',
+  Androidapi.JNI.Java.Security in 'android\Androidapi.JNI.Java.Security.pas',
+  Androidapi.JNI.JavaTypes in 'android\Androidapi.JNI.JavaTypes.pas',
+  Androidapi.JNI.Licensing in 'android\Androidapi.JNI.Licensing.pas',
+  Androidapi.JNI.Location in 'android\Androidapi.JNI.Location.pas',
+  Androidapi.JNI.Media in 'android\Androidapi.JNI.Media.pas',
+  Androidapi.JNI.Net in 'android\Androidapi.JNI.Net.pas',
+  Androidapi.JNI.OpenGL in 'android\Androidapi.JNI.OpenGL.pas',
+  Androidapi.JNI.Os in 'android\Androidapi.JNI.Os.pas',
+  Androidapi.JNI.PlayServices in 'android\Androidapi.JNI.PlayServices.pas',
+  Androidapi.JNI.PlayServices.Maps in 'android\Androidapi.JNI.PlayServices.Maps.pas',
+  Androidapi.JNI.PlayServices.Tasks in 'android\Androidapi.JNI.PlayServices.Tasks.pas',
+  Androidapi.JNI.Print in 'android\Androidapi.JNI.Print.pas',
+  Androidapi.JNI.Provider in 'android\Androidapi.JNI.Provider.pas',
+  Androidapi.JNI.RenderScript in 'android\Androidapi.JNI.RenderScript.pas',
+  Androidapi.JNI.Speech in 'android\Androidapi.JNI.Speech.pas',
+  Androidapi.JNI.Support in 'android\Androidapi.JNI.Support.pas',
+  Androidapi.JNI.Telephony in 'android\Androidapi.JNI.Telephony.pas',
+  Androidapi.JNI.Util in 'android\Androidapi.JNI.Util.pas',
+  Androidapi.JNI.VideoView in 'android\Androidapi.JNI.VideoView.pas',
+  Androidapi.JNI.Webkit in 'android\Androidapi.JNI.Webkit.pas',
+  Androidapi.JNI.Widget in 'android\Androidapi.JNI.Widget.pas',
+  Androidapi.JNIBridge in 'android\Androidapi.JNIBridge.pas',
+  Androidapi.JNIMarshal in 'android\Androidapi.JNIMarshal.pas',
+  Androidapi.KeyCodes in 'android\Androidapi.KeyCodes.pas',
+  Androidapi.KhrPlatform in 'android\Androidapi.KhrPlatform.pas',
+  Androidapi.Log in 'android\Androidapi.Log.pas',
+  Androidapi.Looper in 'android\Androidapi.Looper.pas',
+  Androidapi.NativeActivity in 'android\Androidapi.NativeActivity.pas',
+  Androidapi.NativeWindow in 'android\Androidapi.NativeWindow.pas',
+  Androidapi.NativeWindowJni in 'android\Androidapi.NativeWindowJni.pas',
+  Androidapi.Obb in 'android\Androidapi.Obb.pas',
+  Androidapi.OpenSles in 'android\Androidapi.OpenSles.pas',
+  Androidapi.Rect in 'android\Androidapi.Rect.pas',
+  Androidapi.Sensor in 'android\Androidapi.Sensor.pas',
+  Androidapi.StorageManager in 'android\Androidapi.StorageManager.pas',
+  Androidapi.Timer in 'android\Androidapi.Timer.pas';
+
+end.

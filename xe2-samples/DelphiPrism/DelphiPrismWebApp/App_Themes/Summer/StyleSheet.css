@@ -1,0 +1,98 @@
+body
+{
+
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+form {display: inline;}
+
+a:visited {
+    color:#253443;
+	text-decoration: none;
+}
+a:visited:hover {
+    color:#253443;
+	text-decoration: none;
+}
+
+.header {
+	font-family: Verdana;
+	font-size: 28px;
+	color: #FFFFFF;
+}
+
+.header a { color: yellow;font-weight:bold;}
+
+.header a:hover { color: yellow; }
+
+
+.right {text-align: right; }
+
+table {
+	background-color: White;
+	color: #FFFFFF;
+    border-color: #9DA1B4;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+table .header{
+	background-color : Navy;
+	color : white;
+	font-size : 8.5pt;
+	font-weight : bold;
+	padding: 3px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+table .item {
+	background-color : White;
+	color : #253443;
+	padding: 2px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+table .altitem {
+	background-color : #FFFF99;
+	color : #253443;
+	padding: 2px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+table a { color: #A23425;
+          font-weight:bold;
+	text-decoration: none;
+}
+table a:visited { color: #A23425;
+          font-weight:bold;
+	text-decoration: none;
+}
+
+table a:hover { color: #253443;
+	text-decoration: none; }
+
+.hightlighrow
+{
+	background-color: #FFD700;
+	font-weight: bold;
+}
+
+div.centered  
+{ 
+    text-align: center; 
+} 
+div.centered table  
+{ 
+    margin: 0 auto;  
+    text-align: left; 
+} 

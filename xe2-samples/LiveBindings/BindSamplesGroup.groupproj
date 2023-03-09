@@ -1,0 +1,300 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{8A479C95-78D7-4383-A93D-75F439764A8A}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="bindexpression\fmx\BindComponentsExprProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bindexpression\fmx\BindDBExprSampleProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bindexpression\fmx\BindExpressionSampleProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bindgridlink\fmx\BindGridLinkFMXProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bindgridlink\vcl\BindGridLinkVCLProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bindlink\fmx\BindLinkFMXProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bindlink\vcl\BindLinkVCLProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bindlist\vcl\BindListEditVCLProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bindlist\fmx\BindListFMXProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bindlist\vcl\BindListVCLProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bindlookup\vcl\BindLookupVCLProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="exceptions\EvalErrorSample.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="collections\fmx\ListCollectionsSampleProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bindedits\ManagedBindEdits.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="console\ManagedBindingsConsole.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="binddblink\fmx\SimpleDBBindLinkProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="console\SimpleExpressionConsole.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="collections\fmx\SimpleListCollectionSampleProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bindedits\SimpleManagedBindEdits.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="console\SimpleManagedBindingsConsole.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="console\SimpleUnmanagedBindingsConsole.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="bindexpression\fmx\SynchControlsSampleProject.dproj">
+				<Dependencies/>
+			</Projects>
+			<Projects Include="console\UnmanagedBindingsConsole.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="BindComponentsExprProject">
+			<MSBuild Projects="bindexpression\fmx\BindComponentsExprProject.dproj"/>
+		</Target>
+		<Target Name="BindComponentsExprProject:Clean">
+			<MSBuild Projects="bindexpression\fmx\BindComponentsExprProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="BindComponentsExprProject:Make">
+			<MSBuild Projects="bindexpression\fmx\BindComponentsExprProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="BindDBExprSampleProject">
+			<MSBuild Projects="bindexpression\fmx\BindDBExprSampleProject.dproj"/>
+		</Target>
+		<Target Name="BindDBExprSampleProject:Clean">
+			<MSBuild Projects="bindexpression\fmx\BindDBExprSampleProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="BindDBExprSampleProject:Make">
+			<MSBuild Projects="bindexpression\fmx\BindDBExprSampleProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="BindExpressionSampleProject">
+			<MSBuild Projects="bindexpression\fmx\BindExpressionSampleProject.dproj"/>
+		</Target>
+		<Target Name="BindExpressionSampleProject:Clean">
+			<MSBuild Projects="bindexpression\fmx\BindExpressionSampleProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="BindExpressionSampleProject:Make">
+			<MSBuild Projects="bindexpression\fmx\BindExpressionSampleProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="BindGridLinkFMXProject">
+			<MSBuild Projects="bindgridlink\fmx\BindGridLinkFMXProject.dproj"/>
+		</Target>
+		<Target Name="BindGridLinkFMXProject:Clean">
+			<MSBuild Projects="bindgridlink\fmx\BindGridLinkFMXProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="BindGridLinkFMXProject:Make">
+			<MSBuild Projects="bindgridlink\fmx\BindGridLinkFMXProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="BindGridLinkVCLProject">
+			<MSBuild Projects="bindgridlink\vcl\BindGridLinkVCLProject.dproj"/>
+		</Target>
+		<Target Name="BindGridLinkVCLProject:Clean">
+			<MSBuild Projects="bindgridlink\vcl\BindGridLinkVCLProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="BindGridLinkVCLProject:Make">
+			<MSBuild Projects="bindgridlink\vcl\BindGridLinkVCLProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="BindLinkFMXProject">
+			<MSBuild Projects="bindlink\fmx\BindLinkFMXProject.dproj"/>
+		</Target>
+		<Target Name="BindLinkFMXProject:Clean">
+			<MSBuild Projects="bindlink\fmx\BindLinkFMXProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="BindLinkFMXProject:Make">
+			<MSBuild Projects="bindlink\fmx\BindLinkFMXProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="BindLinkVCLProject">
+			<MSBuild Projects="bindlink\vcl\BindLinkVCLProject.dproj"/>
+		</Target>
+		<Target Name="BindLinkVCLProject:Clean">
+			<MSBuild Projects="bindlink\vcl\BindLinkVCLProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="BindLinkVCLProject:Make">
+			<MSBuild Projects="bindlink\vcl\BindLinkVCLProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="BindListEditVCLProject">
+			<MSBuild Projects="bindlist\vcl\BindListEditVCLProject.dproj"/>
+		</Target>
+		<Target Name="BindListEditVCLProject:Clean">
+			<MSBuild Projects="bindlist\vcl\BindListEditVCLProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="BindListEditVCLProject:Make">
+			<MSBuild Projects="bindlist\vcl\BindListEditVCLProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="BindListFMXProject">
+			<MSBuild Projects="bindlist\fmx\BindListFMXProject.dproj"/>
+		</Target>
+		<Target Name="BindListFMXProject:Clean">
+			<MSBuild Projects="bindlist\fmx\BindListFMXProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="BindListFMXProject:Make">
+			<MSBuild Projects="bindlist\fmx\BindListFMXProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="BindListVCLProject">
+			<MSBuild Projects="bindlist\vcl\BindListVCLProject.dproj"/>
+		</Target>
+		<Target Name="BindListVCLProject:Clean">
+			<MSBuild Projects="bindlist\vcl\BindListVCLProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="BindListVCLProject:Make">
+			<MSBuild Projects="bindlist\vcl\BindListVCLProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="BindLookupVCLProject">
+			<MSBuild Projects="bindlookup\vcl\BindLookupVCLProject.dproj"/>
+		</Target>
+		<Target Name="BindLookupVCLProject:Clean">
+			<MSBuild Projects="bindlookup\vcl\BindLookupVCLProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="BindLookupVCLProject:Make">
+			<MSBuild Projects="bindlookup\vcl\BindLookupVCLProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="EvalErrorSample">
+			<MSBuild Projects="exceptions\EvalErrorSample.dproj"/>
+		</Target>
+		<Target Name="EvalErrorSample:Clean">
+			<MSBuild Projects="exceptions\EvalErrorSample.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="EvalErrorSample:Make">
+			<MSBuild Projects="exceptions\EvalErrorSample.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="ListCollectionsSampleProject">
+			<MSBuild Projects="collections\fmx\ListCollectionsSampleProject.dproj"/>
+		</Target>
+		<Target Name="ListCollectionsSampleProject:Clean">
+			<MSBuild Projects="collections\fmx\ListCollectionsSampleProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="ListCollectionsSampleProject:Make">
+			<MSBuild Projects="collections\fmx\ListCollectionsSampleProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="ManagedBindEdits">
+			<MSBuild Projects="bindedits\ManagedBindEdits.dproj"/>
+		</Target>
+		<Target Name="ManagedBindEdits:Clean">
+			<MSBuild Projects="bindedits\ManagedBindEdits.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="ManagedBindEdits:Make">
+			<MSBuild Projects="bindedits\ManagedBindEdits.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="ManagedBindingsConsole">
+			<MSBuild Projects="console\ManagedBindingsConsole.dproj"/>
+		</Target>
+		<Target Name="ManagedBindingsConsole:Clean">
+			<MSBuild Projects="console\ManagedBindingsConsole.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="ManagedBindingsConsole:Make">
+			<MSBuild Projects="console\ManagedBindingsConsole.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="SimpleDBBindLinkProject">
+			<MSBuild Projects="binddblink\fmx\SimpleDBBindLinkProject.dproj"/>
+		</Target>
+		<Target Name="SimpleDBBindLinkProject:Clean">
+			<MSBuild Projects="binddblink\fmx\SimpleDBBindLinkProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="SimpleDBBindLinkProject:Make">
+			<MSBuild Projects="binddblink\fmx\SimpleDBBindLinkProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="SimpleExpressionConsole">
+			<MSBuild Projects="console\SimpleExpressionConsole.dproj"/>
+		</Target>
+		<Target Name="SimpleExpressionConsole:Clean">
+			<MSBuild Projects="console\SimpleExpressionConsole.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="SimpleExpressionConsole:Make">
+			<MSBuild Projects="console\SimpleExpressionConsole.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="SimpleListCollectionSampleProject">
+			<MSBuild Projects="collections\fmx\SimpleListCollectionSampleProject.dproj"/>
+		</Target>
+		<Target Name="SimpleListCollectionSampleProject:Clean">
+			<MSBuild Projects="collections\fmx\SimpleListCollectionSampleProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="SimpleListCollectionSampleProject:Make">
+			<MSBuild Projects="collections\fmx\SimpleListCollectionSampleProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="SimpleManagedBindEdits">
+			<MSBuild Projects="bindedits\SimpleManagedBindEdits.dproj"/>
+		</Target>
+		<Target Name="SimpleManagedBindEdits:Clean">
+			<MSBuild Projects="bindedits\SimpleManagedBindEdits.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="SimpleManagedBindEdits:Make">
+			<MSBuild Projects="bindedits\SimpleManagedBindEdits.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="SimpleManagedBindingsConsole">
+			<MSBuild Projects="console\SimpleManagedBindingsConsole.dproj"/>
+		</Target>
+		<Target Name="SimpleManagedBindingsConsole:Clean">
+			<MSBuild Projects="console\SimpleManagedBindingsConsole.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="SimpleManagedBindingsConsole:Make">
+			<MSBuild Projects="console\SimpleManagedBindingsConsole.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="SimpleUnmanagedBindingsConsole">
+			<MSBuild Projects="console\SimpleUnmanagedBindingsConsole.dproj"/>
+		</Target>
+		<Target Name="SimpleUnmanagedBindingsConsole:Clean">
+			<MSBuild Projects="console\SimpleUnmanagedBindingsConsole.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="SimpleUnmanagedBindingsConsole:Make">
+			<MSBuild Projects="console\SimpleUnmanagedBindingsConsole.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="SynchControlsSampleProject">
+			<MSBuild Projects="bindexpression\fmx\SynchControlsSampleProject.dproj"/>
+		</Target>
+		<Target Name="SynchControlsSampleProject:Clean">
+			<MSBuild Projects="bindexpression\fmx\SynchControlsSampleProject.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="SynchControlsSampleProject:Make">
+			<MSBuild Projects="bindexpression\fmx\SynchControlsSampleProject.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="UnmanagedBindingsConsole">
+			<MSBuild Projects="console\UnmanagedBindingsConsole.dproj"/>
+		</Target>
+		<Target Name="UnmanagedBindingsConsole:Clean">
+			<MSBuild Projects="console\UnmanagedBindingsConsole.dproj" Targets="Clean"/>
+		</Target>
+		<Target Name="UnmanagedBindingsConsole:Make">
+			<MSBuild Projects="console\UnmanagedBindingsConsole.dproj" Targets="Make"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="BindComponentsExprProject;BindDBExprSampleProject;BindExpressionSampleProject;BindGridLinkFMXProject;BindGridLinkVCLProject;BindLinkFMXProject;BindLinkVCLProject;BindListEditVCLProject;BindListFMXProject;BindListVCLProject;BindLookupVCLProject;EvalErrorSample;ListCollectionsSampleProject;ManagedBindEdits;ManagedBindingsConsole;SimpleDBBindLinkProject;SimpleExpressionConsole;SimpleListCollectionSampleProject;SimpleManagedBindEdits;SimpleManagedBindingsConsole;SimpleUnmanagedBindingsConsole;SynchControlsSampleProject;UnmanagedBindingsConsole"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="BindComponentsExprProject:Clean;BindDBExprSampleProject:Clean;BindExpressionSampleProject:Clean;BindGridLinkFMXProject:Clean;BindGridLinkVCLProject:Clean;BindLinkFMXProject:Clean;BindLinkVCLProject:Clean;BindListEditVCLProject:Clean;BindListFMXProject:Clean;BindListVCLProject:Clean;BindLookupVCLProject:Clean;EvalErrorSample:Clean;ListCollectionsSampleProject:Clean;ManagedBindEdits:Clean;ManagedBindingsConsole:Clean;SimpleDBBindLinkProject:Clean;SimpleExpressionConsole:Clean;SimpleListCollectionSampleProject:Clean;SimpleManagedBindEdits:Clean;SimpleManagedBindingsConsole:Clean;SimpleUnmanagedBindingsConsole:Clean;SynchControlsSampleProject:Clean;UnmanagedBindingsConsole:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="BindComponentsExprProject:Make;BindDBExprSampleProject:Make;BindExpressionSampleProject:Make;BindGridLinkFMXProject:Make;BindGridLinkVCLProject:Make;BindLinkFMXProject:Make;BindLinkVCLProject:Make;BindListEditVCLProject:Make;BindListFMXProject:Make;BindListVCLProject:Make;BindLookupVCLProject:Make;EvalErrorSample:Make;ListCollectionsSampleProject:Make;ManagedBindEdits:Make;ManagedBindingsConsole:Make;SimpleDBBindLinkProject:Make;SimpleExpressionConsole:Make;SimpleListCollectionSampleProject:Make;SimpleManagedBindEdits:Make;SimpleManagedBindingsConsole:Make;SimpleUnmanagedBindingsConsole:Make;SynchControlsSampleProject:Make;UnmanagedBindingsConsole:Make"/>
+		</Target>
+		<Import Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')" Project="$(BDS)\Bin\CodeGear.Group.Targets"/>
+	</Project>

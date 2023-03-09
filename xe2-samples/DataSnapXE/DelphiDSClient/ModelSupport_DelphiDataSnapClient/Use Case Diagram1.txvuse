@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="g6v7y06cfyh_v">
+    <property name="$metaclass" value="Use Case Diagram" />
+    <property name="$name" value="Use Case Diagram1" />
+    <reference referencedUin="design:node:::vwoeqds505t_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="180,140,140,180" />
+      <property name="bounds_setted_by_user" value="True" />
+      <reference referencedUin="design:link:::99e3zc37gm_l:vwoeqds505t_n">
+        <property name="sourceAnchor" value="320,218" />
+        <property name="targetAnchor" value="511,218" />
+        <property name="bendpoints" value="" />
+        <reference referencedUin="label:$associationRoleClientInplace:design:link:::99e3zc37gm_l:vwoeqds505t_n">
+          <property name="bounds" value="330,221,12,16" />
+        </reference>
+        <reference referencedUin="label:$associationRoleSupplierInplace:design:link:::99e3zc37gm_l:vwoeqds505t_n">
+          <property name="bounds" value="489,221,12,16" />
+        </reference>
+      </reference>
+    </reference>
+    <reference referencedUin="design:node:::2b2nde8l5rp_n">
+      <property name="$shortcutReference" value="true" />
+      <property name="background_color" value="200, 200, 200" />
+      <property name="bounds" value="440,80,238,444" />
+      <property name="location_set_by_user" value="True" />
+      <property name="bounds_setted_by_user" value="True" />
+      <reference referencedUin="design:node:::r9xx259xj3h_n:2b2nde8l5rp_n">
+        <property name="bounds" value="71,101,112,32" />
+      </reference>
+    </reference>
+  </view>
+</nodeSet>

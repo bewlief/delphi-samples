@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="a5bdin4y59j_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DMClient.TDMClientContainer">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,290,326" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.ImageList1" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.ILLarte" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.MyBalloonHint" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.CDSEmployee" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.CDSCountry" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.DSPCEmployeeRDM" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.DSCMainServerModule" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.CDSJobs" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.CDSJobsJOBID" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.DSPLookupRDM" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.CDSDepartment" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.MyDSServer" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.CDSCopy" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.CDSJobsJOBNAME" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.CDSJobsDESCRIPTION" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.TDMClientContainer.CDSJobsJOBCMD" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:DMClient.TDMClientContainer.CDSJobsReconcileError(DBClient.TCustomClientDataSet,DBClient.EReconcileError,DB.TUpdateKind,ref@DBClient.TReconcileAction)" />
+      <reference referencedUin="delphi:l_gnt:src:DelphiDataSnapClient:DMClient.TDMClientContainer:Classes.TDataModule">
+        <property name="sourceAnchor" value="300,173" />
+        <property name="targetAnchor" value="319,173" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:DMClient.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:DMClient.@unitclass.DMClientContainer" />
+      <reference referencedUin="delphi:l_ast:src:DelphiDataSnapClient:DMClient.@unitclass.DMClientContainer" />
+    </reference>
+    <reference referencedUin="delphi:e_class:lib:DelphiWin32:Classes.TDataModule">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="319,1,279,508" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.Create(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.WriteHorizontalOffset(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.Destroy()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TDataModule.OnCreate" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TDataModule.FOldCreateOrder" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TDataModule.FDesignOffset" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TDataModule.FDesignSize" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.DefineProperties(Classes.TFiler)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TDataModule.DesignOffset" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.CreateNew(Classes.TComponent,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.WriteHeight(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.GetChildren(Classes.TDataModule.GetChildren.TGetChildProc,Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.ReadHeight(Classes.TReader)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.DoDestroy()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TDataModule.OldCreateOrder" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.AfterConstruction()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.BeforeDestruction()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.DoCreate()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.WriteVerticalOffset(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.ReadState(Classes.TReader)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TDataModule.DesignSize" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TDataModule.FOnDestroy" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.ReadVerticalOffset(Classes.TReader)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.ReadHorizontalOffset(Classes.TReader)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.ReadWidth(Classes.TReader)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TDataModule.FOnCreate" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TDataModule.OnDestroy" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.WriteWidth(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TDataModule.HandleCreateException()" />
+      <reference referencedUin="delphi:l_conn:lib:DelphiWin32:Classes.TDataModule:Classes.TComponent">
+        <property name="sourceAnchor" value="598,255" />
+        <property name="targetAnchor" value="617,255" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:lib:DelphiWin32:Classes.TComponent">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="617,1,342,1438" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Destroying()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.Owner" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FName" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ValidateContainer(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetNamePath()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.ComponentIndex" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FTag" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetComponentIndex(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetAncestor(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetName(Classes.TComponentName)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.Name" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetChildren(Classes.TComponent.GetChildren.TGetChildProc,Classes.TComponent)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.VCLComObject" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetChildParent()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetTypeInfo(System.Integer,System.Integer,out@)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.AddSortedComponent(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ValidateRename(Classes.TComponent,System.string,System.string)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.ComponentCount" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetOwner()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.FindSortedComponent(System.string,ref@System.Integer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FFreeNotifies" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Invoke(System.Integer,System.TGUID,System.Integer,System.Word,ref@,System.Pointer,System.Pointer,System.Pointer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Loaded()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetComponentCount()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Create(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ReadLeft(Classes.TReader)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.WriteState(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.PaletteCreated()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.HasParent()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.IsImplementorOf(System.IInterface)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FComponentStyle" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetParentComponent(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.FreeNotification(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent._Release()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.Tag" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.ComObject" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.QueryInterface(System.TGUID,out@)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ExecuteAction(Classes.TBasicAction)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.UpdateAction(Classes.TBasicAction)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetParentComponent()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Destroy()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.IntfGetComponent()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ReferenceInterface(System.IInterface,Classes.TOperation)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.WriteTop(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetComponent(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.RemoveFreeNotification(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ChangeName(Classes.TComponentName)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.RemoveNotification(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FVCLComObject" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.DestroyComponents()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.WriteLeft(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ValidateInsert(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.RemoveComponent(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Insert(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Updated()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetInline(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetDesignInstance(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetDesigning(System.Boolean,System.Boolean)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.DesignInfo" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetChildOwner()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FOwner" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SafeCallException(System.TObject,System.Pointer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FComponents" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Updating()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.BeforeDestruction()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Remove(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FComponentState" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.ComponentState" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ReadTop(Classes.TReader)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetTypeInfoCount(out@System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetChildOrder(Classes.TComponent,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.RemoveFreeNotifications()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Notification(Classes.TComponent,Classes.TOperation)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.Components" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.RemoveSortedComponent(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetSubComponent(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetIDsOfNames(System.TGUID,System.Pointer,System.Integer,System.Integer,System.Pointer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ReadState(Classes.TReader)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.FindComponent(System.string)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.ComponentStyle" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetEnumerator()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FSortedComponents" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.DefineProperties(Classes.TFiler)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.UpdateRegistry(System.Boolean,System.string,System.string)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FDesignInfo" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetComObject()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.FreeOnRelease()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetReference(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetComponentIndex()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent._AddRef()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.InsertComponent(Classes.TComponent)" />
+      <reference referencedUin="delphi:l_conn:lib:DelphiWin32:Classes.TComponent:Classes.TPersistent">
+        <property name="sourceAnchor" value="617,442" />
+        <property name="targetAnchor" value="313,442" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Classes.TComponent.Owner">
+        <property name="sourceAnchor" value="959,1418" />
+        <property name="targetAnchor" value="951,1439" />
+        <property name="bendpoints" value="1005,1418,1005,1485,951,1485" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Classes.TComponent.FOwner">
+        <property name="sourceAnchor" value="959,1397" />
+        <property name="targetAnchor" value="943,1439" />
+        <property name="bendpoints" value="1026,1397,1026,1506,943,1506" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Classes.TComponent.Components">
+        <property name="sourceAnchor" value="959,1376" />
+        <property name="targetAnchor" value="935,1439" />
+        <property name="bendpoints" value="1047,1376,1047,1527,935,1527" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:lib:DelphiWin32:Classes.TPersistent">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="130,355,183,174" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TPersistent.DefineProperties(Classes.TFiler)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TPersistent.Destroy()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TPersistent.Assign(Classes.TPersistent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TPersistent.AssignTo(Classes.TPersistent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TPersistent.GetNamePath()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TPersistent.GetOwner()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TPersistent.AssignError(Classes.TPersistent)" />
+      <reference referencedUin="delphi:l_conn:lib:DelphiWin32:Classes.TPersistent:System.TObject">
+        <property name="sourceAnchor" value="275,529" />
+        <property name="targetAnchor" value="332,620" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:lib:DelphiWin32:System.TObject">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="332,542,216,504" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.Create()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.CleanupInstance()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.ToString()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.NewInstance()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.Equals(System.TObject)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.GetInterfaceEntry(System.TGUID)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.ClassInfo()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.SafeCallException(System.TObject,System.Pointer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.Free()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.InstanceSize()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.UnitName()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.ClassType()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.Dispatch(ref@)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.ClassName()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.ClassParent()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.FreeInstance()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.AfterConstruction()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.ClassNameIs(System.string)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.BeforeDestruction()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.InitInstance(System.Pointer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.MethodAddress(System.ShortString)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.FieldAddress(System.ShortString)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.DefaultHandler(ref@)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.Destroy()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.GetHashCode()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.InheritsFrom(System.TClass)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.MethodName(System.Pointer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.GetInterfaceTable()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.GetInterface(System.TGUID,out@)" />
+    </reference>
+  </view>
+</nodeSet>

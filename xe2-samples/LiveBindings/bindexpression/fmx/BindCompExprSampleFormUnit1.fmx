@@ -1,0 +1,191 @@
+object Form1: TForm1
+  BiDiMode = bdLeftToRight
+  Caption = 'TBindExpression Example'
+  ClientHeight = 475
+  ClientWidth = 593
+  Left = 0
+  Top = 0
+  Transparency = False
+  Visible = False
+  OnCreate = FormCreate
+  StyleLookup = 'backgroundstyle'
+  object EditOutput: TEdit
+    Position.Point = '(8,214)'
+    Width = 329.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 0
+    ReadOnly = False
+    Password = False
+    Text = 'ABC'
+  end
+  object EditSource: TEdit
+    Position.Point = '(8,267)'
+    Width = 273.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 1
+    ReadOnly = False
+    OnChange = EditSourceChange
+    Password = False
+    Text = 'ABC'
+  end
+  object CheckBoxActive: TCheckBox
+    Position.Point = '(8,168)'
+    Width = 89.000000000000000000
+    Height = 18.000000000000000000
+    TabOrder = 2
+    IsChecked = False
+    Text = 'Active'
+    OnChange = CheckBoxActiveChange
+  end
+  object LabelEditControl: TLabel
+    Position.Point = '(8,198)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 3
+    Text = 'EditOutput: TEdit'
+  end
+  object LabelEditSource: TLabel
+    Position.Point = '(8,251)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 4
+    Text = 'EditSource: TEdit'
+  end
+  object ButtonEvaluate: TButton
+    Position.Point = '(128,167)'
+    Width = 113.000000000000000000
+    Height = 22.000000000000000000
+    OnClick = ButtonEvaluateClick
+    TabOrder = 5
+    StaysPressed = False
+    IsPressed = False
+    Text = 'Evaluate'
+  end
+  object ListBoxComponents: TListBox
+    Position.Point = '(408,210)'
+    Width = 161.000000000000000000
+    Height = 129.000000000000000000
+    TabOrder = 6
+  end
+  object Label1: TLabel
+    Position.Point = '(408,169)'
+    Width = 161.000000000000000000
+    Height = 40.000000000000000000
+    TabOrder = 7
+    Text = 'Components (to use in source expression):'
+  end
+  object ListBox1: TListBox
+    Position.Point = '(8,340)'
+    Width = 265.000000000000000000
+    Height = 100.000000000000000000
+    TabOrder = 8
+    OnChange = ListBox1Change
+  end
+  object LabelListBox: TLabel
+    Position.Point = '(8,323)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 9
+    Text = 'ListBox1: TListBox'
+  end
+  object LabelSourceExpressions: TLabel
+    Position.Point = '(6,108)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 10
+    Text = 'Source Expression:'
+  end
+  object LabelControlExpression: TLabel
+    Position.Point = '(5,43)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 11
+    Text = 'Control Expression:'
+  end
+  object EditControlExpression: TEdit
+    Enabled = False
+    Position.Point = '(128,40)'
+    Width = 241.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 12
+    ReadOnly = False
+    Password = False
+  end
+  object LabelControlComponent: TLabel
+    Position.Point = '(5,11)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 13
+    Text = 'Control Component:'
+  end
+  object EditControlComponent: TEdit
+    Enabled = False
+    Position.Point = '(128,8)'
+    Width = 129.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 14
+    ReadOnly = False
+    Password = False
+  end
+  object LabelSourceComponent: TLabel
+    Position.Point = '(6,75)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 15
+    Text = 'Source Component:'
+  end
+  object EditSourceComponentName: TEdit
+    Enabled = False
+    Position.Point = '(128,72)'
+    Width = 129.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 16
+    ReadOnly = False
+    Password = False
+  end
+  object LabelEditEnter: TLabel
+    Position.Point = '(7,292)'
+    Width = 282.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 17
+    Text = 'Modify and press Enter to cause expression evaluation'
+  end
+  object LabelClickList: TLabel
+    Position.Point = '(8,446)'
+    Width = 265.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 18
+    Text = 'Click on an item to cause expression evaluation'
+  end
+  object MemoSourceExpression: TMemo
+    Position.Point = '(128,104)'
+    Width = 441.000000000000000000
+    Height = 49.000000000000000000
+    TabOrder = 19
+    WordWrap = True
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    UseAppManager = True
+    Left = 544
+    Top = 41
+    object BindEdits: TBindExpression
+      Category = 'Property Bindings'
+      ControlComponent = EditOutput
+      SourceComponent = BindScopeComponent1
+      SourceExpression = 
+        '"EditSource: " + '#39'"'#39' + EditSource.Text + '#39'"'#39' + '#39' '#39#13#10' + Format('#39'L' +
+        'istBox1: "%s"'#39',  SelectedText(ListBox1))'
+      ControlExpression = 'Text'
+      Direction = dirSourceToControl
+      OnEvalError = BindEditsEvalError
+      OnActivating = BindEditsActivating
+    end
+  end
+  object BindScopeComponent1: TBindScope
+    AutoActivate = False
+    Left = 440
+    Top = 41
+  end
+end

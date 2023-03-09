@@ -1,0 +1,62 @@
+﻿<%@ Master Language="Oxygene" AutoEventWireup="true" CodeBehind="MasterPageMenu.master.pas" Inherits="DelphiPrismWebApp.MasterPageMenu" %>
+<%@ Register TagPrefix="uc1" TagName="ucStatistics" Src="~/ucStatistics.ascx" %>
+<%@ Register TagPrefix="uc2" TagName="ucThemeMasterPage" Src="~/ucThemeMasterPage.ascx" %>
+
+<script type="text/javascript" language="JavaScript">
+
+    var popUpWin = 0;
+    function popUpWindow(URLStr, left, top, width, height) {
+        if (popUpWin) {
+            if (!popUpWin.closed)
+                popUpWin.close();
+        }
+        popUpWin = open(URLStr, 'popUpWin', 'toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbar=yes,resizable=yes,copyhistory=yes,width=' + width + ',height=' + height + ',left=' + left + ', top=' + top + ',screenX=' + left + ',screenY=' + top + '');
+    }
+</script>
+<html xmlns="http://www.w3.org/1999/xhtml" >
+  <head id="Head1" runat="server">
+    <title></title>
+    <link href="~/App_Themes/Winter/StyleSheet.css" type="text/css" rel="stylesheet" />
+
+  </head>
+
+  <body>
+     <form id="Form1" runat="server">
+	   <div>
+<asp:ScriptManager id="ScriptManager1" runat="server"></asp:ScriptManager>
+
+<table class="" cellspacing="0" cellpadding="10" width="100%" border="0">
+  <tbody>
+		<tr>
+	  <td valign="top">
+				<asp:Image id="Image1" runat="server" imageurl="~/images/DelphiPrism.png"></asp:Image><br/>
+				<asp:Menu id="Menu1" runat="server" datasourceid="SiteMapDataSource1" width="222px" height="27px" maximumdynamicdisplaylevels="0" staticsubmenuindent="30px" enabletheming="False" enableviewstate="False" staticdisplaylevels="2"></asp:Menu>
+				<asp:SiteMapDataSource id="SiteMapDataSource1" runat="server"></asp:SiteMapDataSource>
+	  </td>
+	  	  <td align="left">
+         <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+         </asp:contentplaceholder>
+	  </td>
+
+	</tr>
+  </tbody>
+</table>
+		
+        </div>
+      <table cellspacing="0" cellpadding="4" width="100%" border="0">
+          <tr>
+            <td>
+                <uc1:ucStatistics ID="ucStatistics2" runat="server" />
+        <asp:HyperLink id="hlStatistics" runat="server"
+          navigateurl="JavaScript:popUpWindow('statistics.aspx', 0, 0, 400, 300)" skinid="LinkStatisticsSkin">Statistics
+</asp:HyperLink></td>
+			<td align="right">
+              <uc2:ucThemeMasterPage id="ucThemeMasterPage1" runat="server"></uc2:ucThemeMasterPage></td>
+		  </tr>
+	  </table>
+<div class="centered">
+<img alt="" src="images/logo2.png" />
+</div>
+	 </form>
+  </body>
+</html>

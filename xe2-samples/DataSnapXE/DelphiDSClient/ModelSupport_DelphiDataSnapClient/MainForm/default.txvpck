@@ -1,0 +1,1648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="dg7p2zhichn_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:MainForm.TDSCallbackMethod">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="649,10,210,36" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:MainForm.TFrmMain">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="1042,8486,181,1183" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.PageControl1" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.TabSheet1" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.TabSheet2" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DSCountry" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DBGrid1" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DSEmployee" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DBGrid2" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Panel1" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Button1" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Button3" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Button2" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DBNavigator1" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DBNavigator2" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Button4" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.LBDateTime" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.GroupBox1" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.PageControl2" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.TBJobList" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.TabSheet4" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Label1" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DBEJobId" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DSJobs" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Label2" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DBEdit2" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Label3" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DBEdit3" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Label4" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DBEdit4" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DBGrid3" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Button5" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DBNavigator3" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.ApplyUpdates" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.TabSheet3" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DSDepartment" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.BTGetDepartament" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Button8" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Memo1" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Button6" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Label5" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.TabSheet5" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Button7" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.TabSheet6" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Button9" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.MMBackupLog" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.TabSheet7" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Button10" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.MMLog" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Button11" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Button12" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.TabSheet8" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DSCopy" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.DBGrid4" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Button13" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.Button14" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.Button1Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.FormShow(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.Button2Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.Button3Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.Button4Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.Button5Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.ApplyUpdatesClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.BTGetDepartamentClick(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.Button8Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.Button6Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.Button7Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.Button9Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.Button10Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.Button11Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.Button12Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.Button13Click(System.TObject)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:MainForm.TFrmMain.Button14Click(System.TObject)" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.TFrmMain.callback" />
+      <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:MainForm.TFrmMain.TMessageCallback" />
+      <reference referencedUin="delphi:l_gnt:src:DelphiDataSnapClient:MainForm.TFrmMain:Forms.TForm">
+        <property name="sourceAnchor" value="1042,9077" />
+        <property name="targetAnchor" value="808,9077" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:MainForm.@unitclass">
+      <property name="$shortcutReference" value="true" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:MainForm.@unitclass.FrmMain" />
+      <reference referencedUin="delphi:l_ast:src:DelphiDataSnapClient:MainForm.@unitclass.FrmMain" />
+    </reference>
+    <reference referencedUin="delphi:e_class:lib:DelphiWin32:Forms.TForm">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="573,8225,235,1706" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnClose" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseWheelDown" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnCanResize" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ScreenSnap" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.HelpFile" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.GlassFrame" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseEnter" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ObjectMenuItem" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.PrintScale" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseUp" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.VertScrollBar" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnCloseQuery" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnKeyUp" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Align" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Font" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseActivate" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TForm.Cascade()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.DragMode" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ClientWidth" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseWheelUp" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.BorderStyle" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnUnDock" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Height" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.AutoScroll" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.BorderIcons" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OldCreateOrder" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnStartDock" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.KeyPreview" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnHide" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.PixelsPerInch" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.DefaultMonitor" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Caption" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnDockDrop" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnAlignInsertBefore" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.WindowState" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Ctl3D" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.TransparentColorValue" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Color" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnEndDock" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TForm.Create()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.DockSite" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.BorderWidth" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TForm.Previous()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TForm.Tile()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Position" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Scaled" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Touch" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Icon" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.WindowMenu" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnGetSiteInfo" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseLeave" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnCreate" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnShow" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Visible" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnContextPopup" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Enabled" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnActivate" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.AlphaBlendValue" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnAlignPosition" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ParentFont" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ClientHandle" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.FormStyle" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.BiDiMode" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.DragKind" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.TransparentColor" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnDragDrop" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.AlphaBlend" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnConstrainedResize" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnHelp" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Action" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnClick" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.PopupMenu" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Anchors" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.TileMode" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.DoubleBuffered" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseDown" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ActiveControl" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnPaint" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TForm.Next()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.MDIChildren" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnDblClick" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.SnapBuffer" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnDragOver" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnGesture" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Menu" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnKeyDown" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ShowHint" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ClientHeight" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Width" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ActiveMDIChild" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnKeyPress" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.HorzScrollBar" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.MDIChildCount" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.AutoSize" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseMove" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.UseDockManager" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnMouseWheel" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TForm.ArrangeIcons()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.DockManager" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.PopupParent" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnResize" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.ParentBiDiMode" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Padding" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnDockOver" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnDestroy" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.Constraints" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnDeactivate" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.OnShortCut" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TForm.PopupMode" />
+      <reference referencedUin="delphi:l_conn:lib:DelphiWin32:Forms.TForm:Forms.TCustomForm">
+        <property name="sourceAnchor" value="678,8225" />
+        <property name="targetAnchor" value="678,5731" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TForm.ActiveControl">
+        <property name="sourceAnchor" value="625,8225" />
+        <property name="targetAnchor" value="386,5851" />
+        <property name="bendpoints" value="625,5965,386,5965" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TForm.MDIChildren">
+        <property name="sourceAnchor" value="808,9906" />
+        <property name="targetAnchor" value="800,9931" />
+        <property name="bendpoints" value="858,9906,858,9981,800,9981" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TForm.ActiveMDIChild">
+        <property name="sourceAnchor" value="808,9881" />
+        <property name="targetAnchor" value="792,9931" />
+        <property name="bendpoints" value="883,9881,883,10006,792,10006" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TForm.PopupParent">
+        <property name="sourceAnchor" value="710,8225" />
+        <property name="targetAnchor" value="710,5731" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:lib:DelphiWin32:System.TObject">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="700,12624,216,504" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.Create()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.CleanupInstance()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.ToString()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.NewInstance()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.Equals(System.TObject)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.GetInterfaceEntry(System.TGUID)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.ClassInfo()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.SafeCallException(System.TObject,System.Pointer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.Free()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.InstanceSize()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.UnitName()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.ClassType()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.Dispatch(ref@)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.ClassName()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.ClassParent()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.FreeInstance()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.AfterConstruction()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.ClassNameIs(System.string)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.BeforeDestruction()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.InitInstance(System.Pointer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.MethodAddress(System.ShortString)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.FieldAddress(System.ShortString)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.DefaultHandler(ref@)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.Destroy()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.GetHashCode()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.InheritsFrom(System.TClass)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.MethodName(System.Pointer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.GetInterfaceTable()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:System.TObject.GetInterface(System.TGUID,out@)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:lib:DelphiWin32:Classes.TPersistent">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="421,13909,183,174" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TPersistent.DefineProperties(Classes.TFiler)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TPersistent.Destroy()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TPersistent.Assign(Classes.TPersistent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TPersistent.AssignTo(Classes.TPersistent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TPersistent.GetNamePath()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TPersistent.GetOwner()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TPersistent.AssignError(Classes.TPersistent)" />
+      <reference referencedUin="delphi:l_conn:lib:DelphiWin32:Classes.TPersistent:System.TObject">
+        <property name="sourceAnchor" value="543,13909" />
+        <property name="targetAnchor" value="808,13128" />
+        <property name="bendpoints" value="543,13518,808,13518" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:lib:DelphiWin32:Classes.TComponent">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="44,12157,342,1438" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Destroying()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.Owner" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FName" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ValidateContainer(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetNamePath()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.ComponentIndex" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FTag" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetComponentIndex(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetAncestor(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetName(Classes.TComponentName)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.Name" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetChildren(Classes.TComponent.GetChildren.TGetChildProc,Classes.TComponent)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.VCLComObject" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetChildParent()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetTypeInfo(System.Integer,System.Integer,out@)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.AddSortedComponent(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ValidateRename(Classes.TComponent,System.string,System.string)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.ComponentCount" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetOwner()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.FindSortedComponent(System.string,ref@System.Integer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FFreeNotifies" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Invoke(System.Integer,System.TGUID,System.Integer,System.Word,ref@,System.Pointer,System.Pointer,System.Pointer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Loaded()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetComponentCount()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Create(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ReadLeft(Classes.TReader)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.WriteState(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.PaletteCreated()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.HasParent()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.IsImplementorOf(System.IInterface)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FComponentStyle" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetParentComponent(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.FreeNotification(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent._Release()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.Tag" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.ComObject" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.QueryInterface(System.TGUID,out@)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ExecuteAction(Classes.TBasicAction)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.UpdateAction(Classes.TBasicAction)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetParentComponent()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Destroy()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.IntfGetComponent()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ReferenceInterface(System.IInterface,Classes.TOperation)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.WriteTop(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetComponent(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.RemoveFreeNotification(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ChangeName(Classes.TComponentName)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.RemoveNotification(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FVCLComObject" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.DestroyComponents()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.WriteLeft(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ValidateInsert(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.RemoveComponent(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Insert(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Updated()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetInline(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetDesignInstance(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetDesigning(System.Boolean,System.Boolean)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.DesignInfo" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetChildOwner()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FOwner" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SafeCallException(System.TObject,System.Pointer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FComponents" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Updating()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.BeforeDestruction()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Remove(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FComponentState" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.ComponentState" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ReadTop(Classes.TReader)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetTypeInfoCount(out@System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetChildOrder(Classes.TComponent,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.RemoveFreeNotifications()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.Notification(Classes.TComponent,Classes.TOperation)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.Components" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.RemoveSortedComponent(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetSubComponent(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetIDsOfNames(System.TGUID,System.Pointer,System.Integer,System.Integer,System.Pointer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.ReadState(Classes.TReader)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.FindComponent(System.string)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Classes.TComponent.ComponentStyle" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetEnumerator()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FSortedComponents" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.DefineProperties(Classes.TFiler)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.UpdateRegistry(System.Boolean,System.string,System.string)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Classes.TComponent.FDesignInfo" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetComObject()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.FreeOnRelease()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.SetReference(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.GetComponentIndex()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent._AddRef()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Classes.TComponent.InsertComponent(Classes.TComponent)" />
+      <reference referencedUin="delphi:l_conn:lib:DelphiWin32:Classes.TComponent:Classes.TPersistent">
+        <property name="sourceAnchor" value="113,13595" />
+        <property name="targetAnchor" value="482,13909" />
+        <property name="bendpoints" value="113,13874,482,13874" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Classes.TComponent.Owner">
+        <property name="sourceAnchor" value="386,13574" />
+        <property name="targetAnchor" value="378,13595" />
+        <property name="bendpoints" value="432,13574,432,13641,378,13641" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Classes.TComponent.FOwner">
+        <property name="sourceAnchor" value="386,13553" />
+        <property name="targetAnchor" value="370,13595" />
+        <property name="bendpoints" value="453,13553,453,13662,370,13662" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Classes.TComponent.Components">
+        <property name="sourceAnchor" value="386,13532" />
+        <property name="targetAnchor" value="362,13595" />
+        <property name="bendpoints" value="474,13532,474,13683,362,13683" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:lib:DelphiWin32:Controls.TControl">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,6079,403,5998" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnMouseActivate" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetParentComponent()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FParentCustomHint" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FText" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetTextBuf(System.PWideChar,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoGesture(Controls.TGestureEventInfo,ref@System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Perform(System.Cardinal,System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Margins" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FDockOrientation" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Show()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMLButtonDown(ref@Messages.TWMMouse)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Parent" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.IsBiDiModeStored()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnMouseUp" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnStartDrag" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FColor" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ExplicitLeft" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FFontHeight" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetDesignVisible(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetTBDockHeight()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DefaultDockImage(Controls.TDragDockObject,System.Boolean)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ExplicitWidth" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ScreenToClient(Types.TPoint)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetAlign(Controls.TAlign)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FTop" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMBiDiModeChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DrawTextBiDiModeFlags(System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnMouseMove" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetVisible(System.Boolean)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnConstrainedResize" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.AdjustSize()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnMouseWheelUp" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetBoundsRect(Types.TRect)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetHeight(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetUndockHeight()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.BiDiMode" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoEndDrag(System.TObject,System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.TBDockHeight" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ActionLink" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ParentCustomHint" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ConstrainedResize(ref@System.Integer,ref@System.Integer,ref@System.Integer,ref@System.Integer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FBiDiMode" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FWidth" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Anchors" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMMouseEnter(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Dock(Controls.TWinControl,Types.TRect)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoMouseUp(ref@Messages.TWMMouse,Controls.TMouseButton)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Visible" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FScalingFlags" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetBoundsRect()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetZOrder(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetParentShowHint(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetPopupMenu()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FWindowProc" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetBounds(System.Integer,System.Integer,System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ClientWidth" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.UseRightToLeftScrollBar()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetPopupMenu(Menus.TPopupMenu)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Hide()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetText()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WriteIsControl(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FParentShowHint" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetFloatingDockSiteClass()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMMButtonDown(ref@Messages.TWMMouse)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WriteExplicitLeft(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoActionChange(System.TObject)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnEndDrag" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnClick" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMMButtonUp(ref@Messages.TWMMouse)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnEndDock" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetFont(Graphics.TFont)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.DragKind" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ReplaceDockedControl(Controls.TControl,Controls.TWinControl,Controls.TControl,Controls.TAlign)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ActionChange(System.TObject,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMNCLButtonDown(ref@Messages.TWMNCHitMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CanResize(ref@System.Integer,ref@System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.AssignTo(Classes.TPersistent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CreateFloatingDockSite(Types.TRect)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.LRDockWidth" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FTouchManager" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Invalidate()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetText(Controls.TCaption)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMContextMenu(ref@Messages.TWMContextMenu)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FReserved" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.IsTouchPropertyStored(Controls.TTouchProperty)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetCustomHint()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Color" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetParentFont(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.IsFontStored()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Height" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMRButtonDown(ref@Messages.TWMMouse)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnCanResize" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnDragDrop" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FHelpKeyword" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Click()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetParentComponent(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetFloating()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FLeft" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMRButtonUp(ref@Messages.TWMMouse)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMParentBiDiModeChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetParentColor(System.Boolean)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnStartDock" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.HostDockSite" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FAnchorMove" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DockTrackNoTarget(Controls.TDragDockObject,System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.UndockHeight" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoMarginChange(System.TObject)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ReadState(Classes.TReader)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.WindowText" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FHint" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ReadExplicitHeight(Classes.TReader)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetParent(Controls.TWinControl)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnMouseEnter" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.MouseCapture" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnMouseDown" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FConstraints" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetTextLen()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetConstraints(Controls.TSizeConstraints)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnDragDrop" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.IsControl" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ScalingFlags" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FAutoSize" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.HelpKeyword" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnConstrainedResize" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Repaint()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMFontChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Destroy()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Notification(Classes.TComponent,Classes.TOperation)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnContextPopup" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetUndockWidth()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetName(Classes.TComponentName)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMLButtonDblClk(ref@Messages.TWMMouse)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetBiDiMode(Classes.TBiDiMode)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.IsShowHintStored()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FFont" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetDragMode()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FExplicitTop" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ScaleConstraints(System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnResize" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ClientToScreen(Types.TPoint)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMHitTest(ref@Messages.TWMNCHitTest)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoConstraintsChange(System.TObject)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SendDockNotification(System.Cardinal,System.Cardinal,System.Cardinal)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.PopupMenu" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnStartDrag" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetLeft(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoGetGestureOptions(ref@Controls.TControl.DoGetGestureOptions.TInteractiveGestures,ref@Controls.TControl.DoGetGestureOptions.TInteractiveGestureOptions)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMColorChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnEndDock" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetMouseCapture()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SendCancelMode(Controls.TControl)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ParentShowHint" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DragOver(System.TObject,System.Integer,System.Integer,Controls.TDragState,ref@System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.BringToFront()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnMouseWheelDown" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetAnchors(Controls.TControl.SetAnchors.TAnchors)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMMouseMove(ref@Messages.TWMMouse)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FHelpContext" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMFloat(ref@Controls.TCMFloat)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.InitiateAction()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.UpdateAnchorRules()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DefineProperties(Classes.TFiler)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.UseRightToLeftReading()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FTBDockHeight" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Font" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMDesignHitTest(ref@Messages.TWMMouse)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnDblClick" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Align" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMParentFontChanged(ref@Controls.TCMParentFontChanged)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FHostDockSite" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ParentToClient(Types.TPoint,Controls.TWinControl)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Floating" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FParent" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FDragKind" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetCursor(System.Smallint)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetClientOrigin()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.BoundsRect" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnMouseUp" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.DragMode" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Resize()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FIsControl" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CanAutoSize(ref@System.Integer,ref@System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetDesktopFont(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.HasParent()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DesignWndProc(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Hint" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMCancelMode(ref@Messages.TWMNoParams)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoEndDock(System.TObject,System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetDockEdge(Types.TPoint)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetHelpContext(System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Enabled" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FAnchors" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoMouseWheelDown(Controls.TControl.DoMouseWheelDown.TShiftState,Types.TPoint)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMEnabledChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetZOrderPosition(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetEnabled()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FMargins" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ReadExplicitLeft(Classes.TReader)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ClientToParent(Types.TPoint,Controls.TWinControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoConstrainedResize(ref@System.Integer,ref@System.Integer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnMouseDown" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetDragImages()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Top" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnGesture" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMHintShow(ref@Controls.TCMHintShow)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.IsOnClickStored()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.UpdateBoundsRect(Types.TRect)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMLButtonUp(ref@Messages.TWMMouse)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FEnabled" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetEnabled(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMVisibleChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.UseRightToLeftAlignment()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetTextBuf(System.PWideChar)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.BeginDrag(System.Boolean,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetAlignWithMargins(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoDragMsg(ref@Controls.TCMDrag)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WriteExplicitTop(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetTouchManager(Controls.TTouchManager)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMGesture(ref@Controls.TCMGesture)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoMouseWheel(Controls.TControl.DoMouseWheel.TShiftState,System.Integer,Types.TPoint)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ReadIsControl(Classes.TReader)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnMouseLeave" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMMouseWheel(ref@Controls.TCMMouseWheel)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ReadExplicitWidth(Classes.TReader)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FHelpType" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ShowHint" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetAutoSize(System.Boolean)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnEndDrag" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.UndockWidth" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.DockOrientation" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ScaleMargins(System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMMouseWheel(ref@Messages.TWMMouseWheel)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FDragCursor" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FHeight" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoMouseDown(ref@Messages.TWMMouse,Controls.TMouseButton,Controls.TControl.DoMouseDown.TShiftState)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMSysFontChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FExplicitWidth" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnContextPopup" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoContextPopup(Types.TPoint,ref@System.Boolean)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Text" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DrawTextBiDiModeFlagsReadingOnly()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetAction(Classes.TBasicAction)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.HelpContext" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetHostDockSite(Controls.TWinControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Dragging()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.FloatingDockSiteClass" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetControlsAlignment()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ControlState" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FParentColor" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FExplicitHeight" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.MouseUp(Controls.TMouseButton,Controls.TControl.MouseUp.TShiftState,System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ClientHeight" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Caption" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DefaultHandler(ref@)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Left" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetParentBiDiMode(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CheckNewSize(ref@System.Integer,ref@System.Integer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FPopupMenu" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DragDrop(System.TObject,System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FWheelAccumulator" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ControlStyle" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnMouseMove" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMMouseLeave(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetClientHeight(System.Integer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FCursor" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnResize" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WriteExplicitHeight(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetShowHint(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetHelpKeyword(System.string)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CalcCursorPos()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ManualDock(Controls.TWinControl,Controls.TControl,Controls.TAlign)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.MouseDown(Controls.TMouseButton,Controls.TControl.MouseDown.TShiftState,System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FControlState" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FCustomHint" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.EndDrag(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMMouseActivate(ref@Controls.TCMMouseActivate)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Loaded()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Refresh()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.WindowProc" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMRButtonDblClk(ref@Messages.TWMMouse)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMParentShowHintChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ParentBiDiMode" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Touch" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoDock(Controls.TWinControl,ref@Types.TRect)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ClientOrigin" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ReadExplicitTop(Classes.TReader)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FControlStyle" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SendToBack()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DrawDragDockImage(Controls.TDragDockObject)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMParentTabletOptionsChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Action" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetDragMode(Controls.TDragMode)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ExplicitTop" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FDesktopFont" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.PositionDockRect(Controls.TDragDockObject)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WriteExplicitWidth(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetDeviceContext(ref@System.Cardinal)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FActionLink" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnMouseWheel" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnMouseWheel" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetCustomHint(Controls.TCustomHint)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetAlignWithMargins()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetParentCustomHint(System.Boolean)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Width" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Constraints" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FParentFont" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.IsCaptionStored()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FAlign" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnStartDock" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetColor(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DblClick()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.IsEnabledStored()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CreateTouchManager()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.CustomHint" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.FontChanged(System.TObject)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ChangeScale(System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetClientSize(Types.TPoint)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ParentFont" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOriginalParentSize" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.RequestAlign()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FVisible" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetClientWidth(System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.WheelAccumulator" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CMParentColorChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoStartDock(ref@Controls.TDragObject)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.MouseMove(Controls.TControl.MouseMove.TShiftState,System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FParentBiDiMode" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FAnchorRules" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoMouseWheelUp(Controls.TControl.MouseMove.TShiftState,Types.TPoint)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnCanResize" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnMouseWheelDown" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FUndockHeight" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.InvalidateControl(System.Boolean,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetMouseCapture(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.VisibleChanging()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FAnchorOrigin" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetLRDockWidth()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FFloatingDockSiteClass" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnDragOver" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.IsHintStored()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.IsVisibleStored()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetClientHeight()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnClick" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FDragMode" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnGesture" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMMButtonDblClk(ref@Messages.TWMMouse)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FExplicitLeft" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.DesktopFont" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnMouseActivate" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WMWindowPosChanged(ref@Messages.TWMWindowPosMsg)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ClientRect" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoMouseActivate(ref@Controls.TCMMouseActivate)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetPalette()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FUndockWidth" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FShowHint" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.UpdateExplicitBounds()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoStartDrag(ref@Controls.TDragObject)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoCanResize(ref@System.Integer,ref@System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.WndProc(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.MouseActivate(Controls.TMouseButton,Controls.TControl.MouseActivate.TShiftState,System.Integer,System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetClientRect()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.MouseWheelHandler(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Changed()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetMargins(Controls.TMargins)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.BeginAutoDrag()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.HelpType" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.AutoSize" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FOnMouseWheelUp" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.IsRightToLeft()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.PaletteChanged(System.Boolean)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.Cursor" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.EraseDragDockImage(Controls.TDragDockObject)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnMouseEnter" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.IsAnchorsStored()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetWidth(System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ParentColor" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetAction()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.IsHelpContextStored()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.SetTop(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetActionLinkClass()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnDblClick" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.GetClientWidth()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnDragOver" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DoCanAutoSize(ref@System.Integer,ref@System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Update()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.CalcDockSizes()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.Create(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.IsColorStored()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.OnMouseLeave" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TControl.FLRDockWidth" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.AlignWithMargins" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.ExplicitHeight" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TControl.DragCursor" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.DragCanceled()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TControl.ManualFloat(Types.TRect)" />
+      <reference referencedUin="delphi:l_conn:lib:DelphiWin32:Controls.TControl:Classes.TComponent">
+        <property name="sourceAnchor" value="215,12077" />
+        <property name="targetAnchor" value="215,12157" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Controls.TControl.Parent">
+        <property name="sourceAnchor" value="54,6079" />
+        <property name="targetAnchor" value="54,5851" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Controls.TControl.HostDockSite">
+        <property name="sourceAnchor" value="93,6079" />
+        <property name="targetAnchor" value="93,5851" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Controls.TControl.FHostDockSite">
+        <property name="sourceAnchor" value="132,6079" />
+        <property name="targetAnchor" value="132,5851" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Controls.TControl.FParent">
+        <property name="sourceAnchor" value="171,6079" />
+        <property name="targetAnchor" value="171,5851" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:lib:DelphiWin32:Controls.TWinControl">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="15,723,391,5128" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMRecreateWnd(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMMove(ref@Messages.TWMMove)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CreateHandle()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.OnAlignInsertBefore" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.EnableAlign()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DestroyWnd()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetZOrder(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetChildOrder(Classes.TComponent,System.Integer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FDockManager" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.OnKeyDown" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.UpdateControlState()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ResetIme()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FShowing" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMInputLangChange(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMFontChange(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.InvalidateDockHostSite(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.Destroy()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMSysFontChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetTabOrder()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMMeasureItem(ref@Messages.TWMMeasureItem)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CreateParented(System.Cardinal)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DoFlipChildren()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMVisibleChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.DoubleBuffered" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DoKeyPress(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.AddBiDiModeExStyle(ref@System.Cardinal)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DefaultHandler(ref@)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.MainWndProc(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.IsCtl3DStored()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.Focused()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetActionLinkClass()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetParentBackground(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMKillFocus(ref@Messages.TWMKillFocus)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.NotifyControls(System.Word)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CreateWnd()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FAlignLevel" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetCtl3D(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DockOver(Controls.TDragDockObject,System.Integer,System.Integer,Controls.TDragState,ref@System.Boolean)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FMouseControl" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.IsDoubleBufferedStored()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.WindowHandle" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.UpdateRecreatingFlag(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DestroyWindowHandle()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CreateWindowHandle(Controls.TCreateParams)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMSysKeyUp(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMVScroll(ref@Messages.TWMScroll)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FOnDockOver" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ChangeScale(System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FParentWindow" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FHandle" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetBounds(System.Integer,System.Integer,System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DoEnter()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.UpdateControlOriginalParentSize(Controls.TControl,ref@Types.TPoint)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FDockClients" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMDrawItem(ref@Messages.TWMDrawItem)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FWinControls" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FOnKeyUp" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.UpdateUIState(System.Word)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMFontChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FTouchControl" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetClientRect()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMEraseBkgnd(ref@Messages.TWMEraseBkgnd)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.OnExit" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetDesignVisible(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WriteDesignSize(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetSiteInfo(Controls.TControl,ref@Types.TRect,Types.TPoint,ref@System.Boolean)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.DockSite" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DockReplaceDockClient(Controls.TControl,Controls.TWinControl,Controls.TControl,Controls.TAlign,Controls.TControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.HandleNeeded()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetUseDockManager(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CanResize(ref@System.Integer,ref@System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.PaletteChanged(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMNCHitTest(ref@Messages.TWMNCHitTest)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.FixupTabList()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.IsControlActivateMsg(ref@Messages.TWMMouseActivate,Controls.TControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.UpdateShowing()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetAlignDisabled()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMCompareItem(ref@Messages.TWMCompareItem)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMChanged(ref@Controls.TCMChanged)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.KeyDown(ref@System.Word,Controls.TWinControl.KeyDown.TShiftState)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CalcConstraints(ref@System.Integer,ref@System.Integer,ref@System.Integer,ref@System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SelectFirst()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FControls" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.UpdateBounds()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetTopParentHandle()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.AssignTo(Classes.TPersistent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMShowHintChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetControlCount()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMCursorChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ActionChange(System.TObject,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMNCDestroy(ref@Messages.TWMNoParams)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FUseDockManager" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ScaleControls(System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMExit(ref@Messages.TWMNoParams)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMWindowPosChanging(ref@Messages.TWMWindowPosMsg)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.BevelKind" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.FindNextControl(Controls.TWinControl,System.Boolean,System.Boolean,System.Boolean)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.Ctl3D" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FImeName" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CNKeyUp(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetDockClientCount()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMCommand(ref@Messages.TWMCommand)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.Padding" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMTabletQuerySystemGestureStatus(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMWinIniChange(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FDefWndProc" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.UpdateTabOrder(System.Smallint)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.KeyPress(ref@System.Char)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FTabList" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMContextMenu(ref@Messages.TWMContextMenu)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMWindowPosChanged(ref@Messages.TWMWindowPosMsg)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.Notification(Classes.TComponent,Classes.TOperation)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMQueryNewPalette(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FBevelWidth" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMCharToItem(ref@Messages.TWMCharToItem)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMChildKey(ref@Controls.TCMChildKey)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMColorChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMInputLangChange(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FOnAlignInsertBefore" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMIMEStartComp(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.PaintWindow(System.Cardinal)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMSysColorChange(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.AlignControl(Controls.TControl)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.OnAlignPosition" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.Insert(Controls.TControl)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.OnKeyUp" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMControlListChanging(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMVKeyToItem(ref@Messages.TWMCharToItem)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FOnGetSiteInfo" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.DockManager" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.InsertControl(Controls.TControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WndProc(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.Broadcast(ref@)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.Invalidate()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetParentDoubleBuffered(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMCtl3DChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ResetImeComposition(System.Cardinal)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetParentWindow(System.Cardinal)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FPerformingShowingChanged" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ReloadDockedControl(System.string,ref@Controls.TControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.RemoveFocus(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMNotify(ref@Messages.TWMNotify)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMSysColorChange(ref@Messages.TWMNoParams)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.InvokeHelp()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMFocusChanged(ref@Controls.TCMFocusChanged)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.Remove(Controls.TControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetParentHandle()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetTabControlList(Classes.TList)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMDestroy(ref@Messages.TWMNoParams)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetBevelKind(Controls.TBevelKind)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetTabStop(System.Boolean)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FBrush" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DoDockOver(Controls.TDragDockObject,System.Integer,System.Integer,Controls.TDragState,ref@System.Boolean)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FBevelKind" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMTimeChange(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMDeleteItem(ref@Messages.TWMDeleteItem)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.IsControlMouseMsg(ref@Messages.TWMMouse)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMTimeChange(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.PrecedingWindow(Controls.TWinControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMSetFocus(ref@Messages.TWMSetFocus)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.ParentDoubleBuffered" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetDoubleBuffered(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetControlExtents()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SelectNext(Controls.TWinControl,System.Boolean,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CNSysKeyDown(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetPadding(Controls.TPadding)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.Update()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMHScroll(ref@Messages.TWMScroll)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMDialogChar(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMPrintClient(ref@Messages.TWMPrint)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.Create(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetHandle()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FOnEnter" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMNCPaint(ref@Messages.TWMNCPaint)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.VisibleDockClientCount" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.RemoveControl(Controls.TControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMMouseActivate(ref@Messages.TWMMouseActivate)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FTabStop" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.OnKeyPress" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.ParentBackground" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FDoubleBuffered" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ContainsControl(Controls.TControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ReadDesignSize(Classes.TReader)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ConstrainedResize(ref@System.Integer,ref@System.Integer,ref@System.Integer,ref@System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetFocus()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ReadState(Classes.TReader)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.Controls" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DoRemoveDockClient(Controls.TControl)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.OnGetSiteInfo" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FPadding" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMTabletOptionsChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetIme()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetBevelCut(System.Integer,Controls.TBevelCut)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetParentCtl3D(System.Boolean)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FParentCtl3D" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMKeyDown(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.BevelOuter" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetTabOrderList(Classes.TList)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetChildren(Controls.TWinControl.GetChildren.TGetChildProc,Classes.TComponent)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.OnDockOver" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.Realign()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FOnKeyPress" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FInImeComposition" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMSysKeyDown(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMFloat(ref@Controls.TCMFloat)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FImeMode" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DoKeyUp(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetDeviceContext(ref@System.Cardinal)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FOnAlignPosition" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.OnDockDrop" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.HandleAllocated()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.IsMenuKey(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMTextChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMBiDiModeChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CNChar(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMDrag(ref@Controls.TCMDrag)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetVisibleDockClientCount()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.Handle" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FDockSite" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CustomAlignPosition(Controls.TControl,ref@System.Integer,ref@System.Integer,ref@System.Integer,ref@System.Integer,ref@Types.TRect,Controls.TAlignInfo)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ScrollBy(System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.ImeMode" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ArrangeControl(Controls.TControl,Types.TPoint,Controls.TAlign,Controls.TAlignInfo,ref@Types.TRect,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMNCCalcSize(ref@Messages.TWMNCCalcSize)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.DockClientCount" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.BevelInner" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMGesture(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.BevelWidth" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CreateDockManager()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetParentBackground()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMControlListChange(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMEnabledChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CustomAlignInsertBefore(Controls.TControl,Controls.TControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMPaletteChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.DockClients" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetImeCompositionWindow(Graphics.TFont,System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.RecreateWnd()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ControlsAligned()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.AdjustClientRect(ref@Types.TRect)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ScaleBy(System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMParentCtl3DChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMShowingChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FTabOrder" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FObjectInstance" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CanFocus()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.ParentWindow" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DestroyHandle()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FBevelEdges" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FParentDoubleBuffered" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMBorderChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DoUnDock(Controls.TWinControl,Controls.TControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMInvalidate(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ShowControl(Controls.TControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetBorderWidth(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DoKeyDown(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMEnter(ref@Messages.TWMNoParams)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMWinIniChange(ref@Messages.TWMWinIniChange)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.AlignControls(Controls.TControl,ref@Types.TRect)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.Showing" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.TabOrder" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.RemoveWindowProps()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FOnUnDock" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMIMEEndComp(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMSetCursor(ref@Messages.TWMSetCursor)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.IsQualifyingSite(Controls.TControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMSysCommand(ref@Messages.TWMSysCommand)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ControlAtPos(Types.TPoint,System.Boolean,System.Boolean,System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.PaintHandler(ref@Messages.TWMPaint)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.Repaint()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetClientOrigin()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FBorderWidth" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CNSysChar(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FAlignControlList" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMSize(ref@Messages.TWMSize)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMParentNotify(ref@Messages.TWMParentNotify)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.InvalidateFrame()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.PaintControls(System.Cardinal,Controls.TControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMDialogKey(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.AdjustSize()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DoExit()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.ScalePadding(System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetDockSite(System.Boolean)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.OnEnter" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CreateParentedControl(System.Cardinal)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DoPaddingChange(System.TObject)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.UseDockManager" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FBevelOuter" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetBevelEdges(Controls.TWinControl.SetBevelEdges.TBevelEdges)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.FlipChildren(System.Boolean)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FMouseInClient" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FDesignSize" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetTabOrder(System.Smallint)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DisableAlign()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMChar(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CanAutoSize(ref@System.Integer,ref@System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetZOrderPosition(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetParent(Controls.TWinControl)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.OnUnDock" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMDesignHitTest(ref@Messages.TWMMouse)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DoAddDockClient(Controls.TControl,Types.TRect)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMKeyUp(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FBevelInner" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FCtl3D" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.RequestAlign()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.FindChildControl(System.string)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.SetBevelWidth(System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.AlignControlList" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CreateSubClass(ref@Controls.TCreateParams,System.PWideChar)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMGestureNotify(ref@Messages.TWMGestureNotify)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetDockClients(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.PaintTo(System.Cardinal,System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DefineProperties(Classes.TFiler)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.ParentCtl3D" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMFontChange(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.PreProcessMessage(ref@Windows.tagMSG)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMDoubleBufferedChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.AlignDisabled" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FOnKeyDown" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.GetControl(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CNKeyDown(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.ImeName" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.TabStop" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FOnDockDrop" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.BevelEdges" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMDockClient(ref@Controls.TCMDockClient)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CreateParams(ref@Controls.TCreateParams)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.BorderWidth" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.DockDrop(Controls.TDragDockObject,System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.DefWndProc" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMUnDockClient(ref@Controls.TCMUnDockClient)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Controls.TWinControl.FOnExit" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.ControlCount" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.Brush" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.CMParentDoubleBufferedChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.KeyUp(ref@System.Word,Controls.TWinControl.KeyUp.TShiftState)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Controls.TWinControl.WMPaint(ref@Messages.TWMPaint)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Controls.TWinControl.MouseInClient" />
+      <reference referencedUin="delphi:l_conn:lib:DelphiWin32:Controls.TWinControl:Controls.TControl">
+        <property name="sourceAnchor" value="210,5851" />
+        <property name="targetAnchor" value="210,6079" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Controls.TWinControl.FMouseControl">
+        <property name="sourceAnchor" value="249,5851" />
+        <property name="targetAnchor" value="249,6079" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Controls.TWinControl.FTouchControl">
+        <property name="sourceAnchor" value="288,5851" />
+        <property name="targetAnchor" value="288,6079" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Controls.TWinControl.Controls">
+        <property name="sourceAnchor" value="327,5851" />
+        <property name="targetAnchor" value="327,6079" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Controls.TWinControl.DockClients">
+        <property name="sourceAnchor" value="366,5851" />
+        <property name="targetAnchor" value="366,6079" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:lib:DelphiWin32:Forms.TScrollingWinControl">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="100,20,236,643" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.AdjustClientRect(ref@Types.TRect)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.WMVScroll(ref@Messages.TWMScroll)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TScrollingWinControl.VertScrollBar" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.ScaleScrollBars(System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.SetVertScrollBar(Forms.TControlScrollBar)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.ChangeScale(System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.Resizing(Forms.TWindowState)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TScrollingWinControl.FPanPoint" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.AlignControls(Controls.TControl,ref@Types.TRect)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.DisableAutoRange()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.CalcAutoRange()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.AutoScrollInView(Controls.TControl)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TScrollingWinControl.FVertScrollBar" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TScrollingWinControl.FUpdatingScrollBars" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.UpdateScrollBars()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.CMBiDiModeChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.CreateParams(ref@Controls.TCreateParams)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.DoGesture(Controls.TGestureEventInfo,ref@System.Boolean)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TScrollingWinControl.FAutoRangeCount" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TScrollingWinControl.OnAlignInsertBefore" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TScrollingWinControl.HorzScrollBar" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.Create(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.WMSize(ref@Messages.TWMSize)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.ScrollInView(Controls.TControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.DoGetGestureOptions(ref@Forms.TScrollingWinControl.DoGetGestureOptions.TInteractiveGestures,ref@Forms.TScrollingWinControl.DoGetGestureOptions.TInteractiveGestureOptions)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TScrollingWinControl.FAutoScroll" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TScrollingWinControl.OnAlignPosition" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TScrollingWinControl.FHorzScrollBar" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.CreateWnd()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.IsTouchPropertyStored(Controls.TTouchProperty)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.EnableAutoRange()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.WMHScroll(ref@Messages.TWMScroll)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TScrollingWinControl.AutoScroll" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.Destroy()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.AutoScrollEnabled()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.SetAutoScroll(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.DoFlipChildren()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TScrollingWinControl.SetHorzScrollBar(Forms.TControlScrollBar)" />
+      <reference referencedUin="delphi:l_conn:lib:DelphiWin32:Forms.TScrollingWinControl:Controls.TWinControl">
+        <property name="sourceAnchor" value="336,502" />
+        <property name="targetAnchor" value="210,723" />
+        <property name="bendpoints" value="471,688,210,688" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+    </reference>
+    <reference referencedUin="delphi:e_class:lib:DelphiWin32:Forms.TCustomForm">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="646,843,331,4888" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FInternalPopupParentWnd" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetPixelsPerInch(System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnKeyDown" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.get_MDIChildCount()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.WindowMenu" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetBorderIcons(Forms.TCustomForm.SetBorderIcons.TBorderIcons)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetTransparentColorValue(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetAlphaBlendValue(System.Byte)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMMDIActivate(ref@Messages.TWMMDIActivate)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FPrintScale" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FOnCreate" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.Resizing(Forms.TWindowState)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetWindowMenu(Menus.TMenuItem)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.ObjectMenuItem" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FAlphaBlendValue" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.PopupMenu" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.AlphaBlend" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FRecreateChildren" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.DefocusControl(Controls.TWinControl,System.Boolean)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FPopupMode" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetClientRect()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.IconChanged(System.TObject)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetLeft(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetClientHeight(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.Hide()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.IsAutoScrollStored()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetMonitor()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetScaled()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FInCMParentBiDiModeChanged" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.ShowModal()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnHide" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CreateWnd()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnShortCut" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FActive" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Top" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.GlassFrame" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FMenu" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.PrintScale" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMIconChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetPixelsPerInch()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.DoDestroy()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetActiveOleControl(Controls.TWinControl)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnMouseMove" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FShowAction" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnMouseUp" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CreateWindowHandle(Controls.TCreateParams)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.MergeMenu(System.Boolean)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FClientInstance" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMUpdateActions(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FWindowMenu" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FRefreshGlassFrame" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.WindowState" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMIconEraseBkgnd(ref@Messages.TWMEraseBkgnd)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FTransparentColor" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FActiveOleControl" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.ScreenSnap" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Position" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMFontChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.DoHide()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WritePixelsPerInch(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMEraseBkgnd(ref@Messages.TWMEraseBkgnd)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Visible" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.DoCreate()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.Dock(Controls.TWinControl,Types.TRect)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FCanvas" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetTop(System.Integer)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FPopupChildren" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.PaletteChanged(System.Boolean)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FScreenSnap" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FFocusedControl" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FOnPaint" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetWindowToMonitor()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMAppSysCommand(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OldCreateOrder" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FSavedBorderStyle" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMCtl3DChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CreateNew(Classes.TComponent,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.InitializeNewForm()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMQueryDragIcon(ref@Messages.TWMNoParams)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetFormStyle(Forms.TFormStyle)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.FocusControl(Controls.TWinControl)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnCloseQuery" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FOnClose" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.IsFormSizeStored()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.Print()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetOwnerWindow()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnPaint" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMWindowPosChanging(ref@Messages.TWMWindowPosMsg)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.DoClose(ref@Forms.TCloseAction)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.Loaded()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.NormalColor()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FIcon" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.IsShortCut(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Height" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMCommand(ref@Messages.TWMCommand)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetPosition(Forms.TPosition)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.TransparentColorValue" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMActionUpdate(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.MakeFullyVisible(Forms.TMonitor)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.DestroyHandle()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMActionExecute(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetLayeredAttribs()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.BorderIcons" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.ActiveChanged()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FOnCloseQuery" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.DoDock(Controls.TWinControl,ref@Types.TRect)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.Notification(Classes.TComponent,Classes.TOperation)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.RequestAlign()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FPopupWnds" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMColorChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Designer" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetBorderIconStyles(ref@System.Cardinal,ref@System.Cardinal)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.PaintWindow(System.Cardinal)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.HandleCreateException()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.ChangeScale(System.Integer,System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.DoShow()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMShowWindow(ref@Messages.TWMShowWindow)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.ReadTextHeight(Classes.TReader)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMUIActivate(ref@)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.InitAlphaBlending(ref@Controls.TCreateParams)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnHelp" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Color" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.ParentFont" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnMouseDown" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Ctl3D" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMEnterMenuLoop(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.ClientWndProc(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetActiveControl(Controls.TWinControl)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.ModalResult" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FHelpFile" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetIcon(Graphics.TIcon)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.ReadIgnoreFontProperty(Classes.TReader)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.HorzScrollBar" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.UpdateGlassFrame(System.TObject)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.UpdateGlassFrameControls(Types.TRect)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetCanvas()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMDestroy(ref@Messages.TWMNoParams)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.Show()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CreateParams(ref@Controls.TCreateParams)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.ClientHeight" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.IsIconStored()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnMouseActivate" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.UpdateWindowState()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FBorderStyle" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMNCCreate(ref@Messages.TWMNCCreate)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SendCancelMode(Controls.TControl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetActive(System.Boolean)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FCreatingMainForm" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FActiveControl" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FWindowState" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.RefreshMDIMenu()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetFormImage()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.BeforeDestruction()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.QueryInterface(System.TGUID,out@)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.MDIChildCount" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.Create(Classes.TComponent)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMNCPaint(ref@Messages.TWMNCPaint)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.Close()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FTextHeight" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetScaled(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMQueryEndSession(ref@Messages.TWMQueryEndSession)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.BorderStyle" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnKeyPress" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnResize" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.AlphaBlendValue" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FOnDestroy" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FClientWidth" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetFocus()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.ReadState(Classes.TReader)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Font" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Canvas" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnDeactivate" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Monitor" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetLeft()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.TransparentColor" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetParentBiDiMode(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.Release()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.DefaultMonitor" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Caption" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FPixelsPerInch" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetFocusedControl(Controls.TWinControl)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FClientHandle" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMHelp(ref@Messages.TWMHelp)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FModalResult" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WndProc(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FOnActivate" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FFormStyle" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.ActiveMDIChild" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnActivate" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.PopupParent" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.VertScrollBar" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FClientHeight" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FPosition" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMTextChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMBiDiModeChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.Paint()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMGetMinMaxInfo(ref@Messages.TWMGetMinMaxInfo)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.PixelsPerInch" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMRelease(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.SnapBuffer" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMParentBiDiModeChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMNCCalcSize(ref@Messages.TWMNCCalcSize)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMInitMenuPopup(ref@Messages.TWMInitMenuPopup)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FGlassFrame" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnKeyUp" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnClick" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMDialogKey(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FAlphaBlend" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMParentFontChanged(ref@Controls.TCMParentFontChanged)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetGlassFrame(Forms.TGlassFrame)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnDblClick" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.FormState" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.set_PopupParent(Forms.TCustomForm)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FTransparentColorValue" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.FormStyle" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMSettingChange(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FPopupParent" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FOldCreateOrder" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMShowingChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Action" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetWindowFocus()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FInternalPopupParent" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.ClientWidth" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMMenuSelect(ref@Messages.TWMMenuSelect)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FOnShortCut" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnCanResize" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FDefClientProc" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMActivate(ref@Messages.TWMActivate)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.DestroyWindowHandle()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetFloating()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMMenuChar(ref@Messages.TWMMenuChar)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnCreate" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.HelpFile" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetAlphaBlend(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.UpdateActions()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.AlignControls(Controls.TControl,ref@Types.TRect)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMActivate(ref@Messages.TWMNoParams)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WantChildKey(Controls.TControl,ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetIconHandle()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMDeactivate(ref@Messages.TWMNoParams)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FOnHelp" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.KeyPreview" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.ClientHandle" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMNCLButtonDown(ref@Messages.TWMNCHitMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetObjectMenuItem(Menus.TMenuItem)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMNextDlgCtl(ref@Messages.TWMNextDlgCtl)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetTransparentColor(System.Boolean)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.IsForm()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMSysCommand(ref@Messages.TWMSysCommand)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnDragOver" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.MouseWheelHandler(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WriteTextHeight(Classes.TWriter)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetTop()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMClose(ref@Messages.TWMNoParams)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetDesigner(Forms.IDesignerHook)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.PopupMode" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FOnShow" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMPopupHwndDestroy(ref@Controls.TCMPopupHWndDestroy)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.MDIChildren" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Left" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Menu" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FOnDeactivate" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CloseQuery()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Active" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Icon" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FKeyPreview" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FSnapBuffer" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetClientWidth(System.Integer)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.VisibleChanging()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetMenu(Menus.TMainMenu)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.BeginAutoDrag()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FObjectMenuItem" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetPopupChildren()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.get_ActiveMDIChild()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FDropTarget" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnDragDrop" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FDefaultMonitor" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetBorderStyles(ref@System.Cardinal,ref@System.Cardinal,ref@System.Cardinal)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetParent(Controls.TWinControl)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FOnHide" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.DefaultHandler(ref@)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Scaled" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.PopupChildren" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMNCHitTest(ref@Messages.TWMNCHitTest)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetChildren(Forms.TCustomForm.GetChildren.TGetChildProc,Classes.TComponent)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FTileMode" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetVisible(System.Boolean)" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FDesigner" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.AfterConstruction()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.TileMode" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetRecreateChildren()" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FBorderIcons" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMGestureNotify(ref@Messages.TWMGestureNotify)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetChildOrder(Classes.TComponent,System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OleFormObject" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetPopupMode(Forms.TPopupMode)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.get_MDIChildren(System.Integer)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.ActiveControl" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FOleForm" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.DefineProperties(Classes.TFiler)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.RecreateAsPopup(System.Cardinal)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetWindowState(Forms.TWindowState)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CloseModal()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.Width" />
+      <reference referencedUin="delphi:e_field:lib:DelphiWin32:Forms.TCustomForm.FFormState" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.AutoScroll" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.ValidateRename(Classes.TComponent,System.string,System.string)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.Destroy()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.Activate()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMIsShortCut(ref@Messages.TWMKey)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnDestroy" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.Deactivate()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.IsClientSizeStored()" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.GetTextHeight()" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnShow" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.SetBorderStyle(Forms.TFormBorderStyle)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.DropTarget" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.ActiveOleControl" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.WMPaint(ref@Messages.TWMPaint)" />
+      <reference referencedUin="delphi:e_method:lib:DelphiWin32:Forms.TCustomForm.CMMenuChanged(ref@Messages.TMessage)" />
+      <reference referencedUin="delphi:e_property:lib:DelphiWin32:Forms.TCustomForm.OnClose" />
+      <reference referencedUin="delphi:l_conn:lib:DelphiWin32:Forms.TCustomForm:Forms.TScrollingWinControl">
+        <property name="sourceAnchor" value="811,843" />
+        <property name="targetAnchor" value="336,485" />
+        <property name="bendpoints" value="811,748,550,748" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TCustomForm.FActiveOleControl">
+        <property name="sourceAnchor" value="646,1657" />
+        <property name="targetAnchor" value="406,1657" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TCustomForm.FFocusedControl">
+        <property name="sourceAnchor" value="646,2471" />
+        <property name="targetAnchor" value="406,2471" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TCustomForm.FActiveControl">
+        <property name="sourceAnchor" value="646,3286" />
+        <property name="targetAnchor" value="406,3286" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TCustomForm.ActiveMDIChild">
+        <property name="sourceAnchor" value="742,5731" />
+        <property name="targetAnchor" value="742,8225" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TCustomForm.PopupParent">
+        <property name="sourceAnchor" value="977,5460" />
+        <property name="targetAnchor" value="969,5731" />
+        <property name="bendpoints" value="1273,5460,1273,6027,969,6027" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TCustomForm.FPopupParent">
+        <property name="sourceAnchor" value="977,5658" />
+        <property name="targetAnchor" value="961,5731" />
+        <property name="bendpoints" value="1075,5658,1075,5829,961,5829" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TCustomForm.FInternalPopupParent">
+        <property name="sourceAnchor" value="977,5585" />
+        <property name="targetAnchor" value="953,5731" />
+        <property name="bendpoints" value="1148,5585,1148,5902,953,5902" />
+        <property name="bounds_setted_by_user" value="True" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TCustomForm.MDIChildren">
+        <property name="sourceAnchor" value="775,5731" />
+        <property name="targetAnchor" value="775,8225" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TCustomForm.ActiveControl">
+        <property name="sourceAnchor" value="646,4101" />
+        <property name="targetAnchor" value="406,4101" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:lib:DelphiWin32:Forms.TCustomForm.ActiveOleControl">
+        <property name="sourceAnchor" value="646,4916" />
+        <property name="targetAnchor" value="406,4916" />
+        <property name="bendpoints" value="" />
+      </reference>
+    </reference>
+    <reference referencedUin="design:view:::shuirb2t75odauv9o_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="879,10,216,42" />
+    </reference>
+    <reference referencedUin="design:view:::3ml1kp7edhg_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="355,2,138,42" />
+    </reference>
+    <reference referencedUin="design:view:::x4qx6e5aezk_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="355,2,154,42" />
+    </reference>
+    <reference referencedUin="design:view:::000sa30yhff_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="355,63,231,42" />
+    </reference>
+  </view>
+</nodeSet>

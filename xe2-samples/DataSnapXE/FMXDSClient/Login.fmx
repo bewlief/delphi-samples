@@ -1,0 +1,159 @@
+object FrmLogin: TFrmLogin
+  Left = 0
+  Top = 0
+  Caption = 'Login'
+  BorderStyle = bsSingle
+  BorderIcons = [biSystemMenu]
+  ClientHeight = 288
+  ClientWidth = 262
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  ActiveControl = edLogin
+  StyleLookup = 'backgroundstyle'
+  object Layout1: TLayout
+    Width = 262.000000000000000000
+    Height = 288.000000000000000000
+    object edLogin: TClearingEdit
+      StyleName = 'MasterStyle'
+      Position.Point = '(104,32)'
+      Width = 137.000000000000000000
+      Height = 22.000000000000000000
+      TabOrder = 0
+      KeyboardType = vktDefault
+      OnChangeTracking = edFieldChange
+      Password = False
+      object seLogin: TShadowEffect
+        Enabled = False
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.500000000000000000
+        Opacity = 1.000000000000000000
+        ShadowColor = claRed
+      end
+    end
+    object LbLogin: TLabel
+      StyleName = 'MasterStyle'
+      Position.Point = '(57,35)'
+      Width = 32.000000000000000000
+      Height = 19.000000000000000000
+      TabOrder = 1
+      AutoSize = True
+      Text = 'Login'
+      WordWrap = False
+    end
+    object edPassword: TClearingEdit
+      StyleName = 'MasterStyle'
+      Position.Point = '(104,80)'
+      Width = 137.000000000000000000
+      Height = 22.000000000000000000
+      TabOrder = 2
+      KeyboardType = vktDefault
+      OnChangeTracking = edFieldChange
+      Password = False
+      object sePassword: TShadowEffect
+        Enabled = False
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.500000000000000000
+        Opacity = 1.000000000000000000
+        ShadowColor = claRed
+      end
+    end
+    object lbPassword: TLabel
+      StyleName = 'MasterStyle'
+      Position.Point = '(40,83)'
+      Width = 51.000000000000000000
+      Height = 19.000000000000000000
+      TabOrder = 3
+      AutoSize = True
+      Text = 'Password'
+      WordWrap = False
+    end
+    object Panel1: TPanel
+      Position.Point = '(8,227)'
+      Width = 241.000000000000000000
+      Height = 3.000000000000000000
+      StyleLookup = 'SeparatorBarStyle'
+      TabOrder = 4
+    end
+    object edDSHost: TClearingEdit
+      StyleName = 'MasterStyle'
+      Position.Point = '(104,128)'
+      Width = 137.000000000000000000
+      Height = 22.000000000000000000
+      TabOrder = 5
+      KeyboardType = vktDefault
+      OnChangeTracking = edFieldChange
+      Password = False
+      Text = 'localhost'
+      object seDSHost: TShadowEffect
+        Enabled = False
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.500000000000000000
+        Opacity = 1.000000000000000000
+        ShadowColor = claRed
+      end
+    end
+    object Label1: TLabel
+      StyleName = 'MasterStyle'
+      Position.Point = '(6,131)'
+      Width = 87.000000000000000000
+      Height = 19.000000000000000000
+      TabOrder = 6
+      AutoSize = True
+      Text = 'DataSnap Server'
+      WordWrap = False
+    end
+    object Label2: TLabel
+      StyleName = 'MasterStyle'
+      Position.Point = '(16,179)'
+      Width = 77.000000000000000000
+      Height = 19.000000000000000000
+      TabOrder = 7
+      AutoSize = True
+      Text = 'DataSnap Port'
+      WordWrap = False
+    end
+    object nbPort: TNumberBox
+      Position.Point = '(104,176)'
+      Width = 57.000000000000000000
+      Height = 22.000000000000000000
+      TabOrder = 8
+      KeyboardType = vktDefault
+      Min = 1.000000000000000000
+      Max = 1000.000000000000000000
+      Value = 211.000000000000000000
+      ValueType = vtInteger
+      HorzIncrement = 1.000000000000000000
+      VertIncrement = 5.000000000000000000
+      object sePort: TShadowEffect
+        Enabled = False
+        Distance = 3.000000000000000000
+        Direction = 45.000000000000000000
+        Softness = 0.300000011920929000
+        Opacity = 1.000000000000000000
+        ShadowColor = claRed
+      end
+    end
+    object Button1: TButton
+      Position.Point = '(40,240)'
+      Width = 97.000000000000000000
+      Height = 25.000000000000000000
+      OnClick = Button1Click
+      StyleLookup = 'Button1Style1'
+      TabOrder = 9
+      Text = 'Ok'
+    end
+    object Button2: TButton
+      Position.Point = '(144,240)'
+      Width = 97.000000000000000000
+      Height = 25.000000000000000000
+      TabOrder = 10
+      ModalResult = 2
+      Text = 'Cancel'
+      Cancel = True
+    end
+  end
+end

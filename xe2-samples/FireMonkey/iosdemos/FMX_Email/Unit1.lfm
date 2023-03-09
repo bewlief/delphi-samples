@@ -1,0 +1,85 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 320
+  Visible = False
+  StyleLookup = 'backgroundstyle'
+  object Edit1: TEdit
+    Position.Point = '(72,48)'
+    Width = 241.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 0
+    Font.Size = 14.000000000000000000
+    KeyboardType = vktDefault
+    Password = False
+    Text = 'aohlsson@embarcadero.com'
+  end
+  object Label1: TLabel
+    Position.Point = '(8,47)'
+    Width = 57.000000000000000000
+    Height = 26.000000000000000000
+    TabOrder = 1
+    Font.Size = 14.000000000000000000
+    Text = 'To:'
+  end
+  object Edit2: TEdit
+    Position.Point = '(72,72)'
+    Width = 241.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 2
+    Font.Size = 14.000000000000000000
+    KeyboardType = vktDefault
+    Password = False
+    Text = 'Mail from iPhone'
+  end
+  object Label2: TLabel
+    Position.Point = '(8,71)'
+    Width = 57.000000000000000000
+    Height = 26.000000000000000000
+    TabOrder = 3
+    Font.Size = 14.000000000000000000
+    Text = 'Subject:'
+  end
+  object Memo1: TMemo
+    Position.Point = '(8,104)'
+    Width = 305.000000000000000000
+    Height = 361.000000000000000000
+    TabOrder = 4
+    Font.Size = 14.000000000000000000
+    Text = 
+      'Hey there!'#13#10#13#10'Remember to tune in to CodeRage 6!'#13#10#13#10'It'#39's October' +
+      ' 17-21, 2011. Mark it!'#13#10#13#10'Yours,'#13#10'aohlsson'#39's iPhone'
+    KeyboardType = vktDefault
+  end
+  object Panel1: TPanel
+    Align = alTop
+    Width = 320.000000000000000000
+    Height = 41.000000000000000000
+    TabOrder = 5
+    object Button1: TButton
+      Position.Point = '(256,8)'
+      Width = 57.000000000000000000
+      Height = 25.000000000000000000
+      OnClick = Button1Click
+      TabOrder = 0
+      Font.Size = 14.000000000000000000
+      Text = 'Send'
+    end
+    object Label3: TLabel
+      Align = alClient
+      Width = 320.000000000000000000
+      Height = 41.000000000000000000
+      TabOrder = 1
+      Font.Size = 20.000000000000000000
+      Font.Style = [fsBold]
+      TextAlign = taCenter
+      Text = 'New Message'
+    end
+  end
+  object iOSEmail1: TiOSEmail
+    Left = 144
+    Top = 312
+  end
+end

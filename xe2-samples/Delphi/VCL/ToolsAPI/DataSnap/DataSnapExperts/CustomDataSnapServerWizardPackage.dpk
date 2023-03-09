@@ -1,0 +1,64 @@
+
+//---------------------------------------------------------------------------
+
+// This software is Copyright (c) 2011 Embarcadero Technologies, Inc. 
+// You may only use this software if you are an authorized licensee
+// of Delphi, C++Builder or RAD Studio (Embarcadero Products).
+// This software is considered a Redistributable as defined under
+// the software license agreement that comes with the Embarcadero Products
+// and is subject to that software license agreement.
+
+//---------------------------------------------------------------------------
+package CustomDataSnapServerWizardPackage;
+
+{$R *.res}
+{$R *.dres}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO ON}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$DESIGNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  dclnet,
+  dcldatasnapserver;
+
+contains
+  CustomizedDataSnapCreatorsUnit in 'CustomizedDataSnapCreatorsUnit.pas' {CustomizedDataSnapCreatorsModule},
+  CustomizedDataSnapUIUnit in 'CustomizedDataSnapUIUnit.pas' {CustomizedDataSnapUIModule: TDataModule},
+  SampleDataSnapReg in 'SampleDataSnapReg.pas',
+  StandardDataSnapCreatorsUnit in 'StandardDataSnapCreatorsUnit.pas' {StandardDataSnapCreatorsModule: TDataModule},
+  StandardDataSnapUIUnit in 'StandardDataSnapUIUnit.pas' {StandardDataSnapUIModule: TDataModule},
+  CustomizedFeatures in 'CustomizedFeatures.pas',
+  CommentFrameUnit in 'CommentFrameUnit.pas' {CommentFrame: TFrame},
+  WelcomeFrameUnit in 'WelcomeFrameUnit.pas' {WelcomeFrame: TFrame},
+  CustomizedServerMethodsCreatorUnit in 'CustomizedServerMethodsCreatorUnit.pas' {CustomizedServerMethodsCreator: TDataModule},
+  CustomizedDSRESTUIUnit in 'CustomizedDSRESTUIUnit.pas' {CustomizedDSRESTUIModule: TDataModule},
+  CustomizedDSRESTCreatorsUnit in 'CustomizedDSRESTCreatorsUnit.pas' {CustomizedDSRESTCreatorsModule: TDataModule},
+  StandardDSRESTCreatorsUnit in 'StandardDSRESTCreatorsUnit.pas' {StandardDSRESTCreatorsModule: TDataModule},
+  StandardDSRESTUIUnit in 'StandardDSRESTUIUnit.pas' {StandardDSRESTUIModule: TDataModule},
+  AddFilesFrameUnit in 'AddFilesFrameUnit.pas' {AddFilesFrame: TFrame};
+
+end.

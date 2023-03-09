@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="9kwcpjv1wlo_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Customer.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Customer.TCustomer">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,179,210" />
+      <property name="bounds_setted_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Customer.TCustomer.FName" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Customer.TCustomer.FAge" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Customer.TCustomer.FMaritalStatus" />
+      <reference referencedUin="delphi:e_property:src:DelphiDataSnapClient:Customer.TCustomer.Name" />
+      <reference referencedUin="delphi:e_property:src:DelphiDataSnapClient:Customer.TCustomer.Age" />
+      <reference referencedUin="delphi:e_property:src:DelphiDataSnapClient:Customer.TCustomer.MaritalStatus" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:Customer.TCustomer.ToString()" />
+      <reference referencedUin="delphi:l_ast:src:DelphiDataSnapClient:Customer.TCustomer.FMaritalStatus">
+        <property name="sourceAnchor" value="189,129" />
+        <property name="targetAnchor" value="360,129" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_ast:src:DelphiDataSnapClient:Customer.TCustomer.MaritalStatus">
+        <property name="sourceAnchor" value="189,121" />
+        <property name="targetAnchor" value="360,121" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:l_gnt:src:DelphiDataSnapClient:Customer.TCustomer:BaseObject.TBaseObject">
+        <property name="sourceAnchor" value="144,220" />
+        <property name="targetAnchor" value="144,280" />
+        <property name="bendpoints" value="" />
+      </reference>
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:Customer.TCustomer." />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:Customer.TMaritalStatus">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="360,80,98,98" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Customer.TMaritalStatus.msMarried" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Customer.TMaritalStatus.msEngaged" />
+      <reference referencedUin="delphi:e_field:src:DelphiDataSnapClient:Customer.TMaritalStatus.msEligible" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:BaseObject.TBaseObject">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="100,280,245,129" />
+      <property name="location_set_by_user" value="True" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:BaseObject.TBaseObject.ObjectToJSON&lt;1&gt;(T)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:BaseObject.TBaseObject.JSONToObject&lt;1&gt;(DBXJSON.TJSONValue)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:BaseObject.TBaseObject.ObjectToJSON&lt;1&gt;(T,DBXJSONReflect.TJSONMarshal)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:BaseObject.TBaseObject.JSONToObject&lt;1&gt;(DBXJSON.TJSONValue,DBXJSONReflect.TJSONUnMarshal)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:BaseObject.TBaseObject.RegisterConverter(DBXJSONReflect.TJSONMarshal)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:BaseObject.TBaseObject.RegisterReverter(DBXJSONReflect.TJSONUnMarshal)" />
+    </reference>
+  </view>
+</nodeSet>

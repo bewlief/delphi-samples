@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<PersonalityInfo>
+		<Option>
+			<Option Name="Personality">W32ResourceDLL.Personality</Option>
+			<Option Name="ProjectType">ResourceDLL</Option>
+			<Option Name="Version">1.0</Option>
+			<Option Name="GUID">{2680F732-070C-45E0-A0DC-42AFC7FE6FD3}</Option>
+		</Option>
+	</PersonalityInfo>
+	<W32ResourceDLL.Personality>
+		<Source>
+			<Source Name="MainSource">richedit.dpr</Source>
+		</Source>
+		<Options>
+			<Options Name="BaseLang">1033</Options>
+			<Options Name="TargetName">..\richedit.JPN</Options>
+			<Options Name="BRCC_IncludePath"></Options>
+			<Options Name="Company"></Options>
+			<Options Name="Configuration"></Options>
+			<Options Name="Copyright"></Options>
+			<Options Name="Description"></Options>
+			<Options Name="Trademark"></Options>
+			<Options Name="Product"></Options>
+			<Options Name="ProductVersion"></Options>
+			<Options Name="Title"></Options>
+			<Options Name="FileVersion"></Options>
+			<Options Name="Evidence"></Options>
+			<Options Name="KeyFile"></Options>
+			<Options Name="KeyName"></Options>
+		</Options>
+		<FileList><File FileName="reabout.dfm" ContainerId="W32Form" ModuleName="reabout.dfm"/><File FileName="remain.dfm" ContainerId="W32Form" ModuleName="remain.dfm"/><File FileName="richedit_DRC.rc" ContainerId="W32RC" ModuleName="richedit_DRC.rc"/></FileList></W32ResourceDLL.Personality>
+</BorlandProject>

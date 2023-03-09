@@ -1,0 +1,1457 @@
+{*******************************************************}
+{                                                       }
+{                Delphi Runtime Library                 }
+{                                                       }
+{          File: wincred.h                              }
+{          Copyright (c) Microsoft Corporation          }
+{          All Rights Reserved.                         }
+{                                                       }
+{       Translator: Embarcadero Technologies, Inc.      }
+{ Copyright(c) 1995-2022 Embarcadero Technologies, Inc. }
+{              All rights reserved                      }
+{                                                       }
+{*******************************************************}
+unit Winapi.WinCred;
+
+interface
+
+(*
+
+Abstract:
+
+    This module contains the public data structures and API definitions
+    needed for the Credential Manager.
+
+*)
+
+uses
+  Winapi.Windows;
+
+{$HPPEMIT '#include <wincred.h>'}
+
+//
+// Ensure PCtxtHandle is defined
+//
+
+type
+  _SecHandle = record
+    dwLower: ULONG_PTR;
+    dwUpper: ULONG_PTR;
+  end;
+  {$EXTERNALSYM _SecHandle}
+  SecHandle = _SecHandle;
+  {$EXTERNALSYM SecHandle}
+  PSecHandle = ^_SecHandle;
+  {$EXTERNALSYM PSecHandle}
+
+  PCtxtHandle = PSecHandle;
+  {$EXTERNALSYM PCtxtHandle}
+
+
+//-----------------------------------------------------------------------------
+// Macros
+//-----------------------------------------------------------------------------
+
+//
+// Macro to determine whether CredUIPromptForCredentials should be called upon a failed
+//      authentication attempt.
+//
+// Implemented as a macro so that the caller can delay load credui.dll only if this
+//      macro returns TRUE.
+//
+// Include only status codes that imply the username/password are wrong or that the
+//      password is expired.  In the former case, asking for a another username or password
+//      is appropriate.  In the later case, we put up a different dialog asking the
+//      user to change the password on the server.
+//
+// Don't include status codes such as ERROR_ACCOUNT_DISABLED, ERROR_ACCOUNT_RESTRICTION,
+//      ERROR_ACCOUNT_LOCKED_OUT, ERROR_ACCOUNT_EXPIRED, ERROR_LOGON_TYPE_NOT_GRANTED.
+//      For those, the user isn't going to have another account so prompting him
+//      won't help.
+//
+// STATUS_DOWNGRADE_DETECTED is included to handle the case where a corporate laptop
+//      is brought to another LAN.  A downgrade attack will indeed be detected,
+//      but we want to popup UI to allow the user to connect to resources in the
+//      other LAN.
+//
+// STATUS_NO_SUCH_LOGON_SESSION and related error codes come from error mappings of
+//      SEC_E_NO_CREDENTIALS and generally indicates that there are not credentials
+//      available for SSO and some need to be provided.
+//
+// STATUS_NO_SUCH_USER comes when a username is mistyped or a certificate credential is
+//      used where a username/password credential is expected.
+//
+// Don't use the CREDUIP_* macros directly.  Their definition is private to credui.dll.
+//
+
+// Don't require ntstatus.h
+const
+  STATUS_LOGON_FAILURE             = NTSTATUS($C000006D);     // ntsubauth
+  {$EXTERNALSYM STATUS_LOGON_FAILURE}
+  STATUS_WRONG_PASSWORD            = NTSTATUS($C000006A);     // ntsubauth
+  {$EXTERNALSYM STATUS_WRONG_PASSWORD}
+  STATUS_PASSWORD_EXPIRED          = NTSTATUS($C0000071);     // ntsubauth
+  {$EXTERNALSYM STATUS_PASSWORD_EXPIRED}
+  STATUS_PASSWORD_MUST_CHANGE      = NTSTATUS($C0000224);    // ntsubauth
+  {$EXTERNALSYM STATUS_PASSWORD_MUST_CHANGE}
+  STATUS_ACCESS_DENIED             = NTSTATUS($C0000022);
+  {$EXTERNALSYM STATUS_ACCESS_DENIED}
+  STATUS_DOWNGRADE_DETECTED        = NTSTATUS($C0000388);
+  {$EXTERNALSYM STATUS_DOWNGRADE_DETECTED}
+  STATUS_AUTHENTICATION_FIREWALL_FAILED = NTSTATUS($C0000413);
+  {$EXTERNALSYM STATUS_AUTHENTICATION_FIREWALL_FAILED}
+  STATUS_ACCOUNT_DISABLED          = NTSTATUS($C0000072);     // ntsubauth
+  {$EXTERNALSYM STATUS_ACCOUNT_DISABLED}
+  STATUS_ACCOUNT_RESTRICTION       = NTSTATUS($C000006E);     // ntsubauth
+  {$EXTERNALSYM STATUS_ACCOUNT_RESTRICTION}
+  STATUS_ACCOUNT_LOCKED_OUT        = NTSTATUS($C0000234);    // ntsubauth
+  {$EXTERNALSYM STATUS_ACCOUNT_LOCKED_OUT}
+  STATUS_ACCOUNT_EXPIRED           = NTSTATUS($C0000193);    // ntsubauth
+  {$EXTERNALSYM STATUS_ACCOUNT_EXPIRED}
+  STATUS_LOGON_TYPE_NOT_GRANTED    = NTSTATUS($C000015B);
+  {$EXTERNALSYM STATUS_LOGON_TYPE_NOT_GRANTED}
+  STATUS_NO_SUCH_LOGON_SESSION    = NTSTATUS($C000005F);
+  {$EXTERNALSYM STATUS_NO_SUCH_LOGON_SESSION}
+  STATUS_NO_SUCH_USER             = NTSTATUS($C0000064);
+  {$EXTERNALSYM STATUS_NO_SUCH_USER}
+
+// Don't require lmerr.h
+  NERR_BASE       = 2100;
+  {$EXTERNALSYM NERR_BASE}
+  NERR_PasswordExpired   = (NERR_BASE+142); // The password of this user has expired.
+  {$EXTERNALSYM NERR_PasswordExpired}
+
+function CREDUIP_IS_USER_PASSWORD_ERROR(_Status: NTSTATUS): Boolean; inline;
+{$EXTERNALSYM CREDUIP_IS_USER_PASSWORD_ERROR}
+function CREDUIP_IS_DOWNGRADE_ERROR(_Status: NTSTATUS): Boolean; inline;
+{$EXTERNALSYM CREDUIP_IS_DOWNGRADE_ERROR}
+function CREDUIP_IS_EXPIRED_ERROR(_Status: NTSTATUS): Boolean; inline;
+{$EXTERNALSYM CREDUIP_IS_EXPIRED_ERROR}
+function CREDUI_IS_AUTHENTICATION_ERROR(_Status: NTSTATUS): Boolean; inline;
+{$EXTERNALSYM CREDUI_IS_AUTHENTICATION_ERROR}
+function CREDUI_NO_PROMPT_AUTHENTICATION_ERROR(_Status: NTSTATUS): Boolean; inline;
+{$EXTERNALSYM CREDUI_NO_PROMPT_AUTHENTICATION_ERROR}
+
+//-----------------------------------------------------------------------------
+// Structures
+//-----------------------------------------------------------------------------
+
+//
+// Credential Attribute
+//
+const
+// Maximum length of the various credential string fields (in characters)
+  CRED_MAX_STRING_LENGTH = 256;
+  {$EXTERNALSYM CRED_MAX_STRING_LENGTH}
+// Maximum length of the UserName field.  The worst case is <User>@<DnsDomain>
+  CRED_MAX_USERNAME_LENGTH = (256+1+256);
+  {$EXTERNALSYM CRED_MAX_USERNAME_LENGTH}
+
+// Maximum length of the TargetName field for CRED_TYPE_GENERIC (in characters)
+  CRED_MAX_GENERIC_TARGET_NAME_LENGTH = 32767;
+  {$EXTERNALSYM CRED_MAX_GENERIC_TARGET_NAME_LENGTH}
+
+// Maximum length of the TargetName field for CRED_TYPE_DOMAIN_* (in characters)
+//      Largest one is <DfsRoot>\<DfsShare>
+  CRED_MAX_DOMAIN_TARGET_NAME_LENGTH = (256+1+80);
+  {$EXTERNALSYM CRED_MAX_DOMAIN_TARGET_NAME_LENGTH}
+
+// Maximum length of a target namespace
+  CRED_MAX_TARGETNAME_NAMESPACE_LENGTH = (256);
+  {$EXTERNALSYM CRED_MAX_TARGETNAME_NAMESPACE_LENGTH}
+
+// Maximum length of a target attribute
+  CRED_MAX_TARGETNAME_ATTRIBUTE_LENGTH = (256);
+  {$EXTERNALSYM CRED_MAX_TARGETNAME_ATTRIBUTE_LENGTH}
+
+// Maximum size of the Credential Attribute Value field (in bytes)
+  CRED_MAX_VALUE_SIZE = (256);
+  {$EXTERNALSYM CRED_MAX_VALUE_SIZE}
+
+// Maximum number of attributes per credential
+  CRED_MAX_ATTRIBUTES = 64;
+  {$EXTERNALSYM CRED_MAX_ATTRIBUTES}
+
+type
+ {$EXTERNALSYM _CREDENTIAL_ATTRIBUTEA}
+  _CREDENTIAL_ATTRIBUTEA = record
+    Keyword: LPSTR;
+    Flags: DWORD;
+    ValueSize: DWORD;
+    Value: LPBYTE;
+ end;
+ {$EXTERNALSYM _CREDENTIAL_ATTRIBUTEW}
+  _CREDENTIAL_ATTRIBUTEW = record
+    Keyword: LPWSTR;
+    Flags: DWORD;
+    ValueSize: DWORD;
+    Value: LPBYTE;
+ end;
+ {$EXTERNALSYM CREDENTIAL_ATTRIBUTEA}
+ CREDENTIAL_ATTRIBUTEA = _CREDENTIAL_ATTRIBUTEA;
+ {$EXTERNALSYM CREDENTIAL_ATTRIBUTEW}
+ CREDENTIAL_ATTRIBUTEW = _CREDENTIAL_ATTRIBUTEW;
+  {$EXTERNALSYM CREDENTIAL_ATTRIBUTE}
+  CREDENTIAL_ATTRIBUTE = CREDENTIAL_ATTRIBUTEW;
+ {$EXTERNALSYM PCREDENTIAL_ATTRIBUTEA}
+ PCREDENTIAL_ATTRIBUTEA = ^_CREDENTIAL_ATTRIBUTEA;
+ {$EXTERNALSYM PCREDENTIAL_ATTRIBUTEW}
+ PCREDENTIAL_ATTRIBUTEW = ^_CREDENTIAL_ATTRIBUTEW;
+  {$EXTERNALSYM PCREDENTIAL_ATTRIBUTE}
+  PCREDENTIAL_ATTRIBUTE = PCREDENTIAL_ATTRIBUTEW;
+
+//
+// Special values of the TargetName field
+//
+const
+  CRED_SESSION_WILDCARD_NAME_W = '*Session';
+  {$EXTERNALSYM CRED_SESSION_WILDCARD_NAME_W}
+  CRED_SESSION_WILDCARD_NAME_A = '*Session';
+  {$EXTERNALSYM CRED_SESSION_WILDCARD_NAME_A}
+  CRED_UNIVERSAL_WILDCARD_W = '*';
+  {$EXTERNALSYM CRED_UNIVERSAL_WILDCARD_W}
+  CRED_UNIVERSAL_WILDCARD_A = '*';
+  {$EXTERNALSYM CRED_UNIVERSAL_WILDCARD_A}
+  CRED_SESSION_WILDCARD_NAME_LENGTH = Length(CRED_SESSION_WILDCARD_NAME_A);
+  {$EXTERNALSYM CRED_SESSION_WILDCARD_NAME_LENGTH}
+  CRED_TARGETNAME_DOMAIN_NAMESPACE_W = 'Domain';
+  {$EXTERNALSYM CRED_TARGETNAME_DOMAIN_NAMESPACE_W}
+  CRED_TARGETNAME_DOMAIN_NAMESPACE_A = 'Domain';
+  {$EXTERNALSYM CRED_TARGETNAME_DOMAIN_NAMESPACE_A}
+  CRED_TARGETNAME_DOMAIN_NAMESPACE_LENGTH = Length(CRED_TARGETNAME_DOMAIN_NAMESPACE_A);
+  {$EXTERNALSYM CRED_TARGETNAME_DOMAIN_NAMESPACE_LENGTH}
+  CRED_TARGETNAME_LEGACYGENERIC_NAMESPACE_W = 'LegacyGeneric';
+  {$EXTERNALSYM CRED_TARGETNAME_LEGACYGENERIC_NAMESPACE_W}
+  CRED_TARGETNAME_LEGACYGENERIC_NAMESPACE_A = 'LegacyGeneric';
+  {$EXTERNALSYM CRED_TARGETNAME_LEGACYGENERIC_NAMESPACE_A}
+  CRED_TARGETNAME_LEGACYGENERIC_NAMESPACE_LENGTH = Length(CRED_TARGETNAME_LEGACYGENERIC_NAMESPACE_A);
+  {$EXTERNALSYM CRED_TARGETNAME_LEGACYGENERIC_NAMESPACE_LENGTH}
+  CRED_TARGETNAME_NAMESPACE_SEPERATOR_W = ':';
+  {$EXTERNALSYM CRED_TARGETNAME_NAMESPACE_SEPERATOR_W}
+  CRED_TARGETNAME_NAMESPACE_SEPERATOR_A = ':';
+  {$EXTERNALSYM CRED_TARGETNAME_NAMESPACE_SEPERATOR_A}
+  CRED_TARGETNAME_ATTRIBUTE_SEPERATOR_W = '=';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_SEPERATOR_W}
+  CRED_TARGETNAME_ATTRIBUTE_SEPERATOR_A = '=';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_SEPERATOR_A}
+  CRED_TARGETNAME_DOMAIN_EXTENDED_USERNAME_SEPARATOR_W = '|';
+  {$EXTERNALSYM CRED_TARGETNAME_DOMAIN_EXTENDED_USERNAME_SEPARATOR_W}
+  CRED_TARGETNAME_DOMAIN_EXTENDED_USERNAME_SEPARATOR_A = '|';
+  {$EXTERNALSYM CRED_TARGETNAME_DOMAIN_EXTENDED_USERNAME_SEPARATOR_A}
+  CRED_TARGETNAME_ATTRIBUTE_TARGET_W = 'target';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_TARGET_W}
+  CRED_TARGETNAME_ATTRIBUTE_TARGET_A = 'target';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_TARGET_A}
+  CRED_TARGETNAME_ATTRIBUTE_TARGET_LENGTH = Length(CRED_TARGETNAME_ATTRIBUTE_TARGET_A);
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_TARGET_LENGTH}
+  CRED_TARGETNAME_ATTRIBUTE_NAME_W = 'name';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_NAME_W}
+  CRED_TARGETNAME_ATTRIBUTE_NAME_A = 'name';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_NAME_A}
+  CRED_TARGETNAME_ATTRIBUTE_NAME_LENGTH = Length(CRED_TARGETNAME_ATTRIBUTE_NAME_A);
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_NAME_LENGTH}
+  CRED_TARGETNAME_ATTRIBUTE_BATCH_W = 'batch';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_BATCH_W}
+  CRED_TARGETNAME_ATTRIBUTE_BATCH_A = 'batch';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_BATCH_A}
+  CRED_TARGETNAME_ATTRIBUTE_BATCH_LENGTH = Length(CRED_TARGETNAME_ATTRIBUTE_BATCH_A);
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_BATCH_LENGTH}
+  CRED_TARGETNAME_ATTRIBUTE_INTERACTIVE_W = 'interactive';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_INTERACTIVE_W}
+  CRED_TARGETNAME_ATTRIBUTE_INTERACTIVE_A = 'interactive';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_INTERACTIVE_A}
+  CRED_TARGETNAME_ATTRIBUTE_INTERACTIVE_LENGTH = Length(CRED_TARGETNAME_ATTRIBUTE_INTERACTIVE_A);
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_INTERACTIVE_LENGTH}
+  CRED_TARGETNAME_ATTRIBUTE_SERVICE_W = 'service';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_SERVICE_W}
+  CRED_TARGETNAME_ATTRIBUTE_SERVICE_A = 'service';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_SERVICE_A}
+  CRED_TARGETNAME_ATTRIBUTE_SERVICE_LENGTH = Length(CRED_TARGETNAME_ATTRIBUTE_SERVICE_A);
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_SERVICE_LENGTH}
+  CRED_TARGETNAME_ATTRIBUTE_NETWORK_W = 'network';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_NETWORK_W}
+  CRED_TARGETNAME_ATTRIBUTE_NETWORK_A = 'network';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_NETWORK_A}
+  CRED_TARGETNAME_ATTRIBUTE_NETWORK_LENGTH = Length(CRED_TARGETNAME_ATTRIBUTE_NETWORK_A);
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_NETWORK_LENGTH}
+  CRED_TARGETNAME_ATTRIBUTE_NETWORKCLEARTEXT_W = 'networkcleartext';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_NETWORKCLEARTEXT_W}
+  CRED_TARGETNAME_ATTRIBUTE_NETWORKCLEARTEXT_A = 'networkcleartext';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_NETWORKCLEARTEXT_A}
+  CRED_TARGETNAME_ATTRIBUTE_NETWORKCLEARTEXT_LENGTH = Length(CRED_TARGETNAME_ATTRIBUTE_NETWORKCLEARTEXT_A);
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_NETWORKCLEARTEXT_LENGTH}
+  CRED_TARGETNAME_ATTRIBUTE_REMOTEINTERACTIVE_W = 'remoteinteractive';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_REMOTEINTERACTIVE_W}
+  CRED_TARGETNAME_ATTRIBUTE_REMOTEINTERACTIVE_A = 'remoteinteractive';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_REMOTEINTERACTIVE_A}
+  CRED_TARGETNAME_ATTRIBUTE_REMOTEINTERACTIVE_LENGTH = Length(CRED_TARGETNAME_ATTRIBUTE_REMOTEINTERACTIVE_A);
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_REMOTEINTERACTIVE_LENGTH}
+  CRED_TARGETNAME_ATTRIBUTE_CACHEDINTERACTIVE_W = 'cachedinteractive';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_CACHEDINTERACTIVE_W}
+  CRED_TARGETNAME_ATTRIBUTE_CACHEDINTERACTIVE_A = 'cachedinteractive';
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_CACHEDINTERACTIVE_A}
+  CRED_TARGETNAME_ATTRIBUTE_CACHEDINTERACTIVE_LENGTH = Length(CRED_TARGETNAME_ATTRIBUTE_CACHEDINTERACTIVE_A);
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_CACHEDINTERACTIVE_LENGTH}
+
+{$ifdef UNICODE}
+  CRED_SESSION_WILDCARD_NAME = CRED_SESSION_WILDCARD_NAME_W;
+  CRED_TARGETNAME_DOMAIN_NAMESPACE = CRED_TARGETNAME_DOMAIN_NAMESPACE_W;
+  CRED_UNIVERSAL_WILDCARD = CRED_UNIVERSAL_WILDCARD_W;
+  CRED_TARGETNAME_NAMESPACE_SEPERATOR = CRED_TARGETNAME_NAMESPACE_SEPERATOR_W;
+  CRED_TARGETNAME_ATTRIBUTE_SEPERATOR = CRED_TARGETNAME_ATTRIBUTE_SEPERATOR_W;
+  CRED_TARGETNAME_ATTRIBUTE_NAME = CRED_TARGETNAME_ATTRIBUTE_NAME_W;
+  CRED_TARGETNAME_ATTRIBUTE_TARGET = CRED_TARGETNAME_ATTRIBUTE_TARGET_W;
+  CRED_TARGETNAME_ATTRIBUTE_BATCH = CRED_TARGETNAME_ATTRIBUTE_BATCH_W;
+  CRED_TARGETNAME_ATTRIBUTE_INTERACTIVE = CRED_TARGETNAME_ATTRIBUTE_INTERACTIVE_W;
+  CRED_TARGETNAME_ATTRIBUTE_SERVICE = CRED_TARGETNAME_ATTRIBUTE_SERVICE_W;
+  CRED_TARGETNAME_ATTRIBUTE_NETWORK = CRED_TARGETNAME_ATTRIBUTE_NETWORK_W;
+  CRED_TARGETNAME_ATTRIBUTE_NETWORKCLEARTEXT = CRED_TARGETNAME_ATTRIBUTE_NETWORKCLEARTEXT_W;
+  CRED_TARGETNAME_ATTRIBUTE_REMOTEINTERACTIVE = CRED_TARGETNAME_ATTRIBUTE_REMOTEINTERACTIVE_W;
+  CRED_TARGETNAME_ATTRIBUTE_CACHEDINTERACTIVE = CRED_TARGETNAME_ATTRIBUTE_CACHEDINTERACTIVE_W;
+
+{$else}
+  CRED_SESSION_WILDCARD_NAME = CRED_SESSION_WILDCARD_NAME_A;
+  CRED_TARGETNAME_DOMAIN_NAMESPACE = CRED_TARGETNAME_DOMAIN_NAMESPACE_A;
+  CRED_UNIVERSAL_WILDCARD = CRED_UNIVERSAL_WILDCARD_A;
+  CRED_TARGETNAME_NAMESPACE_SEPERATOR = CRED_TARGETNAME_NAMESPACE_SEPERATOR_A;
+  CRED_TARGETNAME_ATTRIBUTE_SEPERATOR = CRED_TARGETNAME_ATTRIBUTE_SEPERATOR_A;
+  CRED_TARGETNAME_ATTRIBUTE_NAME = CRED_TARGETNAME_ATTRIBUTE_NAME_A;
+  CRED_TARGETNAME_ATTRIBUTE_TARGET = CRED_TARGETNAME_ATTRIBUTE_TARGET_A;
+  CRED_TARGETNAME_ATTRIBUTE_BATCH = CRED_TARGETNAME_ATTRIBUTE_BATCH_A;
+  CRED_TARGETNAME_ATTRIBUTE_INTERACTIVE = CRED_TARGETNAME_ATTRIBUTE_INTERACTIVE_A;
+  CRED_TARGETNAME_ATTRIBUTE_SERVICE = CRED_TARGETNAME_ATTRIBUTE_SERVICE_A;
+  CRED_TARGETNAME_ATTRIBUTE_NETWORK = CRED_TARGETNAME_ATTRIBUTE_NETWORK_A;
+  CRED_TARGETNAME_ATTRIBUTE_NETWORKCLEARTEXT = CRED_TARGETNAME_ATTRIBUTE_NETWORKCLEARTEXT_A;
+  CRED_TARGETNAME_ATTRIBUTE_REMOTEINTERACTIVE = CRED_TARGETNAME_ATTRIBUTE_REMOTEINTERACTIVE_A;
+  CRED_TARGETNAME_ATTRIBUTE_CACHEDINTERACTIVE = CRED_TARGETNAME_ATTRIBUTE_CACHEDINTERACTIVE_A;
+{$endif} // UNICODE
+  {$EXTERNALSYM CRED_SESSION_WILDCARD_NAME}
+  {$EXTERNALSYM CRED_TARGETNAME_DOMAIN_NAMESPACE}
+  {$EXTERNALSYM CRED_UNIVERSAL_WILDCARD}
+  {$EXTERNALSYM CRED_TARGETNAME_NAMESPACE_SEPERATOR}
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_SEPERATOR}
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_NAME}
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_TARGET}
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_BATCH}
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_INTERACTIVE}
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_SERVICE}
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_NETWORK}
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_NETWORKCLEARTEXT}
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_REMOTEINTERACTIVE}
+  {$EXTERNALSYM CRED_TARGETNAME_ATTRIBUTE_CACHEDINTERACTIVE}
+
+//
+// Add\Extract Logon type from flags
+//
+  CRED_LOGON_TYPES_MASK             = $F000;  // Mask to get logon types
+  {$EXTERNALSYM CRED_LOGON_TYPES_MASK}
+
+procedure CredAppendLogonTypeToFlags(var Flags: DWORD; LogonType: DWORD); inline;
+{$EXTERNALSYM CredAppendLogonTypeToFlags}
+function CredGetLogonTypeFromFlags(Flags: DWORD): DWORD; inline;
+{$EXTERNALSYM CredGetLogonTypeFromFlags}
+procedure CredRemoveLogonTypeFromFlags(var Flags: DWORD); inline;
+{$EXTERNALSYM CredRemoveLogonTypeFromFlags}
+
+//
+// Values of the Credential Flags field.
+//
+const
+  CRED_FLAGS_PASSWORD_FOR_CERT    = $0001;
+  {$EXTERNALSYM CRED_FLAGS_PASSWORD_FOR_CERT}
+  CRED_FLAGS_PROMPT_NOW           = $0002;
+  {$EXTERNALSYM CRED_FLAGS_PROMPT_NOW}
+  CRED_FLAGS_USERNAME_TARGET      = $0004;
+  {$EXTERNALSYM CRED_FLAGS_USERNAME_TARGET}
+  CRED_FLAGS_OWF_CRED_BLOB        = $0008;
+  {$EXTERNALSYM CRED_FLAGS_OWF_CRED_BLOB}
+  CRED_FLAGS_REQUIRE_CONFIRMATION = $0010;
+  {$EXTERNALSYM CRED_FLAGS_REQUIRE_CONFIRMATION}
+
+//
+//  Valid only for return and only with CredReadDomainCredentials().
+//  Indicates credential was returned due to wildcard match
+//  of targetname with credential.
+//
+
+  CRED_FLAGS_WILDCARD_MATCH       = $0020;
+  {$EXTERNALSYM CRED_FLAGS_WILDCARD_MATCH}
+  
+//
+// Valid only for return
+// Indicates that the credential is VSM protected
+//
+  CRED_FLAGS_VSM_PROTECTED        = $0040;
+  {$EXTERNALSYM CRED_FLAGS_VSM_PROTECTED}
+
+  CRED_FLAGS_NGC_CERT             = $0080;
+  {$EXTERNALSYM CRED_FLAGS_NGC_CERT}
+  
+  CRED_FLAGS_VALID_FLAGS          = $F0FF;  // Mask of all valid flags
+  {$EXTERNALSYM CRED_FLAGS_VALID_FLAGS}
+
+//
+//  Bit mask for only those flags which can be passed to the credman
+//  APIs.
+//
+
+  CRED_FLAGS_VALID_INPUT_FLAGS    = $F09F;
+  {$EXTERNALSYM CRED_FLAGS_VALID_INPUT_FLAGS}
+
+//
+// Values of the Credential Type field.
+//
+  CRED_TYPE_GENERIC               =1;
+  {$EXTERNALSYM CRED_TYPE_GENERIC}
+  CRED_TYPE_DOMAIN_PASSWORD       =2;
+  {$EXTERNALSYM CRED_TYPE_DOMAIN_PASSWORD}
+  CRED_TYPE_DOMAIN_CERTIFICATE    =3;
+  {$EXTERNALSYM CRED_TYPE_DOMAIN_CERTIFICATE}
+  CRED_TYPE_DOMAIN_VISIBLE_PASSWORD =4;
+  {$EXTERNALSYM CRED_TYPE_DOMAIN_VISIBLE_PASSWORD}
+  CRED_TYPE_GENERIC_CERTIFICATE   =5;
+  {$EXTERNALSYM CRED_TYPE_GENERIC_CERTIFICATE}
+  CRED_TYPE_DOMAIN_EXTENDED       =6;
+  {$EXTERNALSYM CRED_TYPE_DOMAIN_EXTENDED}
+  CRED_TYPE_MAXIMUM               =7;       // Maximum supported cred type
+  {$EXTERNALSYM CRED_TYPE_MAXIMUM}
+  CRED_TYPE_MAXIMUM_EX  = (CRED_TYPE_MAXIMUM+1000);  // Allow new applications to run on old OSes
+  {$EXTERNALSYM CRED_TYPE_MAXIMUM_EX}
+
+//
+// Maximum size of the CredBlob field (in bytes)
+//
+
+  CRED_MAX_CREDENTIAL_BLOB_SIZE  = (5*512);
+  {$EXTERNALSYM CRED_MAX_CREDENTIAL_BLOB_SIZE}
+
+//
+// Values of the Credential Persist field
+//
+  CRED_PERSIST_NONE              = 0;
+  {$EXTERNALSYM CRED_PERSIST_NONE}
+  CRED_PERSIST_SESSION           = 1;
+  {$EXTERNALSYM CRED_PERSIST_SESSION}
+  CRED_PERSIST_LOCAL_MACHINE     = 2;
+  {$EXTERNALSYM CRED_PERSIST_LOCAL_MACHINE}
+  CRED_PERSIST_ENTERPRISE        = 3;
+  {$EXTERNALSYM CRED_PERSIST_ENTERPRISE}
+
+//
+// A credential
+//
+type
+  {$EXTERNALSYM _CREDENTIALA}
+  _CREDENTIALA = record
+    Flags: DWORD;
+    &Type: DWORD;
+    TargetName: LPSTR;
+    Comment: LPSTR;
+    LastWritten: FILETIME;
+    CredentialBlobSize: DWORD;
+    CredentialBlob: LPBYTE;
+    Persist: DWORD;
+    AttributeCount: DWORD;
+    Attributes: PCREDENTIAL_ATTRIBUTEA;
+    TargetAlias: LPSTR;
+    UserName: LPSTR;
+  end;
+  {$EXTERNALSYM _CREDENTIALW}
+  _CREDENTIALW = record
+    Flags: DWORD;
+    &Type: DWORD;
+    TargetName: LPWSTR;
+    Comment: LPSTR;
+    LastWritten: FILETIME;
+    CredentialBlobSize: DWORD;
+    CredentialBlob: LPBYTE;
+    Persist: DWORD;
+    AttributeCount: DWORD;
+    Attributes: PCREDENTIAL_ATTRIBUTEW;
+    TargetAlias: LPWSTR;
+    UserName: LPWSTR;
+  end;
+  {$EXTERNALSYM CREDENTIALA}
+  CREDENTIALA = _CREDENTIALA;
+  {$EXTERNALSYM CREDENTIALW}
+  CREDENTIALW = _CREDENTIALW;
+  {$EXTERNALSYM CREDENTIAL}
+  CREDENTIAL = CREDENTIALW;
+  {$EXTERNALSYM PCREDENTIALA}
+  PCREDENTIALA = ^CREDENTIALA;
+  {$EXTERNALSYM PCREDENTIALW}
+  PCREDENTIALW = ^CREDENTIALW;
+  {$EXTERNALSYM PCREDENTIAL}
+  PCREDENTIAL = PCREDENTIALW;
+  PPCREDENTIALA = ^PCREDENTIALA;
+  PPCREDENTIALW = ^PCREDENTIALW;
+  PPCREDENTIAL = PPCREDENTIALW;
+
+//
+// Value of the Flags field in CREDENTIAL_TARGET_INFORMATION
+//
+const
+  CRED_TI_SERVER_FORMAT_UNKNOWN   = $0001;  // Don't know if server name is DNS or netbios format
+  {$EXTERNALSYM CRED_TI_SERVER_FORMAT_UNKNOWN}
+  CRED_TI_DOMAIN_FORMAT_UNKNOWN   = $0002;  // Don't know if domain name is DNS or netbios format
+  {$EXTERNALSYM CRED_TI_DOMAIN_FORMAT_UNKNOWN}
+  CRED_TI_ONLY_PASSWORD_REQUIRED  = $0004;  // Server only requires a password and not a username
+  {$EXTERNALSYM CRED_TI_ONLY_PASSWORD_REQUIRED}
+  CRED_TI_USERNAME_TARGET         = $0008;  // TargetName is username
+  {$EXTERNALSYM CRED_TI_USERNAME_TARGET}
+  CRED_TI_CREATE_EXPLICIT_CRED    = $0010;  // When creating a cred, create one named TargetInfo->TargetName
+  {$EXTERNALSYM CRED_TI_CREATE_EXPLICIT_CRED}
+  CRED_TI_WORKGROUP_MEMBER        = $0020;  // Indicates the machine is a member of a workgroup
+  {$EXTERNALSYM CRED_TI_WORKGROUP_MEMBER}
+  CRED_TI_DNSTREE_IS_DFS_SERVER   = $0040;  // used to tell credman that the DNSTreeName could be DFS server
+  {$EXTERNALSYM CRED_TI_DNSTREE_IS_DFS_SERVER}
+  CRED_TI_VALID_FLAGS             = $F07F;
+  {$EXTERNALSYM CRED_TI_VALID_FLAGS}
+
+
+//
+// A credential target
+//
+
+type
+  {$EXTERNALSYM _CREDENTIAL_TARGET_INFORMATIONA}
+  _CREDENTIAL_TARGET_INFORMATIONA = record
+    TargetName: LPSTR;
+    NetbiosServerName: LPSTR;
+    DnsServerName: LPSTR;
+    NetbiosDomainName: LPSTR;
+    DnsDomainName: LPSTR;
+    DnsTreeName: LPSTR;
+    PackageName: LPSTR;
+    Flags: ULONG;
+    CredTypeCount: DWORD;
+    CredTypes: LPDWORD;
+  end;
+  {$EXTERNALSYM _CREDENTIAL_TARGET_INFORMATIONW}
+  _CREDENTIAL_TARGET_INFORMATIONW = record
+    TargetName: LPWSTR;
+    NetbiosServerName: LPWSTR;
+    DnsServerName: LPWSTR;
+    NetbiosDomainName: LPWSTR;
+    DnsDomainName: LPWSTR;
+    DnsTreeName: LPWSTR;
+    PackageName: LPWSTR;
+    Flags: ULONG;
+    CredTypeCount: DWORD;
+    CredTypes: LPDWORD;
+  end;
+  {$EXTERNALSYM CREDENTIAL_TARGET_INFORMATIONA}
+  CREDENTIAL_TARGET_INFORMATIONA = _CREDENTIAL_TARGET_INFORMATIONA;
+  {$EXTERNALSYM CREDENTIAL_TARGET_INFORMATIONW}
+  CREDENTIAL_TARGET_INFORMATIONW = _CREDENTIAL_TARGET_INFORMATIONW;
+  {$EXTERNALSYM CREDENTIAL_TARGET_INFORMATION}
+  CREDENTIAL_TARGET_INFORMATION = CREDENTIAL_TARGET_INFORMATIONW;
+  {$EXTERNALSYM PCREDENTIAL_TARGET_INFORMATIONA}
+  PCREDENTIAL_TARGET_INFORMATIONA = ^_CREDENTIAL_TARGET_INFORMATIONA;
+  {$EXTERNALSYM PCREDENTIAL_TARGET_INFORMATIONW}
+  PCREDENTIAL_TARGET_INFORMATIONW = ^_CREDENTIAL_TARGET_INFORMATIONW;
+  {$EXTERNALSYM PCREDENTIAL_TARGET_INFORMATION}
+  PCREDENTIAL_TARGET_INFORMATION = PCREDENTIAL_TARGET_INFORMATIONW;
+
+//
+// Certificate credential information
+//
+// The cbSize should be the size of the structure, sizeof(CERT_CREDENTIAL_INFO),
+// rgbHashofCert is the hash of the cert which is to be used as the credential.
+//
+const
+  CERT_HASH_LENGTH       = 20;  // SHA1 hashes are used for cert hashes
+  {$EXTERNALSYM CERT_HASH_LENGTH}
+
+type
+  _CERT_CREDENTIAL_INFO = record
+    cbSize: ULONG;
+    rgbHashOfCert: array[0..CERT_HASH_LENGTH - 1] of UCHAR;
+  end;
+  {$EXTERNALSYM _CERT_CREDENTIAL_INFO}
+  CERT_CREDENTIAL_INFO = _CERT_CREDENTIAL_INFO;
+  {$EXTERNALSYM CERT_CREDENTIAL_INFO}
+  PCERT_CREDENTIAL_INFO = ^_CERT_CREDENTIAL_INFO;
+  {$EXTERNALSYM PCERT_CREDENTIAL_INFO}
+
+//
+// Username Target credential information
+//
+// This credential can be pass to LsaLogonUser to ask it to find a credential with a
+// TargetName of UserName.
+//
+
+  _USERNAME_TARGET_CREDENTIAL_INFO = record
+    UserName: LPWSTR;
+  end;
+  {$EXTERNALSYM _USERNAME_TARGET_CREDENTIAL_INFO}
+  USERNAME_TARGET_CREDENTIAL_INFO = _USERNAME_TARGET_CREDENTIAL_INFO;
+  {$EXTERNALSYM USERNAME_TARGET_CREDENTIAL_INFO}
+  PUSERNAME_TARGET_CREDENTIAL_INFO = ^_USERNAME_TARGET_CREDENTIAL_INFO;
+  {$EXTERNALSYM PUSERNAME_TARGET_CREDENTIAL_INFO}
+
+//
+// Marshaled credential blob information.
+//
+  _BINARY_BLOB_CREDENTIAL_INFO = record
+    cbBlob: ULONG;
+    pbBlob: LPBYTE;
+  end;
+  {$EXTERNALSYM _BINARY_BLOB_CREDENTIAL_INFO}
+  BINARY_BLOB_CREDENTIAL_INFO = _BINARY_BLOB_CREDENTIAL_INFO;
+  {$EXTERNALSYM BINARY_BLOB_CREDENTIAL_INFO}
+  PBINARY_BLOB_CREDENTIAL_INFO = ^_BINARY_BLOB_CREDENTIAL_INFO;
+  {$EXTERNALSYM PBINARY_BLOB_CREDENTIAL_INFO}
+
+//
+// Credential type for credential marshaling routines
+//
+  _CRED_MARSHAL_TYPE = (
+    CertCredential = 1,
+    UsernameTargetCredential,
+    BinaryBlobCredential,
+    UsernameForPackedCredentials   // internal only, reserved
+  );
+  {$EXTERNALSYM _CRED_MARSHAL_TYPE}
+  CRED_MARSHAL_TYPE = _CRED_MARSHAL_TYPE;
+  {$EXTERNALSYM CRED_MARSHAL_TYPE}
+  PCRED_MARSHAL_TYPE = ^_CRED_MARSHAL_TYPE;
+  {$EXTERNALSYM PCRED_MARSHAL_TYPE}
+
+//
+// Protection type for credential providers secret protection routines
+//
+  _CRED_PROTECTION_TYPE = (
+    CredUnprotected,
+    CredUserProtection,
+    CredTrustedProtection
+  );
+  {$EXTERNALSYM _CRED_PROTECTION_TYPE}
+  CRED_PROTECTION_TYPE = _CRED_PROTECTION_TYPE;
+  {$EXTERNALSYM CRED_PROTECTION_TYPE}
+  PCRED_PROTECTION_TYPE = ^_CRED_PROTECTION_TYPE;
+  {$EXTERNALSYM PCRED_PROTECTION_TYPE}
+
+//
+// Values for authentication buffers packing
+//
+const
+  CRED_PACK_PROTECTED_CREDENTIALS      = $1;
+  {$EXTERNALSYM CRED_PACK_PROTECTED_CREDENTIALS}
+  CRED_PACK_WOW_BUFFER                 = $2;
+  {$EXTERNALSYM CRED_PACK_WOW_BUFFER}
+  CRED_PACK_GENERIC_CREDENTIALS        = $4;
+  {$EXTERNALSYM CRED_PACK_GENERIC_CREDENTIALS}
+  CRED_PACK_ID_PROVIDER_CREDENTIALS    = $8;
+  {$EXTERNALSYM CRED_PACK_ID_PROVIDER_CREDENTIALS}
+
+//
+// Credential UI info
+//
+
+//#define _CREDUI_INFO_DEFINED
+type
+  {$EXTERNALSYM _CREDUI_INFOA}
+  _CREDUI_INFOA = record
+    cbSize: DWORD;
+    hwndParent: HWND;
+    pszMessageText: LPCSTR;
+    pszCaptionText: LPCSTR;
+    hbmBanner: HBITMAP;
+  end;
+  {$EXTERNALSYM _CREDUI_INFOW}
+  _CREDUI_INFOW = record
+    cbSize: DWORD;
+    hwndParent: HWND;
+    pszMessageText: LPCWSTR;
+    pszCaptionText: LPCWSTR;
+    hbmBanner: HBITMAP;
+  end;
+  {$EXTERNALSYM CREDUI_INFOA}
+  CREDUI_INFOA = _CREDUI_INFOA;
+  {$EXTERNALSYM CREDUI_INFOW}
+  CREDUI_INFOW = _CREDUI_INFOW;
+  {$EXTERNALSYM CREDUI_INFO}
+  CREDUI_INFO = CREDUI_INFOW;
+  {$EXTERNALSYM PCREDUI_INFOA}
+  PCREDUI_INFOA = ^_CREDUI_INFOA;
+  {$EXTERNALSYM PCREDUI_INFOW}
+  PCREDUI_INFOW = ^_CREDUI_INFOW;
+  {$EXTERNALSYM PCREDUI_INFO}
+  PCREDUI_INFO = PCREDUI_INFOW;
+  
+//-----------------------------------------------------------------------------
+// Values
+//-----------------------------------------------------------------------------
+
+// String length limits:
+const
+  CREDUI_MAX_MESSAGE_LENGTH          = 1024;
+  {$EXTERNALSYM CREDUI_MAX_MESSAGE_LENGTH}
+  CREDUI_MAX_CAPTION_LENGTH          = 128;
+  {$EXTERNALSYM CREDUI_MAX_CAPTION_LENGTH}
+  CREDUI_MAX_GENERIC_TARGET_LENGTH   = CRED_MAX_GENERIC_TARGET_NAME_LENGTH;
+  {$EXTERNALSYM CREDUI_MAX_GENERIC_TARGET_LENGTH}
+  CREDUI_MAX_DOMAIN_TARGET_LENGTH    = CRED_MAX_DOMAIN_TARGET_NAME_LENGTH;
+  {$EXTERNALSYM CREDUI_MAX_DOMAIN_TARGET_LENGTH}
+
+//
+//  Username can be in <domain>\<user> or <user>@<domain>
+//  Length in characters, not including NULL termination.
+//
+
+  CREDUI_MAX_USERNAME_LENGTH         = CRED_MAX_USERNAME_LENGTH;
+  {$EXTERNALSYM CREDUI_MAX_USERNAME_LENGTH}
+  CREDUI_MAX_PASSWORD_LENGTH         = (512 div 2);
+  {$EXTERNALSYM CREDUI_MAX_PASSWORD_LENGTH}
+
+//
+//  Packed credential returned by SspiEncodeAuthIdentityAsStrings().
+//  Length in characters, not including NULL termination.
+//
+  MAXUSHORT	= ((1 shl 16) - 1);
+  {$EXTERNALSYM MAXUSHORT}
+
+  CREDUI_MAX_PACKED_CREDENTIALS_LENGTH  =  ((MAXUSHORT div 2) - 2);
+  {$EXTERNALSYM CREDUI_MAX_PACKED_CREDENTIALS_LENGTH}
+
+// maximum length in bytes for binary credential blobs
+
+  CREDUI_MAX_CREDENTIALS_BLOB_SIZE       = (MAXUSHORT);
+  {$EXTERNALSYM CREDUI_MAX_CREDENTIALS_BLOB_SIZE}
+
+//
+// Flags for CredUIPromptForCredentials and/or CredUICmdLinePromptForCredentials
+//
+
+  CREDUI_FLAGS_INCORRECT_PASSWORD     = $00001;     // indicates the username is valid, but password is not
+  {$EXTERNALSYM CREDUI_FLAGS_INCORRECT_PASSWORD}
+  CREDUI_FLAGS_DO_NOT_PERSIST         = $00002;     // Do not show "Save" checkbox, and do not persist credentials
+  {$EXTERNALSYM CREDUI_FLAGS_DO_NOT_PERSIST}
+  CREDUI_FLAGS_REQUEST_ADMINISTRATOR  = $00004;     // Populate list box with admin accounts
+  {$EXTERNALSYM CREDUI_FLAGS_REQUEST_ADMINISTRATOR}
+  CREDUI_FLAGS_EXCLUDE_CERTIFICATES   = $00008;     // do not include certificates in the drop list
+  {$EXTERNALSYM CREDUI_FLAGS_EXCLUDE_CERTIFICATES}
+  CREDUI_FLAGS_REQUIRE_CERTIFICATE    = $00010;
+  {$EXTERNALSYM CREDUI_FLAGS_REQUIRE_CERTIFICATE}
+  CREDUI_FLAGS_SHOW_SAVE_CHECK_BOX    = $00040;
+  {$EXTERNALSYM CREDUI_FLAGS_SHOW_SAVE_CHECK_BOX}
+  CREDUI_FLAGS_ALWAYS_SHOW_UI         = $00080;
+  {$EXTERNALSYM CREDUI_FLAGS_ALWAYS_SHOW_UI}
+  CREDUI_FLAGS_REQUIRE_SMARTCARD      = $00100;
+  {$EXTERNALSYM CREDUI_FLAGS_REQUIRE_SMARTCARD}
+  CREDUI_FLAGS_PASSWORD_ONLY_OK       = $00200;
+  {$EXTERNALSYM CREDUI_FLAGS_PASSWORD_ONLY_OK}
+  CREDUI_FLAGS_VALIDATE_USERNAME      = $00400;
+  {$EXTERNALSYM CREDUI_FLAGS_VALIDATE_USERNAME}
+  CREDUI_FLAGS_COMPLETE_USERNAME      = $00800;     //
+  {$EXTERNALSYM CREDUI_FLAGS_COMPLETE_USERNAME}
+  CREDUI_FLAGS_PERSIST                = $01000;     // Do not show "Save" checkbox, but persist credentials anyway
+  {$EXTERNALSYM CREDUI_FLAGS_PERSIST}
+  CREDUI_FLAGS_SERVER_CREDENTIAL      = $04000;
+  {$EXTERNALSYM CREDUI_FLAGS_SERVER_CREDENTIAL}
+  CREDUI_FLAGS_EXPECT_CONFIRMATION    = $20000;     // do not persist unless caller later confirms credential via  CredUIConfirmCredential() api
+  {$EXTERNALSYM CREDUI_FLAGS_EXPECT_CONFIRMATION}
+  CREDUI_FLAGS_GENERIC_CREDENTIALS    = $40000;     // Credential is a generic credential
+  {$EXTERNALSYM CREDUI_FLAGS_GENERIC_CREDENTIALS}
+  CREDUI_FLAGS_USERNAME_TARGET_CREDENTIALS = $80000; // Credential has a username as the target
+  {$EXTERNALSYM CREDUI_FLAGS_USERNAME_TARGET_CREDENTIALS}
+  CREDUI_FLAGS_KEEP_USERNAME         = $100000;             // don't allow the user to change the supplied username
+  {$EXTERNALSYM CREDUI_FLAGS_KEEP_USERNAME}
+
+
+//
+// Mask of flags valid for CredUIPromptForCredentials
+//
+  CREDUI_FLAGS_PROMPT_VALID =
+        CREDUI_FLAGS_INCORRECT_PASSWORD or
+        CREDUI_FLAGS_DO_NOT_PERSIST or
+        CREDUI_FLAGS_REQUEST_ADMINISTRATOR or
+        CREDUI_FLAGS_EXCLUDE_CERTIFICATES or
+        CREDUI_FLAGS_REQUIRE_CERTIFICATE or
+        CREDUI_FLAGS_SHOW_SAVE_CHECK_BOX or
+        CREDUI_FLAGS_ALWAYS_SHOW_UI or
+        CREDUI_FLAGS_REQUIRE_SMARTCARD or
+        CREDUI_FLAGS_PASSWORD_ONLY_OK or
+        CREDUI_FLAGS_VALIDATE_USERNAME or
+        CREDUI_FLAGS_COMPLETE_USERNAME or
+        CREDUI_FLAGS_PERSIST or
+        CREDUI_FLAGS_SERVER_CREDENTIAL or
+        CREDUI_FLAGS_EXPECT_CONFIRMATION or
+        CREDUI_FLAGS_GENERIC_CREDENTIALS or
+        CREDUI_FLAGS_USERNAME_TARGET_CREDENTIALS or
+        CREDUI_FLAGS_KEEP_USERNAME;
+  {$EXTERNALSYM CREDUI_FLAGS_PROMPT_VALID}
+
+
+//
+// Flags for CredUIPromptForWindowsCredentials and CPUS_CREDUI Usage Scenarios
+//
+
+  CREDUIWIN_GENERIC                   = $00000001;  // Plain text username/password is being requested
+  {$EXTERNALSYM CREDUIWIN_GENERIC}
+  CREDUIWIN_CHECKBOX                  = $00000002;  // Show the Save Credential checkbox
+  {$EXTERNALSYM CREDUIWIN_CHECKBOX}
+  CREDUIWIN_AUTHPACKAGE_ONLY          = $00000010;  // Only Cred Providers that support the input auth package should enumerate
+  {$EXTERNALSYM CREDUIWIN_AUTHPACKAGE_ONLY}
+  CREDUIWIN_IN_CRED_ONLY              = $00000020;  // Only the incoming cred for the specific auth package should be enumerated
+  {$EXTERNALSYM CREDUIWIN_IN_CRED_ONLY}
+  CREDUIWIN_ENUMERATE_ADMINS          = $00000100;  // Cred Providers should enumerate administrators only
+  {$EXTERNALSYM CREDUIWIN_ENUMERATE_ADMINS}
+  CREDUIWIN_ENUMERATE_CURRENT_USER    = $00000200;  // Only the incoming cred for the specific auth package should be enumerated
+  {$EXTERNALSYM CREDUIWIN_ENUMERATE_CURRENT_USER}
+  CREDUIWIN_SECURE_PROMPT             = $00001000;  // The Credui prompt should be displayed on the secure desktop
+  {$EXTERNALSYM CREDUIWIN_SECURE_PROMPT}
+  CREDUIWIN_PREPROMPTING              = $00002000;  // CredUI is invoked by  SspiPromptForCredentials and the client is prompting before a prior handshake
+  {$EXTERNALSYM CREDUIWIN_PREPROMPTING}  
+  CREDUIWIN_PACK_32_WOW               = $10000000;  // Tell the credential provider it should be packing its Auth Blob 32 bit even though it is running 64 native
+  {$EXTERNALSYM CREDUIWIN_PACK_32_WOW}
+
+  CREDUIWIN_VALID_FLAGS =
+        CREDUIWIN_GENERIC                or
+        CREDUIWIN_CHECKBOX               or
+        CREDUIWIN_AUTHPACKAGE_ONLY       or
+        CREDUIWIN_IN_CRED_ONLY           or
+        CREDUIWIN_ENUMERATE_ADMINS       or
+        CREDUIWIN_ENUMERATE_CURRENT_USER or
+        CREDUIWIN_SECURE_PROMPT          or
+        CREDUIWIN_PREPROMPTING           or
+        CREDUIWIN_PACK_32_WOW;
+  {$EXTERNALSYM CREDUIWIN_VALID_FLAGS}
+
+//-----------------------------------------------------------------------------
+// Functions
+//-----------------------------------------------------------------------------
+
+
+//
+// Values of flags to CredWrite and CredWriteDomainCredentials
+//
+
+  CRED_PRESERVE_CREDENTIAL_BLOB = $1;
+  {$EXTERNALSYM CRED_PRESERVE_CREDENTIAL_BLOB}
+function CredWrite(Credential: PCREDENTIAL; Flags: DWORD): BOOL; stdcall;
+{$EXTERNALSYM CredWrite}
+function CredRead(TargetName: LPCWSTR; &Type: DWORD; Flags: DWORD; out Credential: PCREDENTIAL): BOOL; stdcall;
+{$EXTERNALSYM CredRead}
+function CredWriteA(Credential: PCREDENTIALA; Flags: DWORD): BOOL; stdcall;
+{$EXTERNALSYM CredWriteA}
+function CredReadA(TargetName: LPCSTR; &Type: DWORD; Flags: DWORD; out Credential: PCREDENTIALA): BOOL; stdcall;
+{$EXTERNALSYM CredReadA}
+function CredWriteW(Credential: PCREDENTIALW; Flags: DWORD): BOOL; stdcall;
+{$EXTERNALSYM CredWriteW}
+function CredReadW(TargetName: LPCWSTR; &Type: DWORD; Flags: DWORD; out Credential: PCREDENTIALW): BOOL; stdcall;
+{$EXTERNALSYM CredReadW}
+//
+// Values of flags to CredEnumerate
+//
+const
+  CRED_ENUMERATE_ALL_CREDENTIALS = $1;
+  {$EXTERNALSYM CRED_ENUMERATE_ALL_CREDENTIALS}
+
+function CredEnumerate(Filter: LPCWSTR; Flags: DWORD; out Count: DWORD; out Credential: PPCREDENTIAL): BOOL; stdcall;
+{$EXTERNALSYM CredEnumerate}
+function CredWriteDomainCredentials(TargetInfo: PCREDENTIAL_TARGET_INFORMATION; Credential: PCREDENTIAL; Flags: DWORD): BOOL; stdcall;
+{$EXTERNALSYM CredWriteDomainCredentials}
+function CredEnumerateA(Filter: LPCSTR; Flags: DWORD; out Count: DWORD; out Credential: PPCREDENTIALA): BOOL; stdcall;
+{$EXTERNALSYM CredEnumerateA}
+function CredWriteDomainCredentialsA(TargetInfo: PCREDENTIAL_TARGET_INFORMATIONA; Credential: PCREDENTIALA; Flags: DWORD): BOOL; stdcall;
+{$EXTERNALSYM CredWriteDomainCredentialsA}
+function CredEnumerateW(Filter: LPCWSTR; Flags: DWORD; out Count: DWORD; out Credential: PPCREDENTIALW): BOOL; stdcall;
+{$EXTERNALSYM CredEnumerateW}
+function CredWriteDomainCredentialsW(TargetInfo: PCREDENTIAL_TARGET_INFORMATIONW; Credential: PCREDENTIALW; Flags: DWORD): BOOL; stdcall;
+{$EXTERNALSYM CredWriteDomainCredentialsW}
+
+//
+// Values of flags to CredReadDomainCredentials
+//
+const
+  CRED_CACHE_TARGET_INFORMATION = $1;
+  {$EXTERNALSYM CRED_CACHE_TARGET_INFORMATION}
+
+function CredReadDomainCredentials(TargetInfo: PCREDENTIAL_TARGET_INFORMATION; Flags: DWORD; out Count: PDWORD; out Credential: PPCREDENTIAL): BOOL; stdcall;
+{$EXTERNALSYM CredReadDomainCredentials}
+function CredDelete(TargetName: LPCWSTR; &Type: DWORD; Flags: DWORD): BOOL; stdcall;
+{$EXTERNALSYM CredDelete}
+function CredRename(OldTargetName, NewTargetName: LPCWSTR; &Type: DWORD; Flags: DWORD): BOOL; stdcall;
+{$EXTERNALSYM CredRename}
+function CredReadDomainCredentialsA(TargetInfo: PCREDENTIAL_TARGET_INFORMATIONA; Flags: DWORD; out Count: PDWORD; out Credential: PPCREDENTIALA): BOOL; stdcall;
+{$EXTERNALSYM CredReadDomainCredentialsA}
+function CredDeleteA(TargetName: LPCSTR; &Type: DWORD; Flags: DWORD): BOOL; stdcall;
+{$EXTERNALSYM CredDeleteA}
+function CredRenameA(OldTargetName, NewTargetName: LPCSTR; &Type: DWORD; Flags: DWORD): BOOL; stdcall;
+{$EXTERNALSYM CredRenameA}
+function CredReadDomainCredentialsW(TargetInfo: PCREDENTIAL_TARGET_INFORMATIONW; Flags: DWORD; out Count: PDWORD; out Credential: PPCREDENTIALW): BOOL; stdcall;
+{$EXTERNALSYM CredReadDomainCredentialsW}
+function CredDeleteW(TargetName: LPCWSTR; &Type: DWORD; Flags: DWORD): BOOL; stdcall;
+{$EXTERNALSYM CredDeleteW}
+function CredRenameW(OldTargetName, NewTargetName: LPCWSTR; &Type: DWORD; Flags: DWORD): BOOL; stdcall;
+{$EXTERNALSYM CredRenameW}
+//
+// Values of flags to CredGetTargetInfo
+//
+const
+  CRED_ALLOW_NAME_RESOLUTION = $1;
+  {$EXTERNALSYM CRED_ALLOW_NAME_RESOLUTION}
+function CredGetTargetInfo(TargetName: LPCWSTR; Flags: DWORD; out TargetInfo: PCREDENTIAL_TARGET_INFORMATION): BOOL; stdcall;
+{$EXTERNALSYM CredGetTargetInfo}
+
+function CredMarshalCredential(CredType: CRED_MARSHAL_TYPE; Credential: PVOID; out MarshaledCredential: LPWSTR): BOOL; stdcall;
+{$EXTERNALSYM CredMarshalCredential}
+
+function CredUnmarshalCredential(MarshaledCredential: LPCWSTR; out CredType: PCRED_MARSHAL_TYPE; out Credential: PVOID): BOOL; stdcall;
+{$EXTERNALSYM CredUnmarshalCredential}
+
+function CredIsMarshaledCredential(MarshaledCredential: LPCWSTR): BOOL; stdcall;
+{$EXTERNALSYM CredIsMarshaledCredential}
+
+function CredUnPackAuthenticationBuffer(
+  dwFlags: DWORD;
+  pAuthBuffer: PVOID;
+  cbAuthBuffer: DWORD;
+  pszUserName: LPWSTR;
+  pcchMaxUserName: PDWORD;
+  pszDomainName: LPWSTR;
+  pcchMaxDomainName: PDWORD;
+  pszPassword: LPWSTR;
+  pcchMaxPassword: PDWORD
+): BOOL; stdcall;
+{$EXTERNALSYM CredUnPackAuthenticationBuffer}
+
+function CredPackAuthenticationBuffer(
+   dwFlags: DWORD;
+   pszUserName: LPWSTR;
+   pszPassword: LPWSTR;
+   pPackedCredentials: PBYTE;
+   pcbPackedCredentials: PDWORD
+): BOOL; stdcall;
+{$EXTERNALSYM CredPackAuthenticationBuffer}
+
+function CredProtect(
+    fAsSelf: BOOL;
+    pszCredentials: LPWSTR;
+    cchCredentials: DWORD;
+    pszProtectedCredentials: LPWSTR;
+    pcchMaxChars: PDWORD;
+    ProtectionType: PCRED_PROTECTION_TYPE
+): BOOL; stdcall;
+{$EXTERNALSYM CredProtect}
+
+function CredUnprotect(
+    fAsSelf: BOOL;
+    pszProtectedCredentials: LPWSTR;
+    cchProtectedCredentials: DWORD;
+    pszCredentials: LPWSTR;
+    pcchMaxChars: PDWORD
+): BOOL; stdcall;
+{$EXTERNALSYM CredUnprotect}
+
+function CredIsProtected(
+    pszProtectedCredentials: LPWSTR;
+    pProtectionType: PCRED_PROTECTION_TYPE
+): BOOL; stdcall;
+{$EXTERNALSYM CredIsProtected}
+
+function CredFindBestCredential(
+    TargetName: LPWSTR;
+    &Type: DWORD;
+    Flags: DWORD;
+    var Credential: PCREDENTIAL
+): BOOL; stdcall;
+{$EXTERNALSYM CredFindBestCredential}
+function CredGetTargetInfoA(TargetName: LPCSTR; Flags: DWORD; out TargetInfo: PCREDENTIAL_TARGET_INFORMATIONA): BOOL; stdcall;
+{$EXTERNALSYM CredGetTargetInfoA}
+
+function CredMarshalCredentialA(CredType: CRED_MARSHAL_TYPE; Credential: PVOID; out MarshaledCredential: LPSTR): BOOL; stdcall;
+{$EXTERNALSYM CredMarshalCredentialA}
+
+function CredUnmarshalCredentialA(MarshaledCredential: LPCSTR; out CredType: PCRED_MARSHAL_TYPE; out Credential: PVOID): BOOL; stdcall;
+{$EXTERNALSYM CredUnmarshalCredentialA}
+
+function CredIsMarshaledCredentialA(MarshaledCredential: LPCSTR): BOOL; stdcall;
+{$EXTERNALSYM CredIsMarshaledCredentialA}
+
+function CredUnPackAuthenticationBufferA(
+  dwFlags: DWORD;
+  pAuthBuffer: PVOID;
+  cbAuthBuffer: DWORD;
+  pszUserName: LPSTR;
+  pcchMaxUserName: PDWORD;
+  pszDomainName: LPSTR;
+  pcchMaxDomainName: PDWORD;
+  pszPassword: LPSTR;
+  pcchMaxPassword: PDWORD
+): BOOL; stdcall;
+{$EXTERNALSYM CredUnPackAuthenticationBufferA}
+
+function CredPackAuthenticationBufferA(
+   dwFlags: DWORD;
+   pszUserName: LPSTR;
+   pszPassword: LPSTR;
+   pPackedCredentials: PBYTE;
+   pcbPackedCredentials: PDWORD
+): BOOL; stdcall;
+{$EXTERNALSYM CredPackAuthenticationBufferA}
+
+function CredProtectA(
+    fAsSelf: BOOL;
+    pszCredentials: LPSTR;
+    cchCredentials: DWORD;
+    pszProtectedCredentials: LPSTR;
+    pcchMaxChars: PDWORD;
+    ProtectionType: PCRED_PROTECTION_TYPE
+): BOOL; stdcall;
+{$EXTERNALSYM CredProtectA}
+
+function CredUnprotectA(
+    fAsSelf: BOOL;
+    pszProtectedCredentials: LPSTR;
+    cchProtectedCredentials: DWORD;
+    pszCredentials: LPSTR;
+    pcchMaxChars: PDWORD
+): BOOL; stdcall;
+{$EXTERNALSYM CredUnprotectA}
+
+function CredIsProtectedA(
+    pszProtectedCredentials: LPSTR;
+    pProtectionType: PCRED_PROTECTION_TYPE
+): BOOL; stdcall;
+{$EXTERNALSYM CredIsProtectedA}
+
+function CredFindBestCredentialA(
+    TargetName: LPSTR;
+    &Type: DWORD;
+    Flags: DWORD;
+    var Credential: PCREDENTIALA
+): BOOL; stdcall;
+{$EXTERNALSYM CredFindBestCredentialA}
+function CredGetTargetInfoW(TargetName: LPCWSTR; Flags: DWORD; out TargetInfo: PCREDENTIAL_TARGET_INFORMATIONW): BOOL; stdcall;
+{$EXTERNALSYM CredGetTargetInfoW}
+
+function CredMarshalCredentialW(CredType: CRED_MARSHAL_TYPE; Credential: PVOID; out MarshaledCredential: LPWSTR): BOOL; stdcall;
+{$EXTERNALSYM CredMarshalCredentialW}
+
+function CredUnmarshalCredentialW(MarshaledCredential: LPCWSTR; out CredType: PCRED_MARSHAL_TYPE; out Credential: PVOID): BOOL; stdcall;
+{$EXTERNALSYM CredUnmarshalCredentialW}
+
+function CredIsMarshaledCredentialW(MarshaledCredential: LPCWSTR): BOOL; stdcall;
+{$EXTERNALSYM CredIsMarshaledCredentialW}
+
+function CredUnPackAuthenticationBufferW(
+  dwFlags: DWORD;
+  pAuthBuffer: PVOID;
+  cbAuthBuffer: DWORD;
+  pszUserName: LPWSTR;
+  pcchMaxUserName: PDWORD;
+  pszDomainName: LPWSTR;
+  pcchMaxDomainName: PDWORD;
+  pszPassword: LPWSTR;
+  pcchMaxPassword: PDWORD
+): BOOL; stdcall;
+{$EXTERNALSYM CredUnPackAuthenticationBufferW}
+
+function CredPackAuthenticationBufferW(
+   dwFlags: DWORD;
+   pszUserName: LPWSTR;
+   pszPassword: LPWSTR;
+   pPackedCredentials: PBYTE;
+   pcbPackedCredentials: PDWORD
+): BOOL; stdcall;
+{$EXTERNALSYM CredPackAuthenticationBufferW}
+
+function CredProtectW(
+    fAsSelf: BOOL;
+    pszCredentials: LPWSTR;
+    cchCredentials: DWORD;
+    pszProtectedCredentials: LPWSTR;
+    pcchMaxChars: PDWORD;
+    ProtectionType: PCRED_PROTECTION_TYPE
+): BOOL; stdcall;
+{$EXTERNALSYM CredProtectW}
+
+function CredUnprotectW(
+    fAsSelf: BOOL;
+    pszProtectedCredentials: LPWSTR;
+    cchProtectedCredentials: DWORD;
+    pszCredentials: LPWSTR;
+    pcchMaxChars: PDWORD
+): BOOL; stdcall;
+{$EXTERNALSYM CredUnprotectW}
+
+function CredIsProtectedW(
+    pszProtectedCredentials: LPWSTR;
+    pProtectionType: PCRED_PROTECTION_TYPE
+): BOOL; stdcall;
+{$EXTERNALSYM CredIsProtectedW}
+
+function CredFindBestCredentialW(
+    TargetName: LPWSTR;
+    &Type: DWORD;
+    Flags: DWORD;
+    var Credential: PCREDENTIALW
+): BOOL; stdcall;
+{$EXTERNALSYM CredFindBestCredentialW}
+
+function CredGetSessionTypes(
+    MaximumPersistCount: DWORD;
+    MaximumPersist: LPDWORD
+): BOOL; stdcall;
+{$EXTERNALSYM CredGetSessionTypes}
+
+
+procedure CredFree(Buffer: PVOID); stdcall;
+{$EXTERNALSYM CredFree}
+
+function CredUIPromptForCredentials(
+    pUiInfo: PCREDUI_INFO;
+    pszTargetName: LPWSTR;
+    pContext: PCtxtHandle;
+    dwAuthError: DWORD;
+    pszUserName: LPWSTR;
+    ulUserNameBufferSize: ULONG;
+    pszPassword: LPWSTR;
+    ulPasswordBufferSize: ULONG;
+    save: PBOOL;
+    dwFlags: DWORD
+): DWORD; stdcall;
+{$EXTERNALSYM CredUIPromptForCredentials}
+
+function CredUIPromptForWindowsCredentials(
+    pUiInfo: PCREDUI_INFO;
+    dwAuthError: DWORD;
+    pulAuthPackage: PULONG;
+    pvInAuthBuffer: LPCVOID;
+    ulInAuthBufferSize: ULONG;
+    out ppvOutAuthBuffer: LPVOID;
+    out pulOutAuthBufferSize: ULONG;
+    pfSave: PBOOL;
+    dwFlags: DWORD
+): DWORD; stdcall;
+{$EXTERNALSYM CredUIPromptForWindowsCredentials}
+
+function CredUIParseUserName(
+    UserName: LPWSTR;
+    user: LPWSTR;
+    userBufferSize: ULONG;
+    domain: LPWSTR;
+    domainBufferSize: ULONG
+): DWORD; stdcall;
+{$EXTERNALSYM CredUIParseUserName}
+
+function CredUICmdLinePromptForCredentials(
+    pszTargetName: LPCWSTR;
+    pContext: PCtxtHandle;
+    dwAuthError: DWORD;
+    UserName: LPCWSTR;
+    ulUserBufferSize: ULONG;
+    pszPassword: LPCWSTR;
+    ulPasswordBufferSize: ULONG;
+    pfSave: PBOOL;
+    dwFlags:DWORD
+): DWORD; stdcall;
+{$EXTERNALSYM CredUICmdLinePromptForCredentials}
+function CredUIPromptForCredentialsA(
+    pUiInfo: PCREDUI_INFOA;
+    pszTargetName: LPSTR;
+    pContext: PCtxtHandle;
+    dwAuthError: DWORD;
+    pszUserName: LPSTR;
+    ulUserNameBufferSize: ULONG;
+    pszPassword: LPSTR;
+    ulPasswordBufferSize: ULONG;
+    save: PBOOL;
+    dwFlags: DWORD
+): DWORD; stdcall;
+{$EXTERNALSYM CredUIPromptForCredentialsA}
+
+function CredUIPromptForWindowsCredentialsA(
+    pUiInfo: PCREDUI_INFOA;
+    dwAuthError: DWORD;
+    pulAuthPackage: PULONG;
+    pvInAuthBuffer: LPCVOID;
+    ulInAuthBufferSize: ULONG;
+    out ppvOutAuthBuffer: LPVOID;
+    out pulOutAuthBufferSize: ULONG;
+    pfSave: PBOOL;
+    dwFlags: DWORD
+): DWORD; stdcall;
+{$EXTERNALSYM CredUIPromptForWindowsCredentialsA}
+
+function CredUIParseUserNameA(
+    UserName: LPSTR;
+    user: LPSTR;
+    userBufferSize: ULONG;
+    domain: LPSTR;
+    domainBufferSize: ULONG
+): DWORD; stdcall;
+{$EXTERNALSYM CredUIParseUserNameA}
+
+function CredUICmdLinePromptForCredentialsA(
+    pszTargetName: LPCSTR;
+    pContext: PCtxtHandle;
+    dwAuthError: DWORD;
+    UserName: LPCSTR;
+    ulUserBufferSize: ULONG;
+    pszPassword: LPCSTR;
+    ulPasswordBufferSize: ULONG;
+    pfSave: PBOOL;
+    dwFlags:DWORD
+): DWORD; stdcall;
+{$EXTERNALSYM CredUICmdLinePromptForCredentialsA}
+function CredUIPromptForCredentialsW(
+    pUiInfo: PCREDUI_INFOW;
+    pszTargetName: LPWSTR;
+    pContext: PCtxtHandle;
+    dwAuthError: DWORD;
+    pszUserName: LPWSTR;
+    ulUserNameBufferSize: ULONG;
+    pszPassword: LPWSTR;
+    ulPasswordBufferSize: ULONG;
+    save: PBOOL;
+    dwFlags: DWORD
+): DWORD; stdcall;
+{$EXTERNALSYM CredUIPromptForCredentialsW}
+
+function CredUIPromptForWindowsCredentialsW(
+    pUiInfo: PCREDUI_INFOW;
+    dwAuthError: DWORD;
+    pulAuthPackage: PULONG;
+    pvInAuthBuffer: LPCVOID;
+    ulInAuthBufferSize: ULONG;
+    out ppvOutAuthBuffer: LPVOID;
+    out pulOutAuthBufferSize: ULONG;
+    pfSave: PBOOL;
+    dwFlags: DWORD
+): DWORD; stdcall;
+{$EXTERNALSYM CredUIPromptForWindowsCredentialsW}
+
+function CredUIParseUserNameW(
+    UserName: LPWSTR;
+    user: LPWSTR;
+    userBufferSize: ULONG;
+    domain: LPWSTR;
+    domainBufferSize: ULONG
+): DWORD; stdcall;
+{$EXTERNALSYM CredUIParseUserNameW}
+
+function CredUICmdLinePromptForCredentialsW(
+    pszTargetName: LPCWSTR;
+    pContext: PCtxtHandle;
+    dwAuthError: DWORD;
+    UserName: LPCWSTR;
+    ulUserBufferSize: ULONG;
+    pszPassword: LPCWSTR;
+    ulPasswordBufferSize: ULONG;
+    pfSave: PBOOL;
+    dwFlags:DWORD
+): DWORD; stdcall;
+{$EXTERNALSYM CredUICmdLinePromptForCredentialsW}
+//
+// Call this API with bConfirm set to TRUE to confirm that the credential (previously created
+// via CredUIGetCredentials or CredUIPromptForCredentials worked, or with bConfirm set to FALSE
+// to indicate it didn't
+
+function CredUIConfirmCredentials(
+    pszTargetName: LPCWSTR;
+    bConfirm: BOOL
+): DWORD; stdcall;
+{$EXTERNALSYM CredUIConfirmCredentials}
+function CredUIConfirmCredentialsA(
+    pszTargetName: LPCSTR;
+    bConfirm: BOOL
+): DWORD; stdcall;
+{$EXTERNALSYM CredUIConfirmCredentialsA}
+function CredUIConfirmCredentialsW(
+    pszTargetName: LPCWSTR;
+    bConfirm: BOOL
+): DWORD; stdcall;
+{$EXTERNALSYM CredUIConfirmCredentialsW}
+
+function CredUIStoreSSOCredW(
+    pszRealm: LPCWSTR;
+    pszUsername: LPCWSTR;
+    pszPassword: LPCWSTR;
+    bPersist: BOOL
+): DWORD; stdcall;
+{$EXTERNALSYM CredUIStoreSSOCredW}
+
+implementation
+
+function CREDUIP_IS_USER_PASSWORD_ERROR(_Status: NTSTATUS): Boolean;
+begin
+  Result := (_Status = ERROR_LOGON_FAILURE) or
+        (_Status = HResultFromWin32( ERROR_LOGON_FAILURE )) or
+        (_Status = STATUS_LOGON_FAILURE) or
+        (_Status = HResultFromNT( STATUS_LOGON_FAILURE )) or
+        (_Status = ERROR_ACCESS_DENIED) or
+        (_Status = HResultFromWin32( ERROR_ACCESS_DENIED )) or
+        (_Status = STATUS_ACCESS_DENIED) or
+        (_Status = HResultFromNT( STATUS_ACCESS_DENIED )) or
+        (_Status = ERROR_INVALID_PASSWORD) or
+        (_Status = HResultFromWin32( ERROR_INVALID_PASSWORD )) or
+        (_Status = STATUS_WRONG_PASSWORD) or
+        (_Status = HResultFromNT( STATUS_WRONG_PASSWORD )) or
+        (_Status = STATUS_NO_SUCH_USER) or
+        (_Status = HResultFromNT( STATUS_NO_SUCH_USER )) or
+        (_Status = ERROR_NO_SUCH_USER) or
+        (_Status = HResultFromWin32( ERROR_NO_SUCH_USER )) or
+        (_Status = ERROR_NO_SUCH_LOGON_SESSION) or
+        (_Status = HResultFromWin32( ERROR_NO_SUCH_LOGON_SESSION )) or
+        (_Status = STATUS_NO_SUCH_LOGON_SESSION) or
+        (_Status = HResultFromNT( STATUS_NO_SUCH_LOGON_SESSION )) or
+        (_Status = SEC_E_NO_CREDENTIALS) or
+        (_Status = SEC_E_LOGON_DENIED) or
+        (_Status = SEC_E_NO_CONTEXT) or
+        (_Status = STATUS_NO_SECURITY_CONTEXT);
+end;
+
+function CREDUIP_IS_DOWNGRADE_ERROR(_Status: NTSTATUS): Boolean;
+begin
+  Result :=
+        (_Status = ERROR_DOWNGRADE_DETECTED) or
+        (_Status = HResultFromWin32( ERROR_DOWNGRADE_DETECTED ) ) or
+        (_Status = STATUS_DOWNGRADE_DETECTED ) or
+        (_Status = HResultFromNT( STATUS_DOWNGRADE_DETECTED ));
+end;
+
+function CREDUIP_IS_EXPIRED_ERROR(_Status: NTSTATUS): Boolean;
+begin
+  Result :=
+        (_Status = ERROR_PASSWORD_EXPIRED) or
+        (_Status = HResultFromWin32( ERROR_PASSWORD_EXPIRED )) or
+        (_Status = STATUS_PASSWORD_EXPIRED) or
+        (_Status = HResultFromNT( STATUS_PASSWORD_EXPIRED )) or
+        (_Status = ERROR_PASSWORD_MUST_CHANGE) or
+        (_Status = HResultFromWin32( ERROR_PASSWORD_MUST_CHANGE )) or
+        (_Status = STATUS_PASSWORD_MUST_CHANGE) or
+        (_Status = HResultFromNT( STATUS_PASSWORD_MUST_CHANGE )) or
+        (_Status = NERR_PasswordExpired) or
+        (_Status = HResultFromWin32( NERR_PasswordExpired ));
+end;
+
+function CREDUI_IS_AUTHENTICATION_ERROR(_Status: NTSTATUS): Boolean;
+begin
+  Result :=
+        CREDUIP_IS_USER_PASSWORD_ERROR( _Status ) or
+        CREDUIP_IS_DOWNGRADE_ERROR( _Status ) or
+        CREDUIP_IS_EXPIRED_ERROR( _Status );
+end;
+
+function CREDUI_NO_PROMPT_AUTHENTICATION_ERROR( _Status: NTSTATUS): Boolean;
+begin
+    Result :=
+        (_Status = ERROR_AUTHENTICATION_FIREWALL_FAILED) or
+        (_Status = HResultFromWin32( ERROR_AUTHENTICATION_FIREWALL_FAILED )) or
+        (_Status = STATUS_AUTHENTICATION_FIREWALL_FAILED) or
+        (_Status = HResultFromNT( STATUS_AUTHENTICATION_FIREWALL_FAILED )) or
+        (_Status = ERROR_ACCOUNT_DISABLED) or
+        (_Status = HResultFromWin32( ERROR_ACCOUNT_DISABLED )) or
+        (_Status = STATUS_ACCOUNT_DISABLED) or
+        (_Status = HResultFromNT( STATUS_ACCOUNT_DISABLED )) or
+        (_Status = ERROR_ACCOUNT_RESTRICTION) or
+        (_Status = HResultFromWin32( ERROR_ACCOUNT_RESTRICTION )) or
+        (_Status = STATUS_ACCOUNT_RESTRICTION) or
+        (_Status = HResultFromNT( STATUS_ACCOUNT_RESTRICTION )) or
+        (_Status = ERROR_ACCOUNT_LOCKED_OUT) or
+        (_Status = HResultFromWin32( ERROR_ACCOUNT_LOCKED_OUT )) or
+        (_Status = STATUS_ACCOUNT_LOCKED_OUT) or
+        (_Status = HResultFromNT( STATUS_ACCOUNT_LOCKED_OUT )) or
+        (_Status = ERROR_ACCOUNT_EXPIRED) or
+        (_Status = HResultFromWin32( ERROR_ACCOUNT_EXPIRED )) or
+        (_Status = STATUS_ACCOUNT_EXPIRED) or
+        (_Status = HResultFromNT( STATUS_ACCOUNT_EXPIRED )) or
+        (_Status = ERROR_LOGON_TYPE_NOT_GRANTED) or
+        (_Status = HResultFromWin32( ERROR_LOGON_TYPE_NOT_GRANTED )) or
+        (_Status = STATUS_LOGON_TYPE_NOT_GRANTED) or
+        (_Status = HResultFromNT( STATUS_LOGON_TYPE_NOT_GRANTED ));
+end;
+
+procedure CredAppendLogonTypeToFlags(var Flags: DWORD; LogonType: DWORD);
+begin
+  Flags := Flags or ((LogonType) shl 12);
+end;
+
+function CredGetLogonTypeFromFlags(Flags: DWORD): DWORD;
+begin
+  Result := (Flags and CRED_LOGON_TYPES_MASK) shr 12
+end;
+
+procedure CredRemoveLogonTypeFromFlags(var Flags: DWORD);
+begin
+  Flags := Flags and (not CRED_LOGON_TYPES_MASK);
+end;
+
+const
+  credui = 'credui.dll';
+
+function CredWrite; stdcall; external advapi32 name 'CredWriteW';
+function CredRead; stdcall; external advapi32 name 'CredReadW';
+function CredEnumerate; stdcall; external advapi32 name 'CredEnumerateW';
+function CredWriteDomainCredentials; stdcall; external advapi32 name 'CredWriteDomainCredentialsW';
+function CredReadDomainCredentials; stdcall; external advapi32 name 'CredReadDomainCredentialsW';
+function CredDelete; stdcall; external advapi32 name 'CredDeleteW';
+function CredRename; stdcall; external advapi32 name 'CredRenameW';
+function CredGetTargetInfo; stdcall; external advapi32 name 'CredGetTargetInfoW';
+function CredMarshalCredential; stdcall; external advapi32 name 'CredMarshalCredentialW';
+function CredUnmarshalCredential; stdcall; external advapi32 name 'CredUnmarshalCredentialW';
+function CredIsMarshaledCredential; stdcall; external advapi32 name 'CredIsMarshaledCredentialW';
+function CredUnPackAuthenticationBuffer; stdcall; external credui name 'CredUnPackAuthenticationBufferW';
+function CredPackAuthenticationBuffer; stdcall; external credui name 'CredPackAuthenticationBufferW';
+function CredProtect; stdcall; external advapi32 name 'CredProtectW';
+function CredUnprotect; stdcall; external advapi32 name 'CredUnprotectW';
+function CredIsProtected; stdcall; external advapi32 name 'CredIsProtectedW';
+function CredFindBestCredential; stdcall; external advapi32 name 'CredFindBestCredentialW';
+function CredWriteA; stdcall; external advapi32 name 'CredWriteA';
+function CredReadA; stdcall; external advapi32 name 'CredReadA';
+function CredEnumerateA; stdcall; external advapi32 name 'CredEnumerateA';
+function CredWriteDomainCredentialsA; stdcall; external advapi32 name 'CredWriteDomainCredentialsA';
+function CredReadDomainCredentialsA; stdcall; external advapi32 name 'CredReadDomainCredentialsA';
+function CredDeleteA; stdcall; external advapi32 name 'CredDeleteA';
+function CredRenameA; stdcall; external advapi32 name 'CredRenameA';
+function CredGetTargetInfoA; stdcall; external advapi32 name 'CredGetTargetInfoA';
+function CredMarshalCredentialA; stdcall; external advapi32 name 'CredMarshalCredentialA';
+function CredUnmarshalCredentialA; stdcall; external advapi32 name 'CredUnmarshalCredentialA';
+function CredIsMarshaledCredentialA; stdcall; external advapi32 name 'CredIsMarshaledCredentialA';
+function CredUnPackAuthenticationBufferA; stdcall; external credui name 'CredUnPackAuthenticationBufferA';
+function CredPackAuthenticationBufferA; stdcall; external credui name 'CredPackAuthenticationBufferA';
+function CredProtectA; stdcall; external advapi32 name 'CredProtectA';
+function CredUnprotectA; stdcall; external advapi32 name 'CredUnprotectA';
+function CredIsProtectedA; stdcall; external advapi32 name 'CredIsProtectedA';
+function CredFindBestCredentialA; stdcall; external advapi32 name 'CredFindBestCredentialA';
+function CredWriteW; stdcall; external advapi32 name 'CredWriteW';
+function CredReadW; stdcall; external advapi32 name 'CredReadW';
+function CredEnumerateW; stdcall; external advapi32 name 'CredEnumerateW';
+function CredWriteDomainCredentialsW; stdcall; external advapi32 name 'CredWriteDomainCredentialsW';
+function CredReadDomainCredentialsW; stdcall; external advapi32 name 'CredReadDomainCredentialsW';
+function CredDeleteW; stdcall; external advapi32 name 'CredDeleteW';
+function CredRenameW; stdcall; external advapi32 name 'CredRenameW';
+function CredGetTargetInfoW; stdcall; external advapi32 name 'CredGetTargetInfoW';
+function CredMarshalCredentialW; stdcall; external advapi32 name 'CredMarshalCredentialW';
+function CredUnmarshalCredentialW; stdcall; external advapi32 name 'CredUnmarshalCredentialW';
+function CredIsMarshaledCredentialW; stdcall; external advapi32 name 'CredIsMarshaledCredentialW';
+function CredUnPackAuthenticationBufferW; stdcall; external credui name 'CredUnPackAuthenticationBufferW';
+function CredPackAuthenticationBufferW; stdcall; external credui name 'CredPackAuthenticationBufferW';
+function CredProtectW; stdcall; external advapi32 name 'CredProtectW';
+function CredUnprotectW; stdcall; external advapi32 name 'CredUnprotectW';
+function CredIsProtectedW; stdcall; external advapi32 name 'CredIsProtectedW';
+function CredFindBestCredentialW; stdcall; external advapi32 name 'CredFindBestCredentialW';
+function CredGetSessionTypes; stdcall; external advapi32;
+procedure CredFree; stdcall; external advapi32;
+function CredUIPromptForCredentials; stdcall; external credui name 'CredUIPromptForCredentialsW';
+function CredUIPromptForWindowsCredentials; stdcall; external credui name 'CredUIPromptForWindowsCredentialsW';
+function CredUIParseUserName; stdcall; external credui name 'CredUIParseUserNameW';
+function CredUICmdLinePromptForCredentials; stdcall; external credui name 'CredUICmdLinePromptForCredentialsW';
+function CredUIConfirmCredentials; stdcall; external credui name 'CredUIConfirmCredentialsW';
+function CredUIPromptForCredentialsA; stdcall; external credui name 'CredUIPromptForCredentialsA';
+function CredUIPromptForWindowsCredentialsA; stdcall; external credui name 'CredUIPromptForWindowsCredentialsA';
+function CredUIParseUserNameA; stdcall; external credui name 'CredUIParseUserNameA';
+function CredUICmdLinePromptForCredentialsA; stdcall; external credui name 'CredUICmdLinePromptForCredentialsA';
+function CredUIConfirmCredentialsA; stdcall; external credui name 'CredUIConfirmCredentialsA';
+function CredUIPromptForCredentialsW; stdcall; external credui name 'CredUIPromptForCredentialsW';
+function CredUIPromptForWindowsCredentialsW; stdcall; external credui name 'CredUIPromptForWindowsCredentialsW';
+function CredUIParseUserNameW; stdcall; external credui name 'CredUIParseUserNameW';
+function CredUICmdLinePromptForCredentialsW; stdcall; external credui name 'CredUICmdLinePromptForCredentialsW';
+function CredUIConfirmCredentialsW; stdcall; external credui name 'CredUIConfirmCredentialsW';
+function CredUIStoreSSOCredW; stdcall; external credui;
+
+end.

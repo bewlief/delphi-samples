@@ -1,0 +1,109 @@
+object FmxMonitorClient: TFmxMonitorClient
+  BiDiMode = bdLeftToRight
+  Caption = 'Monitor Connections Client'
+  ClientHeight = 325
+  ClientWidth = 365
+  Left = 0
+  Top = 0
+  Transparency = False
+  Visible = False
+  OnActivate = FormActivate
+  StyleLookup = 'backgroundstyle'
+  object startButton: TButton
+    Position.Point = '(272,48)'
+    Width = 81.000000000000000000
+    Height = 33.000000000000000000
+    OnClick = startButtonClick
+    TabOrder = 0
+    StaysPressed = False
+    IsPressed = False
+    Text = 'Start'
+  end
+  object HostEdit: TEdit
+    Position.Point = '(88,21)'
+    Width = 100.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 1
+    ReadOnly = False
+    Password = False
+    Text = '192.168.254.174'
+  end
+  object IOMemo: TMemo
+    Position.Point = '(8,88)'
+    Width = 345.000000000000000000
+    Height = 201.000000000000000000
+    TabOrder = 2
+    WordWrap = False
+    Text = 'Hello world, this is a line of text to reverse.'
+  end
+  object ReqCountLabel: TLabel
+    Position.Point = '(8,296)'
+    Width = 177.000000000000000000
+    Height = 25.000000000000000000
+    TabOrder = 3
+    Text = 'ReqCountLabel'
+  end
+  object Label1: TLabel
+    Position.Point = '(8,24)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 4
+    Text = 'HOST SERVER:'
+  end
+  object Label2: TLabel
+    Position.Point = '(200,24)'
+    Width = 73.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 5
+    Text = 'TCP/IP Port:'
+  end
+  object PortEdit: TNumberBox
+    Position.Point = '(272,21)'
+    Width = 49.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 6
+    ReadOnly = False
+    Max = 10000.000000000000000000
+    Value = 211.000000000000000000
+    ValueType = vtInteger
+    HorzIncrement = 1.000000000000000000
+    VertIncrement = 5.000000000000000000
+  end
+  object Label3: TLabel
+    Position.Point = '(8,64)'
+    Width = 120.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 7
+    Text = 'Hammer server every'
+  end
+  object HammerEdit: TNumberBox
+    Position.Point = '(128,61)'
+    Width = 49.000000000000000000
+    Height = 22.000000000000000000
+    TabOrder = 8
+    ReadOnly = False
+    Max = 10000.000000000000000000
+    Value = 1000.000000000000000000
+    ValueType = vtInteger
+    HorzIncrement = 1.000000000000000000
+    VertIncrement = 5.000000000000000000
+  end
+  object Label4: TLabel
+    Position.Point = '(184,64)'
+    Width = 81.000000000000000000
+    Height = 15.000000000000000000
+    TabOrder = 9
+    Text = 'milliseconds'
+  end
+  object CMCSQLConnection: TSQLConnection
+    DriverName = 'DataSnap'
+    LoginPrompt = False
+    Params.Strings = (
+      'Port=211'
+      'CommunicationProtocol=tcp/ip'
+      'DatasnapContext=datasnap/')
+    Left = 152
+    Top = 208
+    UniqueId = '{B20CFA38-BEDE-497B-B520-6C8FD3B34392}'
+  end
+end

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<nodeSet version="1.0">
+  <view uin="g3uhangqn7o_v">
+    <property name="$defaultDiagram" value="true" />
+    <property name="$metaclass" value="Package Diagram" />
+    <property name="$name" value="default" />
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:LocationMigration.TLocationMigration">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="10,10,160,129" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:LocationMigration.TLocationMigration.RegionToClientDataSet(DBXJSON.TJSONArray,DBClient.TClientDataSet)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:LocationMigration.TLocationMigration.CountryToClientDataSet(DBXJSON.TJSONArray,DBClient.TClientDataSet)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:LocationMigration.TLocationMigration.StateToClientDataSet(DBXJSON.TJSONArray,DBClient.TClientDataSet)" />
+      <reference referencedUin="delphi:e_method:src:DelphiDataSnapClient:LocationMigration.TLocationMigration.CityToClientDataSet(DBXJSON.TJSONArray,DBClient.TClientDataSet)" />
+    </reference>
+    <reference referencedUin="delphi:e_class:src:DelphiDataSnapClient:LocationMigration.@unitclass">
+      <property name="$shortcutReference" value="true" />
+    </reference>
+    <reference referencedUin="design:view:::dqli3wdo8hn28ix2q_v">
+      <property name="$shortcutReference" value="true" />
+      <property name="bounds" value="189,1,252,42" />
+    </reference>
+  </view>
+</nodeSet>

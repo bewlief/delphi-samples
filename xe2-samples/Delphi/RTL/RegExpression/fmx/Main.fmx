@@ -1,0 +1,88 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Regular Expression Delphi Demo'
+  BorderStyle = bsSizeToolWin
+  ClientHeight = 271
+  ClientWidth = 600
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  ActiveControl = EditText
+  StyleLookup = 'backgroundstyle'
+  object lbRegExp: TListBox
+    Position.Point = '(16,24)'
+    Width = 169.000000000000000000
+    Height = 161.000000000000000000
+    TabOrder = 1
+    ItemIndex = 0
+    OnChange = lbRegExpChange
+    object TListBoxItem
+      Width = 167.000000000000000000
+      Height = 19.000000000000000000
+      HitTest = False
+      TabOrder = 0
+      IsSelected = True
+      Text = 'E-mail'
+    end
+    object TListBoxItem
+      Position.Point = '(0,19)'
+      Width = 167.000000000000000000
+      Height = 19.000000000000000000
+      HitTest = False
+      TabOrder = 1
+      Text = 'IP Address'
+    end
+    object TListBoxItem
+      Position.Point = '(0,38)'
+      Width = 167.000000000000000000
+      Height = 19.000000000000000000
+      HitTest = False
+      TabOrder = 2
+      Text = 'Date Interval (mm-dd-yyyy)'
+    end
+    object TListBoxItem
+      Position.Point = '(0,57)'
+      Width = 167.000000000000000000
+      Height = 19.000000000000000000
+      HitTest = False
+      TabOrder = 3
+      Text = 'Date Interval (dd-mm-yyyy)'
+    end
+  end
+  object MemoRegEx: TMemo
+    Position.Point = '(192,24)'
+    Width = 385.000000000000000000
+    Height = 161.000000000000000000
+    TabOrder = 2
+    WordWrap = True
+    Font.Size = 12.000000000000000000
+    KeyboardType = vktDefault
+  end
+  object EditText: TEdit
+    Position.Point = '(16,216)'
+    Width = 561.000000000000000000
+    Height = 33.000000000000000000
+    TabOrder = 3
+    DisableFocusEffect = True
+    KeyboardType = vktDefault
+    OnChangeTracking = EditTextChangeTracking
+    Password = False
+    object lbType: TLabel
+      Position.Point = '(0,-24)'
+      Width = 35.000000000000000000
+      Height = 19.000000000000000000
+      TabOrder = 0
+      AutoSize = True
+      Text = 'E-mail'
+      WordWrap = False
+    end
+    object SEResult: TShadowEffect
+      Distance = 3.000000000000000000
+      Direction = 45.000000000000000000
+      Softness = 0.300000011920929000
+      Opacity = 1.000000000000000000
+      ShadowColor = claRed
+    end
+  end
+end
