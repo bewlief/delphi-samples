@@ -1,3 +1,0 @@
-inherited ActiveForm_Windows: TActiveForm_Windows
-  DesignerMasterStyle = 0
-end

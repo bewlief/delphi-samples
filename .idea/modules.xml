@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/xe2-samples/Delphi/DataSnap/connectors/AndroidClients/AndroidClients.iml" filepath="$PROJECT_DIR$/xe2-samples/Delphi/DataSnap/connectors/AndroidClients/AndroidClients.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xe2-samples/Delphi/DataSnap/connectors/BlackberryClients/BlackberryClients.iml" filepath="$PROJECT_DIR$/xe2-samples/Delphi/DataSnap/connectors/BlackberryClients/BlackberryClients.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xe11-source/rtl/androiddex/java/apkexpansion/apkexpansion.iml" filepath="$PROJECT_DIR$/xe11-source/rtl/androiddex/java/apkexpansion/apkexpansion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xe11-source/rtl/androiddex/java/cloudmessaging/cloudmessaging.iml" filepath="$PROJECT_DIR$/xe11-source/rtl/androiddex/java/cloudmessaging/cloudmessaging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/delphi-samples.iml" filepath="$PROJECT_DIR$/.idea/delphi-samples.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xe11-source/rtl/androiddex/java/fmx/fmx.iml" filepath="$PROJECT_DIR$/xe11-source/rtl/androiddex/java/fmx/fmx.iml" />
+    </modules>
+  </component>
+</project>

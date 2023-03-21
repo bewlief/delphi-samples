@@ -1,9 +1,0 @@
-Title: Image Zoom
-
-Brief Description: This code snippet shows you how to zoom an image on an iOS or Android device.
-
-Language: Object Pascal
-
-Platforms supported: iOS, Android
-
-Keywords: zoom, gesture, iOS, Android, picture

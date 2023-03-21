@@ -1,3 +1,0 @@
-inherited frmCustomList_Windows: TfrmCustomList_Windows
-  DesignerMasterStyle = 0
-end
